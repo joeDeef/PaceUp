@@ -1,0 +1,12 @@
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 2rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}

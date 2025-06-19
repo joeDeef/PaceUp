@@ -1,0 +1,41 @@
+.card {
+  width: 250px;
+  height: 350px; /* o lo que necesites */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  text-decoration: none; /* por si se usa como <a> */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.card-image {
+  max-height: 150px;        /* o el alto máximo que deseas */
+  height: 100%;             /* que tome toda la altura disponible */
+  width: auto;              /* el ancho se ajusta automáticamente */
+  object-fit: contain;      /* evita recortes */
+  display: block;
+  margin: 0 auto;           /* centra la imagen horizontalmente */
+}
+
+
+.card-description {
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  color: #555;
+}

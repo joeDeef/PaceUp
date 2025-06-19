@@ -1,0 +1,22 @@
+<template id="search-bar-template">
+  <form class="search-form" role="search" onsubmit="event.preventDefault(); handleSearch(this);">
+    <div class="search-input-container">
+      <span class="search-icon" aria-hidden="true">
+        <img src="../assets/img/icons/magnifying-glass-solid.svg" alt="Buscar" />
+      </span> <input type="search" placeholder="Introduce aquí el texto" aria-label="Buscar" required />
+      <button type="submit">Buscar</button>
+    </div>
+  </form>
+</template>
+
+<script>
+  // No funciona si está dentro de template
+  // mejor poner esta función global en tu main.js o en load-welcome-header.js
+  window.handleSearch = function (form) {
+    const query = form.querySelector('input').value.trim();
+    if (query) {
+      alert('Buscar: ' + query);
+      // Aquí iría tu lógica real de búsqueda
+    }
+  };
+</script>
