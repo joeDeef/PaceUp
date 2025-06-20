@@ -1,58 +1,65 @@
+/* === Reset básico === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-}
-
+/* === Encabezado principal === */
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   background-color: #103D7C;
-  border-bottom: 1px solid #ccc;
 }
 
+/* === Logo y texto del header === */
 .logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: #ffffff;
+  font-family: Title1, sans-serif;
 }
 
+/* === Imagen del logo === */
 .logo-img {
-  width: 40px;
-  height: 40px;
+  width: 75px;
+  height: 75px;
   object-fit: contain;
 }
 
+/* === Navegación principal === */
 .nav {
   display: flex;
   gap: 2rem;
 }
 
+/* === Enlaces de navegación === */
 .nav a {
   text-decoration: none;
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 750;
   transition: color 0.2s ease;
+  font-family: Title2, sans-serif;
+  font-size: 1.2rem;
 }
 
+/* === Efecto hover en enlaces === */
 .nav a:hover {
   color: #007bff;
 }
 
+/* === Selector de idioma === */
 .language-switcher {
   display: flex;
   align-items: center;
 }
 
+/* === Botón de cambio de idioma === */
 .language-btn {
   background-color: #ffffff;
   border: 1px solid #ccc;
@@ -69,10 +76,12 @@ body {
   background-color: #f0f0f0;
 }
 
+/* === Icono o bandera como texto === */
 .flag {
   font-size: 1.2rem;
 }
 
+/* === Imagen redonda de bandera === */
 .flag-img {
   width: 24px;
   height: 24px;

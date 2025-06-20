@@ -8,15 +8,3 @@
     </div>
   </form>
 </template>
-
-<script>
-  // No funciona si está dentro de template
-  // mejor poner esta función global en tu main.js o en load-welcome-header.js
-  window.handleSearch = function (form) {
-    const query = form.querySelector('input').value.trim();
-    if (query) {
-      alert('Buscar: ' + query);
-      // Aquí iría tu lógica real de búsqueda
-    }
-  };
-</script>

@@ -1,9 +1,11 @@
+// Elementos del botón y sus partes
 const languageBtn = document.getElementById("languageBtn");
 const languageName = document.getElementById("languageName");
 const languageFlag = document.getElementById("languageFlag");
 
-let currentLanguage = "es";
+let currentLanguage = "es"; // Idioma inicial
 
+// Cambia el idioma al hacer clic en el botón
 languageBtn.addEventListener("click", () => {
   if (currentLanguage === "es") {
     currentLanguage = "en";

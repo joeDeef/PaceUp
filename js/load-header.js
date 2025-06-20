@@ -1,9 +1,10 @@
+// Carga el archivo HTML del header y lo inserta en el contenedor
 fetch('components/header.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('header-container').innerHTML = data;
 
-    // Cargar el script del cambio de idioma después de insertar el header
+    // Después de cargar el header, añade el script para el cambio de idioma
     const script = document.createElement('script');
     script.src = 'js/language.js';
     document.body.appendChild(script);

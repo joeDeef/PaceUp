@@ -1,9 +1,11 @@
+/* === Formulario de búsqueda === */
 .search-form {
-  width: 100%;
+  width: 700px;
   max-width: 1500px;
   margin: 0 auto;
 }
 
+/* === Contenedor del input y botón === */
 .search-input-container {
   display: flex;
   align-items: center;
@@ -13,6 +15,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* === Ícono de búsqueda (imagen) === */
 .search-icon img {
   width: 22px;
   height: 22px;
@@ -20,6 +23,7 @@
   margin-right: 12px;
 }
 
+/* === Campo de entrada (input de búsqueda) === */
 .search-input-container input[type="search"] {
   flex: 1;
   border: none;
@@ -29,14 +33,17 @@
   background: transparent;
   padding: 0.5rem 0;
   border-radius: 30px;
-  min-width: 0; /* importante para flexbox en inputs */
+  min-width: 0;
+  font-family: Text, sans-serif;
 }
 
+/* === Estilo del texto placeholder === */
 .search-input-container input::placeholder {
   color: #aaa;
   font-style: italic;
 }
 
+/* === Botón de búsqueda === */
 .search-input-container button {
   background-color: #FF7200;
   border: none;
@@ -48,8 +55,10 @@
   cursor: pointer;
   transition: background-color 0.25s ease;
   margin-left: 0.75rem;
+  font-family: Title1;
 }
 
+/* === Efecto hover/focus en el botón === */
 .search-input-container button:hover,
 .search-input-container button:focus {
   background-color: #e65c00;

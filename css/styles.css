@@ -1,0 +1,35 @@
+/* === Header fijo superior === */
+#header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Se mantiene por encima del resto */
+}
+
+/* === Contenedor del carrusel === */
+#carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* === Sección de niveles (título y carrusel) === */
+.section-niveles {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif; /* Fuente secundaria */
+}
+
+/* === Título principal de la sección === */
+.section-niveles h1 {
+  font-size: 2rem;
+  font-family: Title1, sans-serif;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #103D7C;
+}

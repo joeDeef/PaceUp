@@ -1,0 +1,31 @@
+/* === Título principal en negrita === */
+@font-face {
+  font-family: 'Title1';
+  src: url('../assets/fonts/Quicksand-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* === Subtítulo destacado o segundo título === */
+@font-face {
+  font-family: 'Title2';
+  src: url('../assets/fonts/Quicksand-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* === Subtítulo intermedio o descripción destacada === */
+@font-face {
+  font-family: 'Subtitle';
+  src: url('../assets/fonts/Quicksand-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* === Texto general del contenido === */
+@font-face {
+  font-family: 'Text';
+  src: url('../assets/fonts/Inter_24pt-Medium.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}

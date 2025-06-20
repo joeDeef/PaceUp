@@ -1,41 +1,90 @@
+/* === Estilo base de la tarjeta === */
 .card {
-  width: 250px;
-  height: 350px; /* o lo que necesites */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 220px;
+  height: 320px;
   background: white;
   border-radius: 12px;
+  border: 2px solid #ccc;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
-  text-decoration: none; /* por si se usa como <a> */
+  transition: transform 0.4s ease, border-color 0.3s ease;
+  transform-origin: center center;
+  transform: translateX(-50%) scale(0.85);
+  opacity: 1;
+  z-index: 0;
+  background-color: #ffffff;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+/* === Tarjeta activa (en foco) === */
+.card.active {
+  transform: translateX(-50%) scale(1);
+  z-index: 5;
+  border-color: black;
 }
 
+/* === Tarjetas a la izquierda === */
+.card.left {
+  transform: translateX(calc(-50% - 105%)) scale(0.9);
+  z-index: 4;
+}
+
+.card.left-2 {
+  transform: translateX(calc(-50% - 210%)) scale(0.85);
+  z-index: 3;
+}
+
+/* === Tarjetas a la derecha === */
+.card.right {
+  transform: translateX(calc(-50% + 105%)) scale(0.9);
+  z-index: 4;
+}
+
+.card.right-2 {
+  transform: translateX(calc(-50% + 210%)) scale(0.85);
+  z-index: 3;
+}
+
+/* === Título de la tarjeta === */
 .card-title {
   font-size: 1.2rem;
   margin: 0.5rem 0;
+  font-family: Title2, sans-serif;
 }
 
+/* === Imagen dentro de la tarjeta === */
 .card-image {
-  max-height: 150px;        /* o el alto máximo que deseas */
-  height: 100%;             /* que tome toda la altura disponible */
-  width: auto;              /* el ancho se ajusta automáticamente */
-  object-fit: contain;      /* evita recortes */
+  max-height: 140px;
+  width: auto;
+  object-fit: contain;
   display: block;
-  margin: 0 auto;           /* centra la imagen horizontalmente */
+  margin: 0 auto;
 }
 
-
+/* === Descripción de la tarjeta === */
 .card-description {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   margin-top: 0.75rem;
   color: #555;
+  font-family: Text;
+}
+
+/* === Contenedor con fondo para la imagen === */
+.card-image-wrapper {
+  background-color: #eee;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
 }
