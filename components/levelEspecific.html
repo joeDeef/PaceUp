@@ -1,13 +1,28 @@
 <div class="nivel-header">
   <h1>{{titulo}}</h1>
+  <p class="bienvenida">{{bienvenida}}</p>
+
   <div class="nivel-main">
-    <p>{{bienvenida}}</p>
+    <div class="descripcion-wrapper">
+      <p class="descripcion">{{descripcion}}</p>
+
+      <div class="estandar-sello" role="region" aria-label="Correspondencia con estándar internacional">
+        <!-- Aquí va tu icono personalizado, ejemplo SVG simple MCER -->
+        <svg class="icon-estandar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="24" height="24" aria-hidden="true" focusable="false">
+          <circle cx="32" cy="32" r="30" stroke="#007acc" stroke-width="3" fill="none"/>
+          <text x="32" y="37" font-size="20" text-anchor="middle" fill="#007acc" font-family="Arial, sans-serif">MCER</text>
+        </svg>
+        <p class="estandar-texto">{{estandar}}</p>
+      </div>
+    </div>
+
     <img src="{{imagen}}" alt="{{titulo}}" />
   </div>
-<section class="modos-aprendizaje">
-  <h2>Modos de aprendizaje</h2>
-  <div id="modos-dinamicos" class="tarjetas-lista"></div>
-</section>
+
+  <section class="modos-aprendizaje">
+    <h2>Modos de aprendizaje</h2>
+    <div id="modos-dinamicos" class="tarjetas-lista"></div>
+  </section>
 </div>
 
 <template id="card-template">

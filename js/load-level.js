@@ -23,8 +23,9 @@ export function cargarContenidoNivel(nivel) {
       let htmlFinal = template
         .replace(/{{titulo}}/g, contenido.titulo)
         .replace(/{{bienvenida}}/g, contenido.bienvenida)
-        .replace(/{{imagen}}/g, contenido.imagen);
-      // Nota: No se reemplaza {{modos}}, ya que el contenedor para modos queda vacío
+        .replace(/{{imagen}}/g, contenido.imagen)
+        .replace(/{{descripcion}}/g, contenido.descripcion)
+        .replace(/{{estandar}}/g, contenido.estandar || "");
 
       // Inserta el HTML generado en el contenedor del nivel
       contenedor.innerHTML = htmlFinal;
@@ -41,7 +42,7 @@ export function cargarContenidoNivel(nivel) {
           if (!modo) return; // Si no existe, salta
 
           // Crea la tarjeta usando la función createCard con los datos del modo
-          const card = createCard(
+          const { fragment } = createCard(
             {
               image: modo.imagen,
               title: modo.titulo,
@@ -53,17 +54,6 @@ export function cargarContenidoNivel(nivel) {
           );
 
           // Si la tarjeta se creó correctamente, la añade al contenedor dinámico
-          const { fragment } = createCard(
-            {
-              image: modo.imagen,
-              title: modo.titulo,
-              description: modo.descripcion,
-              imageBgColor: "#f5f5f5",
-              onClick: () => console.log(`Clic en ${modo.titulo}`),
-            },
-            cardTemplate
-          );
-
           if (fragment) lista.appendChild(fragment);
         });
       }
