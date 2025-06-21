@@ -1,0 +1,33 @@
+/* === Header fijo arriba === */
+#header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* === Sidebar fijo a la izquierda, debajo del header === */
+.sidebar {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px);
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+/* === Contenedor principal (contenido) con espacio para sidebar y header === */
+main.sidebar-layout {
+  margin-top: 60px;
+  margin-left: 250px;
+  padding: 20px;
+  min-height: calc(100vh - 60px);
+  overflow-y: auto;
+}

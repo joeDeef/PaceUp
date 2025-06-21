@@ -1,0 +1,69 @@
+/* === Sidebar fijo debajo del header === */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  z-index: 999;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* === Título dentro del sidebar === */
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+/* === Lista dentro del sidebar sin estilos de lista por defecto === */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* === Elementos li dentro del sidebar con padding y estilo flex === */
+.sidebar li {
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+/* === Estado activo para li: fondo, color y tamaño diferente === */
+.sidebar li.active {
+  background-color: #d4e0f3;
+  font-size: 1.2rem;
+  color: #0a58ca;
+  font-weight: 700;
+}
+
+/* === Imagen preview dentro del li activo === */
+.sidebar li .preview-img {
+  max-width: 70px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* === Ocultar imagen preview en li no activo === */
+.sidebar li:not(.active) .preview-img {
+  display: none;
+}

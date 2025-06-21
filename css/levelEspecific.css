@@ -1,0 +1,51 @@
+/* === Contenedor nivel-header con padding y texto centrado === */
+.nivel-header {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+/* === Estilo para el título h1 dentro de nivel-header === */
+.nivel-header h1 {
+  margin-bottom: 1rem;
+}
+
+/* === Contenedor nivel-main con layout flex, espacio y alineación === */
+.nivel-main {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+/* === Párrafos dentro de nivel-main con flex y texto justificado === */
+.nivel-main p {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin: 0;
+  text-align: justify;
+}
+
+/* === Imagen dentro de nivel-main con tamaño máximo y margen === */
+.nivel-main img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+/* === Contenedor modos-aprendizaje con margen y padding lateral === */
+.modos-aprendizaje {
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+/* === Grid responsive para tarjetas-lista, máximo 4 columnas === */
+.tarjetas-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}

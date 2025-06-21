@@ -10,12 +10,12 @@ languageBtn.addEventListener("click", () => {
   if (currentLanguage === "es") {
     currentLanguage = "en";
     languageName.textContent = "ENG";
-    languageFlag.src = "../assets/img/english.jpg";
-    languageFlag.alt = "Bandera Reino Unido";
+    languageFlag.src = "../assets/img/languages/english.jpg";
+    languageFlag.alt = "Bandera Ingles";
   } else {
     currentLanguage = "es";
     languageName.textContent = "ESP";
-    languageFlag.src = "../assets/img/spanish.png";
-    languageFlag.alt = "Bandera Ecuador";
+    languageFlag.src = "../assets/img/languages/spanish.png";
+    languageFlag.alt = "Bandera Español";
   }
 });

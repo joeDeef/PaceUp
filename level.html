@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Nivel de Inglés</title>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/level.css" />
+  <link rel="stylesheet" href="css/breadcrumb.css" />
+  <link rel="stylesheet" href="css/levelEspecific.css" />
+  <link rel="stylesheet" href="css/cardList.css" />
+</head>
+
+<body>
+  <div id="header-container"></div>
+
+  <main class="sidebar-layout">
+    <div id="sidebar-container"></div>
+    <div id="breadcrumb-container"></div>
+
+    <section id="nivel-content"></section>
+  </main>
+
+  <script src="js/load-header.js"></script>
+
+  <script type="module">
+    import { setupSidebar } from './js/load-sidebar.js';
+    import { cargarContenidoNivel } from './js/load-level.js';
+    import { renderBreadcrumb } from './js/load-breadcrumb.js';
+
+    function actualizarVista(nivel) {
+      nivel = nivel || new URLSearchParams(location.search).get('nivel');
+
+      // Actualizar URL sin crear historial duplicado
+      if (nivel !== new URLSearchParams(location.search).get('nivel')) {
+        history.pushState({}, '', `level.html?nivel=${nivel}`);
+      }
+
+      // Actualizar sidebar con callback para clicks
+      setupSidebar(nivel, actualizarVista);
+
+      // Cargar contenido dinámico
+      cargarContenidoNivel(nivel);
+
+      // Renderizar breadcrumb usando tu función que carga componente HTML
+      renderBreadcrumb([
+        { label: 'Inicio', href: 'home.html' },
+        { label: `${nivel}` }
+      ]);
+    }
+
+    // Cargar sidebar y vista inicial
+    fetch('./components/sidebar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('sidebar-container').innerHTML = html;
+        actualizarVista();
+      });
+
+    // Manejar navegación con botones atrás/adelante
+    window.addEventListener('popstate', () => {
+      const nivel = new URLSearchParams(location.search).get('nivel') || 'Basico1';
+      actualizarVista(nivel);
+    });
+  </script>
+</body>
+
+</html>

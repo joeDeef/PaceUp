@@ -14,6 +14,16 @@
   background-color: #103D7C;
 }
 
+/* === Enlace que envuelve logo y texto para hacer clic === */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* === Logo y texto del header === */
 .logo {
   display: flex;
@@ -21,8 +31,12 @@
   gap: 0.5rem;
   font-weight: bold;
   font-size: 1.75rem;
-  color: #ffffff;
   font-family: Title1, sans-serif;
+}
+
+/* === Color blanco para texto dentro de logo-link === */
+.logo-link .logo span {
+  color: #ffffff;
 }
 
 /* === Imagen del logo === */

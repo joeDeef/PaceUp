@@ -6,7 +6,7 @@ fetch('components/header.html')
 
     // Después de cargar el header, añade el script para el cambio de idioma
     const script = document.createElement('script');
-    script.src = 'js/language.js';
+    script.src = 'js/select-language.js';
     document.body.appendChild(script);
   })
   .catch(err => {

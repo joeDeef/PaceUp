@@ -1,73 +1,77 @@
-import { createCard } from "./createCards.js";
+import { createCard } from "./create-card.js";
+import { cardsData } from "../data/levels.js";
 
 // Carga las plantillas HTML para tarjetas y carrusel
 async function loadTemplates() {
+  // Carga en paralelo las plantillas card.html y carousel.html
   const [cardHTML, carouselHTML] = await Promise.all([
     fetch("./components/card.html").then((res) => res.text()),
     fetch("./components/carousel.html").then((res) => res.text()),
   ]);
 
+  // Inserta las plantillas en el body para poder usarlas luego
   document.body.insertAdjacentHTML("beforeend", cardHTML);
   document.body.insertAdjacentHTML("beforeend", carouselHTML);
 }
 
 // Inicializa el carrusel y sus eventos
 async function initCarousel() {
+  // Espera a que las plantillas se carguen e inserten en el DOM
   await loadTemplates();
 
+  // Obtiene la plantilla de tarjeta y el contenedor del carrusel
   const cardTemplate = document.getElementById("card-template");
   const wrapper = document.getElementById("carousel-wrapper");
+
+  // Clona la plantilla del carrusel y la añade al wrapper
   const carouselTemplate = document.getElementById("carousel-template");
   const carouselNode = carouselTemplate.content.cloneNode(true);
   wrapper.appendChild(carouselNode);
 
+  // Obtiene elementos clave del carrusel y los botones de navegación
   const carousel = document.getElementById("carousel");
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
 
-  const cardsData = [
-    // Datos con imagen, título, descripción y color de fondo para cada tarjeta
-    { image: "../assets/img/levels/A1.png", title: "Básico 1 (A1)", description: "Vocabulario y frases básicas.", imageBgColor: "#E6FFEB" },
-    { image: "../assets/img/levels/A2.png", title: "Básico 2 (A2)", description: "Expresiones simples comunes.", imageBgColor: "#CFFFE0" },
-    { image: "../assets/img/levels/B1.png", title: "Intermedio 1 (B1)", description: "Estructuras más complejas.", imageBgColor: "#CCE5FF" },
-    { image: "../assets/img/levels/B2.png", title: "Intermedio 2 (B2)", description: "Conversación fluida y técnica.", imageBgColor: "#A0C4FF" },
-    { image: "../assets/img/levels/C1.png", title: "Avanzado 1 (C1)", description: "Expresión con matices.", imageBgColor: "#E6CCFF" },
-    { image: "../assets/img/levels/C2.png", title: "Avanzado 2 (C2)", description: "Inglés como un nativo.", imageBgColor: "#D1A3FF" },
-  ];
-
   const cardElements = [];
 
-  // Crea las tarjetas y las añade al carrusel, asignando evento click para cambiar la activa
+  // Por cada dato en cardsData crea una tarjeta, le asigna evento click y la añade al carrusel
   cardsData.forEach((data, index) => {
-    const card = createCard(
+    const { fragment, cardElement } = createCard(
       {
         ...data,
-        onClick: () => setActiveCard(index),
+        onClick: () => {
+          if (cardElement.classList.contains("active")) {
+            window.location.href = `level.html?nivel=${data.nivelId}`;
+          } else {
+            setActiveCard(index);
+          }
+        },
       },
       cardTemplate
     );
-    const el = card.querySelector(".card");
-    cardElements.push(el);
-    carousel.appendChild(card);
+
+    cardElements.push(cardElement);
+    carousel.appendChild(fragment); // Inserta el fragmento completo
   });
 
   let currentIndex = 0;
 
-  // Módulo para índice circular (permite loop continuo)
+  // Función para módulo que soporta números negativos (índice circular)
   function mod(n, m) {
     return ((n % m) + m) % m;
   }
 
-  // Actualiza las clases CSS para posicionar las tarjetas según la activa
+  // Actualiza las clases CSS para las tarjetas según la activa y su posición relativa
   function updateCarousel() {
     const len = cardElements.length;
 
     cardElements.forEach((card, index) => {
-      card.className = "card"; // resetear clases
+      card.className = "card"; // Resetea las clases para limpiar estados previos
 
       const diff = mod(index - currentIndex, len);
 
-      // Asigna posición relativa a la tarjeta según distancia a la activa
+      // Asigna clases de posición según la distancia a la tarjeta activa
       if (diff === 0) {
         card.classList.add("active");
       } else if (diff === 1) {
@@ -82,23 +86,26 @@ async function initCarousel() {
     });
   }
 
-  // Cambia la tarjeta activa y actualiza la vista
+  // Cambia la tarjeta activa al índice dado y actualiza la vista
   function setActiveCard(index) {
     const len = cardElements.length;
     currentIndex = mod(index, len);
     updateCarousel();
   }
 
-  // Eventos para botones y teclado
+  // Eventos para navegar entre tarjetas con botones
   prevBtn.addEventListener("click", () => setActiveCard(currentIndex - 1));
   nextBtn.addEventListener("click", () => setActiveCard(currentIndex + 1));
 
+  // Eventos para navegar entre tarjetas con teclas izquierda/derecha
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") prevBtn.click();
     if (e.key === "ArrowRight") nextBtn.click();
   });
 
+  // Inicializa la vista del carrusel actualizando clases
   updateCarousel();
 }
 
+// Llama a la función para inicializar todo
 initCarousel();
