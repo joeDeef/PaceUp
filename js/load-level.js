@@ -4,7 +4,7 @@ import { catalogModes } from "../data/modes.js";
 import { actualizarVista } from "./level-main.js";
 
 // Función para cargar el contenido de un nivel específico
-export function cargarContenidoNivel(nivel, modoSeleccionado = null) {
+export function cargarContenidoNivel(nivel, modoSeleccionado = null, id = null) {
   const contenido = levelContent[nivel];
   const contenedor = document.getElementById("nivel-content");
 
@@ -17,13 +17,13 @@ export function cargarContenidoNivel(nivel, modoSeleccionado = null) {
   if (modoSeleccionado) {
     switch (modoSeleccionado) {
       case "canciones":
-        import("./load-songs.js").then((m) => m.cargarCanciones());
+        import("./load-songs.js").then((m) => m.cargarCanciones(nivel));
         break;
       case "videos":
-        import("./cargarVideos.js").then((m) => m.cargarVideosComponent());
+        import("./load-songs.js").then((m) => m.cargarCanciones(id));
         break;
       case "gramatica":
-        import("./cargarGramatica.js").then((m) => m.cargarGramaticaComponent());
+        import("./cargarGramatica.js").then((m) => m.cargarGramaticaComponent(nivel));
         break;
       default:
         contenedor.innerHTML = `<p>Modo "${modoSeleccionado}" aún no implementado.</p>`;
@@ -60,12 +60,6 @@ export function cargarContenidoNivel(nivel, modoSeleccionado = null) {
               description: modo.descripcion,
               imageBgColor: "#f5f5f5",
               onClick: () => {
-                // ✅ Actualiza la URL con el modo sin recargar
-                const nuevaURL = `level.html?nivel=${nivel}&modo=${keyModo}`;
-                history.pushState({}, '', nuevaURL);
-
-                // ✅ Vuelve a llamar actualizarVista con el nuevo modo
-                console.log(`Cambiando a modo: ${keyModo}`);
                 actualizarVista(nivel, keyModo);
               },
             },

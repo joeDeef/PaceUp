@@ -1,70 +1,82 @@
-// data/canciones.js
-
 export const canciones = [
   {
-    title: 'Shape of You',
-    description: 'Ed Sheeran - Shape of You',
-    image: 'https://img.youtube.com/vi/JGwWNGJdvx8/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=JGwWNGJdvx8'
+    id: "1",
+    title: "Shape of You - Ed Sheeran",
+    link: "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+    embed_link: "https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=0&mute=1",
+    popularityRank: 98,
+    description: "Shape of You by Ed Sheeran",
   },
   {
-    title: 'Blinding Lights',
-    description: 'The Weeknd - Blinding Lights',
-    image: 'https://img.youtube.com/vi/4NRXx6U8ABQ/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=4NRXx6U8ABQ'
+    id: "2",
+    title: "Blinding Lights - The Weeknd",
+    link: "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
+    embed_link: "https://www.youtube.com/embed/4NRXx6U8ABQ?autoplay=0&mute=1",
+    popularityRank: 95,
+    description: "Blinding Lights by The Weeknd",
   },
   {
-    title: 'Happier',
-    description: 'Marshmello ft. Bastille - Happier',
-    image: 'https://img.youtube.com/vi/m7Bc3pLyij0/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=m7Bc3pLyij0'
+    id: "3",
+    title: "Someone You Loved - Lewis Capaldi",
+    link: "https://www.youtube.com/watch?v=bCuhuePlP8o",
+    embed_link: "https://www.youtube.com/embed/bCuhuePlP8o?autoplay=0&mute=1",
+    popularityRank: 93,
+    description: "Someone You Loved by Lewis Capaldi",
   },
   {
-    title: 'Perfect',
-    description: 'Ed Sheeran - Perfect',
-    image: 'https://img.youtube.com/vi/2Vv-BfVoq4g/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=2Vv-BfVoq4g'
+    id: "4",
+    title: "Dance Monkey - Tones and I",
+    link: "https://www.youtube.com/watch?v=q0hyYWKXF0Q",
+    embed_link: "https://www.youtube.com/embed/q0hyYWKXF0Q?autoplay=0&mute=1",
+    popularityRank: 90,
+    description: "Dance Monkey by Tones and I",
   },
   {
-    title: 'Senorita',
-    description: 'Shawn Mendes, Camila Cabello - Señorita',
-    image: 'https://img.youtube.com/vi/Pkh8UtuejGw/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=Pkh8UtuejGw'
+    id: "5",
+    title: "Senorita - Shawn Mendes & Camila Cabello",
+    link: "https://www.youtube.com/watch?v=Pkh8UtuejGw",
+    embed_link: "https://www.youtube.com/embed/Pkh8UtuejGw?autoplay=0&mute=1",
+    popularityRank: 88,
+    description: "Senorita by Shawn Mendes & Camila Cabello",
   },
   {
-    title: 'Counting Stars',
-    description: 'OneRepublic - Counting Stars',
-    image: 'https://img.youtube.com/vi/hT_nvWreIhg/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=hT_nvWreIhg'
+    id: "6",
+    title: "Perfect - Ed Sheeran",
+    link: "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
+    embed_link: "https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=0&mute=1",
+    popularityRank: 87,
+    description: "Perfect by Ed Sheeran",
   },
   {
-    title: 'Let Her Go',
-    description: 'Passenger - Let Her Go',
-    image: 'https://img.youtube.com/vi/RBumgq5yVrA/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=RBumgq5yVrA'
+    id: "7",
+    title: "Memories - Maroon 5",
+    link: "https://www.youtube.com/watch?v=SlPhMPnQ58k",
+    embed_link: "https://www.youtube.com/embed/SlPhMPnQ58k?autoplay=0&mute=1",
+    popularityRank: 85,
+    description: "Memories by Maroon 5",
   },
   {
-    title: 'Girls Like You',
-    description: 'Maroon 5 ft. Cardi B - Girls Like You',
-    image: 'https://img.youtube.com/vi/aJOTlE1K90k/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=aJOTlE1K90k'
+    id: "8",
+    title: "Levitating - Dua Lipa",
+    link: "https://www.youtube.com/watch?v=TUVcZfQe-Kw",
+    embed_link: "https://www.youtube.com/embed/TUVcZfQe-Kw?autoplay=0&mute=1",
+    popularityRank: 83,
+    description: "Levitating by Dua Lipa",
   },
   {
-    title: 'Someone You Loved',
-    description: 'Lewis Capaldi - Someone You Loved',
-    image: 'https://img.youtube.com/vi/bCuhuePlP8o/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=bCuhuePlP8o'
+    id: "9",
+    title: "Stay - The Kid LAROI & Justin Bieber",
+    link: "https://www.youtube.com/watch?v=kTJczUoc26U",
+    embed_link: "https://www.youtube.com/embed/kTJczUoc26U?autoplay=0&mute=1",
+    popularityRank: 80,
+    description: "Stay by The Kid LAROI & Justin Bieber",
   },
   {
-    title: 'Stay',
-    description: 'The Kid LAROI, Justin Bieber - Stay',
-    image: 'https://img.youtube.com/vi/kTJczUoc26U/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=kTJczUoc26U'
+    id: "10",
+    title: "Bad Guy - Billie Eilish",
+    link: "https://www.youtube.com/watch?v=DyDfgMOUjCI",
+    embed_link: "https://www.youtube.com/embed/DyDfgMOUjCI?autoplay=0&mute=1",
+    popularityRank: 78,
+    description: "Bad Guy by Billie Eilish",
   },
-  {
-    title: 'Cheap Thrills',
-    description: 'Sia - Cheap Thrills',
-    image: 'https://img.youtube.com/vi/nYh-n7EOtMA/mqdefault.jpg',
-    link: 'https://www.youtube.com/watch?v=nYh-n7EOtMA'
-  }
 ];
