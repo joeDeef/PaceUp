@@ -81,5 +81,25 @@
   font-size: 18px;
   text-align: center;
   color: #cccccc;
+  min-height: 72px; /* para que no salte al cambiar líneas */
 }
 
+#linea-actual {
+  color: #bbb; /* gris claro para palabras no cantadas */
+  font-weight: bold;
+  margin: 0;
+}
+
+#linea-actual span.cantada {
+  color: #fff; /* blanco para palabras ya cantadas */
+}
+
+#linea-actual span.cantandose {
+  color: #ffec8b; /* amarillo suave para palabra cantándose */
+}
+
+#linea-siguiente {
+  color: #777; /* gris medio para la siguiente línea */
+  font-style: italic;
+  margin: 0;
+}

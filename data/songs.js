@@ -6,6 +6,7 @@ export const canciones = [
     embed_link: "https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=0&mute=1",
     popularityRank: 98,
     description: "Shape of You by Ed Sheeran",
+    lyrics_file: "ShapeOfYou-EdSheeran.json"
   },
   {
     id: "2",
