@@ -1,0 +1,37 @@
+<!-- Componente de Canciones -->
+<section class="canciones-section">
+
+  <!-- Contenedor para la barra de búsqueda -->
+  <div id="search-bar-container"></div>
+
+  <!-- Canciones más populares -->
+  <h2 class="titulo-populares">Canciones más populares</h2>
+  <div class="carrusel-populares">
+    <button class="carrusel-btn prev" aria-label="Anterior">‹</button>
+    <div class="carrusel-inner" id="carrusel-populares">
+      <!-- Aquí se insertan dinámicamente las 5 canciones más buscadas -->
+    </div>
+    <button class="carrusel-btn next" aria-label="Siguiente">›</button>
+  </div>
+
+  <!-- Lista general de canciones -->
+  <h2 class="titulo-lista">Lista de canciones</h2>
+  <div class="tarjetas-lista" id="lista-canciones">
+    <!-- Aquí se insertan el resto de las tarjetas -->
+  </div>
+
+</section>
+
+<!-- Template para tarjetas con botón play -->
+<template id="card-template">
+  <div class="card">
+    <h3 class="card-title">Título</h3>
+    <div class="card-image-wrapper">
+      <img class="card-image" src="" alt="Imagen" />
+      <button class="btn-play" aria-label="Reproducir canción">
+        ▶
+      </button>
+    </div>
+    <p class="card-description">Descripción breve</p>
+  </div>
+</template>

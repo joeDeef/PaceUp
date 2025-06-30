@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="css/breadcrumb.css" />
   <link rel="stylesheet" href="css/levelEspecific.css" />
   <link rel="stylesheet" href="css/cardList.css" />
+  <link rel="stylesheet" href="css/songs.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/song-game.css" />
 </head>
 
 <body>
@@ -23,47 +26,7 @@
   </main>
 
   <script src="js/load-header.js"></script>
-
-  <script type="module">
-    import { setupSidebar } from './js/load-sidebar.js';
-    import { cargarContenidoNivel } from './js/load-level.js';
-    import { renderBreadcrumb } from './js/load-breadcrumb.js';
-
-    function actualizarVista(nivel) {
-      nivel = nivel || new URLSearchParams(location.search).get('nivel');
-
-      // Actualizar URL sin crear historial duplicado
-      if (nivel !== new URLSearchParams(location.search).get('nivel')) {
-        history.pushState({}, '', `level.html?nivel=${nivel}`);
-      }
-
-      // Actualizar sidebar con callback para clicks
-      setupSidebar(nivel, actualizarVista);
-
-      // Cargar contenido dinámico
-      cargarContenidoNivel(nivel);
-
-      // Renderizar breadcrumb usando tu función que carga componente HTML
-      renderBreadcrumb([
-        { label: 'Inicio', href: 'home.html' },
-        { label: `${nivel}` }
-      ]);
-    }
-
-    // Cargar sidebar y vista inicial
-    fetch('./components/sidebar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sidebar-container').innerHTML = html;
-        actualizarVista();
-      });
-
-    // Manejar navegación con botones atrás/adelante
-    window.addEventListener('popstate', () => {
-      const nivel = new URLSearchParams(location.search).get('nivel') || 'Basico1';
-      actualizarVista(nivel);
-    });
-  </script>
+  <script type="module" src="js/level-main.js"></script>
 </body>
 
 </html>
