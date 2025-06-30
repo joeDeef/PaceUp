@@ -4,6 +4,16 @@ let player;
 let letraSincronizada = [];
 let letraIndex = -1;
 
+let palabraObjetivo = null;
+let opcionesVisibles = false;
+let haRespondido = true;
+let intentosRestantes = 3;
+let idxPalabraOculta = -1;
+let volumenOriginal = 100;
+let pausaForzada = false; // Pausa para esperar respuesta
+let bajandoVolumen = false;
+let esperandoContinuar = false; // Flag para controlar retroceso y reanudación
+
 export async function cargarVideo(nivelActual, id) {
   const contenedor = document.getElementById("nivel-content");
   contenedor.innerHTML = "";
@@ -25,7 +35,6 @@ export async function cargarVideo(nivelActual, id) {
   const videoContainer = document.getElementById("video-container");
   videoContainer.innerHTML = `<div id="youtube-wrapper"></div>`;
 
-  // Cargar letra sincronizada desde archivo JSON
   if (cancion.lyrics_file) {
     await cargarLetra(cancion.lyrics_file);
   }
@@ -53,6 +62,7 @@ function crearPlayer(cancion) {
       rel: 0,
       fs: 0,
       enablejsapi: 1,
+      volume: 100,
     },
     events: {
       onReady: onPlayerReady,
@@ -77,13 +87,15 @@ function onPlayerReady() {
 
   btnFwd.onclick = () => {
     player.seekTo(player.getCurrentTime() + 5, true);
+    resetearEstadoLinea();
   };
 
   btnBack.onclick = () => {
     player.seekTo(Math.max(0, player.getCurrentTime() - 5), true);
+    resetearEstadoLinea();
   };
 
-  // Iniciar sincronización de letra
+  // Iniciar sincronización letra
   requestAnimationFrame(actualizarLetra);
 }
 
@@ -95,6 +107,8 @@ function onPlayerStateChange(e) {
     requestAnimationFrame(actualizarLetra);
   } else {
     btn.textContent = "▶️ Play";
+    // Seguimos actualizando letra para mantener sincronía incluso pausado
+    requestAnimationFrame(actualizarLetra);
   }
 }
 
@@ -103,75 +117,247 @@ function extraerVideoId(url) {
   return match ? match[1] : "";
 }
 
-// 🔽 Cargar letra sincronizada desde archivo JSON
 async function cargarLetra(nombreArchivo) {
   try {
     const res = await fetch(`../data/lyrics/${nombreArchivo}`);
     if (!res.ok) throw new Error("Letra no encontrada");
     letraSincronizada = await res.json();
-    console.log("Letra cargada:", letraSincronizada); // <-- Aquí
     letraIndex = -1;
   } catch (err) {
     console.error("Error cargando letra:", err);
   }
 }
 
-// 🔽 Mostrar línea actual y siguiente según tiempo
 function actualizarLetra() {
   if (!player || typeof player.getCurrentTime !== "function") return;
 
   const tiempoActual = player.getCurrentTime();
 
+  // Si estamos pausados forzadamente esperando respuesta, no avanzar índice ni mostrar nueva línea
+  if (pausaForzada) {
+    // Mostrar línea con hueco
+    if (letraIndex >= 0 && letraIndex < letraSincronizada.length) {
+      const actualEl = document.getElementById("linea-actual");
+      const lineaActualObj = letraSincronizada[letraIndex];
+      if (actualEl && palabraObjetivo) {
+        renderizarLineaConHueco(lineaActualObj, idxPalabraOculta, haRespondido);
+      }
+    }
+    requestAnimationFrame(actualizarLetra);
+    return;
+  }
+
+  // Si estamos en proceso de retroceso para continuar (esperandoContinuar)
+  if (esperandoContinuar) {
+    // Si el tiempo actual es menor al tiempo de la línea actual menos 3 seg, ya retrocedimos suficiente
+    const tiempoLinea = letraSincronizada[letraIndex]?.time ?? 0;
+    if (tiempoActual <= tiempoLinea) {
+      player.playVideo();
+      esperandoContinuar = false;
+      // Resetear para la nueva línea
+      resetearEstadoLinea();
+    }
+    requestAnimationFrame(actualizarLetra);
+    return;
+  }
+
   if (letraSincronizada.length > 0) {
+    // Encontrar la línea actual según tiempo (la línea más cercana sin pasarse)
     let i;
     for (i = letraSincronizada.length - 1; i >= 0; i--) {
       if (tiempoActual >= letraSincronizada[i].time) break;
     }
+    if (i < 0) i = 0;
 
+    // Si cambiamos de línea, resetear estado
     if (i !== letraIndex) {
       letraIndex = i;
+      resetearEstadoLinea();
     }
 
-    // --- Crear el contenido HTML con karaoke para la línea actual ---
-    const lineaActualObj = letraSincronizada[i];
-    const lineaSiguienteObj = letraSincronizada[i + 1];
+    const lineaActualObj = letraSincronizada[letraIndex];
+    const lineaSiguienteObj = letraSincronizada[letraIndex + 1];
 
     const actualEl = document.getElementById("linea-actual");
     const siguienteEl = document.getElementById("linea-siguiente");
 
     if (lineaActualObj && actualEl) {
-      const palabrasHTML = lineaActualObj.words
-        .map((word) => {
-          if (tiempoActual >= word.end) {
-            // Palabra ya cantada - blanca
-            return `<span class="cantada">${word.text}</span>`;
-          } else if (tiempoActual >= word.start && tiempoActual < word.end) {
-            // Palabra cantándose ahora - resaltada
-            return `<span class="cantandose">${word.text}</span>`;
-          } else {
-            // Palabra aún no cantada - gris claro (color base de #linea-actual)
-            return `<span>${word.text}</span>`;
-          }
-        })
-        .join(" ");
+      if (!opcionesVisibles && tiempoActual >= lineaActualObj.time) {
+        generarOpciones(lineaActualObj);
+        opcionesVisibles = true;
+      }
 
-      actualEl.innerHTML = palabrasHTML;
-    } else if (actualEl) {
-      actualEl.innerHTML = "";
+      if (opcionesVisibles && palabraObjetivo) {
+        renderizarLineaConHueco(lineaActualObj, idxPalabraOculta, haRespondido);
+      } else {
+        actualEl.innerHTML = lineaActualObj.words.map(w => `<span>${w.text}</span>`).join(" ");
+      }
+    }
+
+    // Pausar justo al final de la línea para responder, si no ha respondido todavía
+    if (
+      palabraObjetivo &&
+      !haRespondido &&
+      tiempoActual >= obtenerFinLinea(lineaActualObj) &&
+      !pausaForzada &&
+      !bajandoVolumen
+    ) {
+      pausaForzada = true;
+      bajarVolumenYPausar();
     }
 
     if (lineaSiguienteObj && siguienteEl) {
-      // Solo mostrar texto plano para la siguiente línea
-      const textoSiguiente = lineaSiguienteObj.words
-        .map((w) => w.text)
-        .join(" ");
+      const textoSiguiente = lineaSiguienteObj.words.map((w) => w.text).join(" ");
       siguienteEl.textContent = textoSiguiente;
     } else if (siguienteEl) {
       siguienteEl.textContent = "";
     }
+  } else {
+    // Si no hay letra, limpiar
+    const actualEl = document.getElementById("linea-actual");
+    const siguienteEl = document.getElementById("linea-siguiente");
+    if (actualEl) actualEl.textContent = "";
+    if (siguienteEl) siguienteEl.textContent = "";
   }
 
-  if (player.getPlayerState() === YT.PlayerState.PLAYING) {
-    requestAnimationFrame(actualizarLetra);
+  requestAnimationFrame(actualizarLetra);
+}
+
+function obtenerFinLinea(linea) {
+  if (!linea || !linea.words || linea.words.length === 0) return 0;
+  return linea.words[linea.words.length - 1].end;
+}
+
+async function bajarVolumenYPausar() {
+  if (bajandoVolumen) return;
+  bajandoVolumen = true;
+  let volumen = player.getVolume();
+  volumenOriginal = volumen;
+
+  while (volumen > 0) {
+    volumen -= 5;
+    if (volumen < 0) volumen = 0;
+    player.setVolume(volumen);
+    await new Promise(r => setTimeout(r, 50));
   }
+
+  player.pauseVideo();
+  bajandoVolumen = false;
+}
+
+function subirVolumen() {
+  let volumen = 0;
+  player.setVolume(0);
+  const interval = setInterval(() => {
+    volumen += 5;
+    if (volumen >= volumenOriginal) {
+      player.setVolume(volumenOriginal);
+      clearInterval(interval);
+    } else {
+      player.setVolume(volumen);
+    }
+  }, 50);
+}
+
+function generarOpciones(linea) {
+  const gameOptions = document.getElementById("game-options");
+  gameOptions.innerHTML = "";
+
+  if (!linea.words || linea.words.length === 0) return;
+
+  idxPalabraOculta = Math.floor(Math.random() * linea.words.length);
+  palabraObjetivo = linea.words[idxPalabraOculta];
+  intentosRestantes = 3;
+  haRespondido = false;
+
+  renderizarLineaConHueco(linea, idxPalabraOculta);
+
+  const distractores = obtenerDistractores(palabraObjetivo.text, 3);
+  const opciones = [palabraObjetivo.text, ...distractores].sort(() => Math.random() - 0.5);
+
+  opciones.forEach((opcion) => {
+    const btn = document.createElement("button");
+    btn.textContent = opcion;
+    btn.className = "opcion-btn";
+    btn.onclick = () => verificarRespuesta(opcion, linea);
+    gameOptions.appendChild(btn);
+  });
+}
+
+function renderizarLineaConHueco(linea, huecoIdx, mostrarCorrecta = false) {
+  const actualEl = document.getElementById("linea-actual");
+
+  const palabrasHTML = linea.words
+    .map((word, i) => {
+      if (i === huecoIdx) {
+        if (mostrarCorrecta) {
+          return `<span class="cantada">${word.text}</span>`;
+        } else {
+          return `<span class="hueco">_____</span>`;
+        }
+      }
+      return `<span>${word.text}</span>`;
+    })
+    .join(" ");
+  actualEl.innerHTML = palabrasHTML;
+}
+
+function verificarRespuesta(opcionSeleccionada, linea) {
+  const esCorrecta = opcionSeleccionada === palabraObjetivo.text;
+
+  const botones = document.querySelectorAll(".opcion-btn");
+  botones.forEach((btn) => (btn.disabled = true));
+
+  if (esCorrecta) {
+    haRespondido = true;
+    pausaForzada = false;
+    renderizarLineaConHueco(linea, idxPalabraOculta, true);
+    alert("✅ ¡Correcto!");
+    // Subir volumen y retroceder 3 segundos antes de seguir
+    subirVolumen();
+    retrocederYContinuar();
+  } else {
+    intentosRestantes--;
+    if (intentosRestantes > 0) {
+      alert(`❌ Incorrecto. Te quedan ${intentosRestantes} intento(s).`);
+      // Permitir reintentar habilitando botones otra vez
+      botones.forEach((btn) => (btn.disabled = false));
+    } else {
+      haRespondido = true;
+      pausaForzada = false;
+      renderizarLineaConHueco(linea, idxPalabraOculta, true);
+      alert(`❌ Incorrecto. La respuesta correcta era: \"${palabraObjetivo.text}\".`);
+      subirVolumen();
+      retrocederYContinuar();
+    }
+  }
+}
+
+function retrocederYContinuar() {
+  // Retroceder 3 segundos y mantener el flag para continuar cuando llegue el tiempo
+  esperandoContinuar = true;
+  const tiempoARetroceder = Math.max(0, player.getCurrentTime() - 3);
+  player.seekTo(tiempoARetroceder, true);
+  // Nota: la reanudación se hará en actualizarLetra
+}
+
+function obtenerDistractores(correcta, cantidad) {
+  const pool = [
+    "love", "the", "you", "is", "go", "home", "find", "a",
+    "club", "night", "best", "me", "we", "music"
+  ];
+  const sinRepetir = pool.filter((w) => w.toLowerCase() !== correcta.toLowerCase());
+  return sinRepetir.sort(() => Math.random() - 0.5).slice(0, cantidad);
+}
+
+function resetearEstadoLinea() {
+  pausaForzada = false;
+  haRespondido = true;
+  opcionesVisibles = false;
+  palabraObjetivo = null;
+  intentosRestantes = 3;
+  idxPalabraOculta = -1;
+  esperandoContinuar = false;
+  const gameOptions = document.getElementById("game-options");
+  if (gameOptions) gameOptions.innerHTML = "";
 }
