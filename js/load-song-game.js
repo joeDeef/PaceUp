@@ -2,8 +2,10 @@ import { canciones } from "../data/songs.js";
 
 let youtubePlayer;
 let syncedLyrics = [];
-let currentLineIndex = -1;
+let currentPairIndex = 0;
 let animationRunning = false;
+let fadeInterval;
+let isFading = false;
 
 export async function cargarVideo(levelId, videoId) {
   const container = document.getElementById("nivel-content");
@@ -50,46 +52,39 @@ function createPlayer(song) {
 }
 
 function handlePlayerReady(song) {
-  const btnPlay = document.getElementById("playpause-btn");
-  const btnFwd = document.getElementById("adelantar-btn");
-  const btnBack = document.getElementById("retroceder-btn");
-
-  btnPlay.onclick = () => {
+  document.getElementById("playpause-btn").onclick = () => {
     const state = youtubePlayer.getPlayerState();
     if (state === YT.PlayerState.PLAYING) {
       youtubePlayer.pauseVideo();
     } else {
-      youtubePlayer.playVideo();
-      resetLinePauseFlags();
       startLyricsAnimation();
+      youtubePlayer.playVideo();
+      restoreVolume();
     }
   };
 
-  btnFwd.onclick = () => {
+  document.getElementById("adelantar-btn").onclick = () => {
     const newTime = youtubePlayer.getCurrentTime() + 5;
     youtubePlayer.seekTo(newTime, true);
-    currentLineIndex = -1;
-    resetLinePauseFlags();
-    startLyricsAnimation();
+    resetState();
   };
 
-  btnBack.onclick = () => {
+  document.getElementById("retroceder-btn").onclick = () => {
     const newTime = Math.max(0, youtubePlayer.getCurrentTime() - 5);
     youtubePlayer.seekTo(newTime, true);
-    currentLineIndex = -1;
-    resetLinePauseFlags();
-    startLyricsAnimation();
+    resetState();
   };
 
-  resetLinePauseFlags();
-  startLyricsAnimation();
+  resetState();
 }
 
 function handlePlayerStateChange(event) {
-  const btn = document.getElementById("playpause-btn");
-  btn.textContent = event.data === YT.PlayerState.PLAYING ? "⏸️ Pause" : "▶️ Play";
-  if (event.data === YT.PlayerState.PLAYING) startLyricsAnimation();
-  else stopLyricsAnimation();
+  document.getElementById("playpause-btn").textContent = event.data === YT.PlayerState.PLAYING ? "⏸️ Pause" : "▶️ Play";
+  if (event.data === YT.PlayerState.PLAYING) {
+    startLyricsAnimation();
+  } else {
+    stopLyricsAnimation();
+  }
 }
 
 function extractVideoId(url) {
@@ -100,7 +95,7 @@ function extractVideoId(url) {
 async function loadLyrics(fileName) {
   const res = await fetch(`../data/lyrics/${fileName}`);
   syncedLyrics = await res.json();
-  currentLineIndex = -1;
+  currentPairIndex = 0;
 }
 
 function startLyricsAnimation() {
@@ -114,57 +109,97 @@ function stopLyricsAnimation() {
   animationRunning = false;
 }
 
-function resetLinePauseFlags() {
+function resetState() {
+  currentPairIndex = 0;
+  stopLyricsAnimation();
   syncedLyrics.forEach(line => delete line.paused);
+  renderCurrentLyrics(0);
 }
 
 function updateLyrics() {
   if (!youtubePlayer || typeof youtubePlayer.getCurrentTime !== "function" || !animationRunning) return;
 
   const currentTime = youtubePlayer.getCurrentTime();
+  const line1 = syncedLyrics[currentPairIndex];
+  const line2 = syncedLyrics[currentPairIndex + 1];
+  if (!line1 || !line2) return;
 
-  if (syncedLyrics.length > 0) {
-    let i = syncedLyrics.length - 1;
-    while (i >= 0 && currentTime < syncedLyrics[i].time) i--;
-    if (i < 0) i = 0;
+  renderCurrentLyrics(currentTime);
 
-    if (i !== currentLineIndex) {
-      currentLineIndex = i;
-    }
+  const lastWord = line2.words[line2.words.length - 1];
+  const pauseTime = lastWord.end + 1;
 
-    const currentLineObj = syncedLyrics[currentLineIndex];
-    const lastWord = currentLineObj.words[currentLineObj.words.length - 1];
-    const pauseThreshold = lastWord.end-0.01;
-
-    if (currentTime < currentLineObj.time) {
-      document.getElementById("linea-actual").textContent = "......";
-    } else {
-      renderLineKaraoke(currentLineObj, currentTime);
-    }
-
-    // Solo si no se ha pausado aún esta línea
-    if (!currentLineObj.paused && currentTime >= pauseThreshold && currentTime < lastWord.end) {
-      const playerState = youtubePlayer.getPlayerState();
-      if (playerState === YT.PlayerState.PLAYING) {
-        youtubePlayer.pauseVideo();
-        currentLineObj.paused = true;
-        stopLyricsAnimation();
-        return; // No pedir otro frame hasta que vuelva a dar play
-      }
-    }
+  if (!line2.paused && currentTime >= lastWord.end && currentTime < pauseTime) {
+    fadeOutVolume(1000);
   }
 
-  requestAnimationFrame(updateLyrics);
+  if (!line2.paused && currentTime >= pauseTime) {
+    youtubePlayer.pauseVideo();
+    stopLyricsAnimation();
+    line2.paused = true;
+    currentPairIndex += 2;
+  }
+
+  if (animationRunning) {
+    requestAnimationFrame(updateLyrics);
+  }
 }
 
-function renderLineKaraoke(line, currentTime) {
-  const currentEl = document.getElementById("linea-actual");
-  if (!currentEl) return;
+function renderCurrentLyrics(currentTime) {
+  const line1 = syncedLyrics[currentPairIndex];
+  const line2 = syncedLyrics[currentPairIndex + 1];
 
-  const html = line.words.map(word => {
-    const cssClass = currentTime >= word.start ? "cantada" : "";
+  renderLine(document.getElementById("linea-actual"), line1, currentTime);
+  renderLine(document.getElementById("linea-siguiente"), line2, currentTime);
+}
+
+function renderLine(container, line, currentTime) {
+  if (!container || !line) return;
+  if (currentTime < line.time) {
+    container.textContent = "......";
+    return;
+  }
+  container.innerHTML = line.words.map(word => {
+    let cssClass = "";
+    if (currentTime >= word.start && currentTime < word.end) {
+      cssClass = "cantandose";  // palabra cantándose
+    } else if (currentTime >= word.end) {
+      cssClass = "cantada";     // palabra ya cantada
+    }
     return `<span class="${cssClass}">${word.text}</span>`;
   }).join(" ");
+}
 
-  currentEl.innerHTML = html;
+function fadeOutVolume(duration = 1000) {
+  if (isFading) return;
+  isFading = true;
+  let step = 100 / (duration / 50);
+  let current = 100;
+
+  fadeInterval = setInterval(() => {
+    current -= step;
+    if (current <= 0) {
+      current = 0;
+      clearInterval(fadeInterval);
+      isFading = false;
+    }
+    youtubePlayer.setVolume(Math.round(current));
+  }, 50);
+}
+
+function restoreVolume(duration = 1000) {
+  clearInterval(fadeInterval);
+  let step = 100 / (duration / 50);
+  let current = 0;
+  isFading = true;
+
+  fadeInterval = setInterval(() => {
+    current += step;
+    if (current >= 100) {
+      current = 100;
+      clearInterval(fadeInterval);
+      isFading = false;
+    }
+    youtubePlayer.setVolume(Math.round(current));
+  }, 50);
 }

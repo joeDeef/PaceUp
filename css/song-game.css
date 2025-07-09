@@ -84,45 +84,18 @@
   min-height: 72px; /* para que no salte al cambiar líneas */
 }
 
-#linea-actual {
+#linea-actual, #linea-siguiente {
   color: #bbb; /* gris claro para palabras no cantadas */
   font-weight: bold;
   margin: 0;
 }
 
-#linea-actual span.cantada {
-  color: #fff; /* blanco para palabras ya cantadas */
+#linea-actual span.cantada,
+#linea-siguiente span.cantada {
+  color: #fff; /* blanco para palabras ya cantadas en ambas líneas */
 }
 
-#linea-actual span.cantandose {
-  color: #ffec8b; /* amarillo suave para palabra cantándose */
-}
-
-#linea-siguiente {
-  color: #777; /* gris medio para la siguiente línea */
-  font-style: italic;
-  margin: 0;
-}
-
-.hueco {
-  display: inline-block;
-  width: 60px;
-  border-bottom: 2px solid #ccc;
-  color: #999;
-  text-align: center;
-}
-
-.opcion-btn {
-  margin: 0.3em;
-  padding: 0.4em 0.8em;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: background-color 0.2s;
-}
-
-.opcion-btn:hover:not(:disabled) {
-  background-color: #dceeff;
+#linea-actual span.cantandose,
+#linea-siguiente span.cantandose {
+  color: #ffec8b; /* amarillo suave para palabra cantándose en ambas líneas */
 }
