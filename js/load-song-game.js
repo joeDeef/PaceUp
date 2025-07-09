@@ -22,7 +22,8 @@ export async function cargarVideo(levelId, videoId) {
   }
 
   document.getElementById("video-title").textContent = song.title;
-  document.getElementById("video-container").innerHTML = '<div id="youtube-wrapper"></div>';
+  document.getElementById("video-container").innerHTML =
+    '<div id="youtube-wrapper"></div>';
 
   if (song.lyrics_file) {
     await loadLyrics(song.lyrics_file);
@@ -43,7 +44,7 @@ export async function cargarVideo(levelId, videoId) {
 function createPlayer(song) {
   youtubePlayer = new YT.Player("youtube-wrapper", {
     videoId: extractVideoId(song.embed_link),
-    playerVars: { controls: 0, modestbranding: 1, rel: 0, fs: 0 },
+    playerVars: { controls: 0, modestbranding: 1, rel: 0, fs: 0, disablekb: 1 },
     events: {
       onReady: () => handlePlayerReady(song),
       onStateChange: handlePlayerStateChange,
@@ -66,30 +67,70 @@ function handlePlayerReady(song) {
         const seekTime = nextLine.words[0].start;
         youtubePlayer.seekTo(seekTime, true);
       }
-      restoreVolume();  // Subir volumen gradualmente
+      restoreVolume(); // Subir volumen gradualmente
       startLyricsAnimation();
       youtubePlayer.playVideo();
     }
   };
 
   document.getElementById("adelantar-btn").onclick = () => {
-    const newTime = youtubePlayer.getCurrentTime() + 5;
+    const newTime = youtubePlayer.getCurrentTime() + 2;
     youtubePlayer.seekTo(newTime, true);
     resetState();
   };
 
   document.getElementById("retroceder-btn").onclick = () => {
-    const newTime = Math.max(0, youtubePlayer.getCurrentTime() - 5);
+    const newTime = Math.max(0, youtubePlayer.getCurrentTime() - 2);
     youtubePlayer.seekTo(newTime, true);
-    resetState();
+
+    updateCurrentPairIndex(newTime);
+    renderCurrentLyrics(newTime);
+    restoreVolume();
+    startLyricsAnimation();
+    youtubePlayer.playVideo();
   };
+
+  window.addEventListener("keydown", (e) => {
+    const playPauseBtn = document.getElementById("playpause-btn");
+    const retrocederBtn = document.getElementById("retroceder-btn");
+    const adelantarBtn = document.getElementById("adelantar-btn");
+
+    switch (e.code) {
+      case "Space": // barra espacio
+        e.preventDefault();
+        playPauseBtn.click();
+        break;
+      case "ArrowLeft": // flecha izquierda
+        e.preventDefault();
+        retrocederBtn.click();
+        break;
+      case "ArrowRight": // flecha derecha
+        e.preventDefault();
+        adelantarBtn.click();
+        break;
+    }
+  });
 
   resetState();
 }
 
 function handlePlayerStateChange(event) {
-  document.getElementById("playpause-btn").textContent = event.data === YT.PlayerState.PLAYING ? "⏸️ Pause" : "▶️ Play";
-  if (event.data === YT.PlayerState.PLAYING) {
+  const isPlaying = event.data === YT.PlayerState.PLAYING;
+  const icon = document.getElementById("playpause-icon");
+  const text = document.querySelector("#playpause-btn span");
+
+  if (icon) {
+    icon.src = isPlaying
+      ? "../assets/icons/pause-solid.svg"
+      : "../assets/icons/play-solid.svg";
+    icon.alt = isPlaying ? "Pause" : "Play";
+  }
+
+  if (text) {
+    text.textContent = isPlaying ? "Pause" : "Play";
+  }
+
+  if (isPlaying) {
     startLyricsAnimation();
   } else {
     stopLyricsAnimation();
@@ -121,12 +162,17 @@ function stopLyricsAnimation() {
 function resetState() {
   currentPairIndex = 0;
   stopLyricsAnimation();
-  syncedLyrics.forEach(line => delete line.paused);
+  syncedLyrics.forEach((line) => delete line.paused);
   renderCurrentLyrics(0);
 }
 
 function updateLyrics() {
-  if (!youtubePlayer || typeof youtubePlayer.getCurrentTime !== "function" || !animationRunning) return;
+  if (
+    !youtubePlayer ||
+    typeof youtubePlayer.getCurrentTime !== "function" ||
+    !animationRunning
+  )
+    return;
 
   const currentTime = youtubePlayer.getCurrentTime();
   const line1 = syncedLyrics[currentPairIndex];
@@ -168,15 +214,17 @@ function renderLine(container, line, currentTime) {
     container.textContent = "......";
     return;
   }
-  container.innerHTML = line.words.map(word => {
-    let cssClass = "";
-    if (currentTime >= word.start && currentTime < word.end) {
-      cssClass = "cantandose";  // palabra cantándose
-    } else if (currentTime >= word.end) {
-      cssClass = "cantada";     // palabra ya cantada
-    }
-    return `<span class="${cssClass}">${word.text}</span>`;
-  }).join(" ");
+  container.innerHTML = line.words
+    .map((word) => {
+      let cssClass = "";
+      if (currentTime >= word.start && currentTime < word.end) {
+        cssClass = "cantandose"; // palabra cantándose
+      } else if (currentTime >= word.end) {
+        cssClass = "cantada"; // palabra ya cantada
+      }
+      return `<span class="${cssClass}">${word.text}</span>`;
+    })
+    .join(" ");
 }
 
 function fadeOutVolume(duration = 1000) {
