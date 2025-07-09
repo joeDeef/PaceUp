@@ -54,12 +54,21 @@ function createPlayer(song) {
 function handlePlayerReady(song) {
   document.getElementById("playpause-btn").onclick = () => {
     const state = youtubePlayer.getPlayerState();
+
     if (state === YT.PlayerState.PLAYING) {
       youtubePlayer.pauseVideo();
     } else {
+      // Al dar play después de pausa:
+      // 1. Si ya pausaste por la línea anterior, busca el tiempo de inicio de la primera palabra de la siguiente línea.
+      const nextLineIndex = currentPairIndex;
+      const nextLine = syncedLyrics[nextLineIndex];
+      if (nextLine && nextLine.words && nextLine.words.length > 0) {
+        const seekTime = nextLine.words[0].start;
+        youtubePlayer.seekTo(seekTime, true);
+      }
+      restoreVolume();  // Subir volumen gradualmente
       startLyricsAnimation();
       youtubePlayer.playVideo();
-      restoreVolume();
     }
   };
 
