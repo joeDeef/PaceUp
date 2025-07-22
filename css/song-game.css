@@ -134,47 +134,73 @@
   background: transparent;
 }
 
-.progress-container {
+.progress-wrapper {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 8px;
-  background-color: #ddd;
+  gap: 10px; /* espacio entre barra y texto */
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 6px;
+  background-color: white;
   border-radius: 4px;
-  margin: 10px 0;
-  cursor: pointer;
-  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
 }
 
 #progress-bar {
   height: 100%;
   width: 0%;
-  background-color: #4caf50;
+  background-color: #007bff; /* azul */
   border-radius: 4px;
-  transition: width 0.1s linear;
+  transition: width 0.4s ease-out;
 }
 
-.option-btn {
-  background-color: #333;
-  border: none;
-  border-radius: 6px;
-  color: #00ffcc;
-  padding: 8px 12px;
-  margin: 5px;
-  cursor: pointer;
+#progress-text {
+  min-width: 35px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  color: #007bff;
+  user-select: none;
+  font-size: 12px;
 }
 
-.option-btn:hover {
-  background-color: #00ffcc;
-  color: #121212;
+.opcion-palabra {
+  background-color: #1a1a1a;              /* Fondo neutro oscuro */
+  border: 2px solid #FF9900;              /* Borde naranja vibrante (complementario del azul) */
+  border-radius: 8px;
+  color: #ffffff;                         /* Texto blanco */
+  padding: 10px 16px;
+  margin: 8px 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(255, 153, 0, 0.4);  /* sombra naranja */
+  user-select: none;
+  outline-offset: 3px;
 }
 
-.option-btn.correcta {
-  background-color: #2ecc71 !important; /* Verde */
-  color: white;
+.opcion-palabra:hover {
+  background-color: #FF9900;              /* Fondo naranja al hover */
+  color: #121212;                         /* Texto oscuro al hover */
+  border-color: #FF9900;
+  box-shadow: 0 4px 10px rgba(255, 153, 0, 0.7);
 }
 
-.option-btn.incorrecta {
-  background-color: #e74c3c !important; /* Rojo */
-  color: white;
+/* Correcta: Verde fuerte y vibrante */
+.opcion-palabra.correcta {
+  background-color: #2ECC71 !important;
+  border-color: #2ECC71 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.8);
+}
+
+/* Incorrecta: Rojo fuerte */
+.opcion-palabra.incorrecta {
+  background-color: #E74C3C !important;
+  border-color: #E74C3C !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(231, 76, 60, 0.8);
 }

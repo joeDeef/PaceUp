@@ -1,4 +1,5 @@
 import { canciones } from "../data/songs.js";
+import { mostrarModal } from "./mostrar-modal.js";
 
 let youtubePlayer;
 let syncedLyrics = [];
@@ -58,28 +59,31 @@ function handlePlayerReady(song) {
   document.getElementById("playpause-btn").onclick = () => {
     const state = youtubePlayer.getPlayerState();
 
+    // Verificar si estamos pausados esperando respuesta
+    if (isPausedForAnswer) {
+      const line2 = syncedLyrics[currentPairIndex + 1];
+      if (!line2 || !line2.answered) {
+        // Mostrar mensaje
+        mostrarModal("Primero debes contestar antes de continuar.");
+        return; // ❌ No reproducir
+      }
+    }
+
     if (state === YT.PlayerState.PLAYING) {
       youtubePlayer.pauseVideo();
     } else {
-      // Al dar play después de pausa:
-      // 1. Si ya pausaste por la línea anterior, busca el tiempo de inicio de la primera palabra de la siguiente línea.
-      const nextLineIndex = currentPairIndex;
-      const nextLine = syncedLyrics[nextLineIndex];
-      if (nextLine && nextLine.words && nextLine.words.length > 0) {
-        const seekTime = nextLine.words[0].start;
-        youtubePlayer.seekTo(seekTime, true);
-      }
-      restoreVolume(); // Subir volumen gradualmente
-      startLyricsAnimation();
+      restoreVolume();
       youtubePlayer.playVideo();
+      startLyricsAnimation();
     }
   };
 
-  document.getElementById("adelantar-btn").onclick = () => {
-    const newTime = youtubePlayer.getCurrentTime() + 2;
-    youtubePlayer.seekTo(newTime, true);
-    resetState();
-  };
+  // Eliminar el listener del botón adelantar
+  // document.getElementById("adelantar-btn").onclick = () => {
+  //   const newTime = youtubePlayer.getCurrentTime() + 2;
+  //   youtubePlayer.seekTo(newTime, true);
+  //   resetState();
+  // };
 
   document.getElementById("retroceder-btn").onclick = () => {
     const newTime = Math.max(0, youtubePlayer.getCurrentTime() - 2);
@@ -95,7 +99,7 @@ function handlePlayerReady(song) {
   window.addEventListener("keydown", (e) => {
     const playPauseBtn = document.getElementById("playpause-btn");
     const retrocederBtn = document.getElementById("retroceder-btn");
-    const adelantarBtn = document.getElementById("adelantar-btn");
+    // const adelantarBtn = document.getElementById("adelantar-btn");
 
     switch (e.code) {
       case "Space": // barra espacio
@@ -106,10 +110,10 @@ function handlePlayerReady(song) {
         e.preventDefault();
         retrocederBtn.click();
         break;
-      case "ArrowRight": // flecha derecha
-        e.preventDefault();
-        adelantarBtn.click();
-        break;
+      // case "ArrowRight": // flecha derecha
+      //   e.preventDefault();
+      //   adelantarBtn.click();
+      //   break;
     }
   });
 
@@ -175,7 +179,6 @@ function resetState() {
 }
 
 function updateCurrentPairIndex(currentTime) {
-  // Actualiza currentPairIndex según el tiempo actual para re-renderizar correctamente
   for (let i = 0; i < syncedLyrics.length; i += 2) {
     const line = syncedLyrics[i];
     if (line && line.words && line.words.length > 0) {
@@ -221,12 +224,8 @@ function updateLyrics() {
   if (!line2.paused) {
     if (line2.answered) {
       // Ya respondió antes → dejar que el video fluya sin pausar
-      // Avance se realizará automáticamente al final del bloque
-      //currentPairIndex += 2;
-      //line2.paused = true;
-      //renderCurrentLyrics(currentTime);
     } else if (currentTime >= lastWord.end && currentTime < pauseTime) {
-      fadeOutVolume(1000); // baja volumen antes de pausa
+      fadeOutVolume(1000);
     } else if (currentTime >= pauseTime) {
       youtubePlayer.pauseVideo();
       stopLyricsAnimation();
@@ -235,13 +234,13 @@ function updateLyrics() {
     }
   }
 
-  // Avanzar automáticamente si ya se respondió y el bloque terminó
   if (line2.answered && !line2.paused && currentTime >= pauseTime) {
     currentPairIndex += 2;
     line2.paused = true;
     renderCurrentLyrics(currentTime);
   }
 
+  actualizarBarraProgreso();
   if (animationRunning) {
     requestAnimationFrame(updateLyrics);
   }
@@ -276,9 +275,9 @@ function renderLine(container, line, currentTime) {
       if (word.oculta) {
         contenido = "_".repeat(word.text.length);
       } else if (currentTime >= word.start && currentTime < word.end) {
-        cssClass = "cantandose"; // palabra cantándose
+        cssClass = "cantandose";
       } else if (currentTime >= word.end) {
-        cssClass = "cantada"; // palabra ya cantada
+        cssClass = "cantada";
       }
 
       return `<span class="${cssClass}">${contenido}</span>`;
@@ -327,7 +326,6 @@ function mostrarOpcionesAleatorias(line1, line2) {
   const palabras = [...(line1?.words || []), ...(line2?.words || [])];
   if (palabras.length < 4) return;
 
-  // Escoger 4 palabras aleatorias únicas
   const seleccionadas = [];
   while (seleccionadas.length < 4) {
     const randIndex = Math.floor(Math.random() * palabras.length);
@@ -337,10 +335,8 @@ function mostrarOpcionesAleatorias(line1, line2) {
     }
   }
 
-  // Elegir una palabra para ocultar
   const palabraOculta = seleccionadas[Math.floor(Math.random() * 4)];
 
-  // Marcarla como oculta dentro de line1 o line2
   for (const line of [line1, line2]) {
     if (!line) continue;
     for (const word of line.words) {
@@ -355,7 +351,6 @@ function mostrarOpcionesAleatorias(line1, line2) {
     .map((word) => `<button class="opcion-palabra">${word}</button>`)
     .join("");
 
-  // 👇 Agrega listeners a las opciones
   const botones = container.querySelectorAll(".opcion-palabra");
   botones.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -363,15 +358,20 @@ function mostrarOpcionesAleatorias(line1, line2) {
         btn.classList.contains("correcta") ||
         btn.classList.contains("incorrecta")
       ) {
-        // Ignorar clicks múltiples
         return;
       }
       if (btn.textContent === palabraOculta) {
-        btn.classList.add("correcta"); // opcional: marcar verde
+        btn.classList.add("correcta");
+        setTimeout(() => {
+          btn.classList.remove("correcta");
+        }, 1000);
+
         avanzarLineaConRespuestaCorrecta();
       } else {
-        btn.classList.add("incorrecta"); // opcional: marcar rojo
-        // Aquí puedes manejar intentos fallidos si quieres
+        btn.classList.add("incorrecta");
+        setTimeout(() => {
+          btn.classList.remove("incorrecta");
+        }, 1000);
       }
     });
   });
@@ -419,5 +419,26 @@ function resetLineState(pairIndex) {
     syncedLyrics[nextPairIndex].words.forEach((word) => delete word.oculta);
   }
 
-  lastPairIndexShown = -1; // para que vuelva a mostrar opciones
+  lastPairIndexShown = -1;
+}
+
+let porcentajeActual = 0;
+
+function actualizarBarraProgreso() {
+  if (!youtubePlayer || typeof youtubePlayer.getCurrentTime !== "function") return;
+
+  const currentTime = youtubePlayer.getCurrentTime();
+  const duration = youtubePlayer.getDuration();
+
+  if (!duration || duration === 0) return;
+
+  const porcentaje = Math.floor((currentTime / duration) * 100);
+
+  const barra = document.getElementById("progress-bar");
+  const texto = document.getElementById("progress-text");
+
+  if (barra && texto) {
+    barra.style.width = porcentaje + "%"; // Cambia ancho
+    texto.textContent = porcentaje + "%"; // Actualiza número
+  }
 }
