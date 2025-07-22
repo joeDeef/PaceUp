@@ -162,11 +162,15 @@ function stopLyricsAnimation() {
 
 function resetState() {
   currentPairIndex = 0;
-  lastPairIndexShown = -1; // Reinicia para permitir mostrar opciones desde el principio
+  lastPairIndexShown = -1;
   stopLyricsAnimation();
-  syncedLyrics.forEach((line) => delete line.paused);
+  syncedLyrics.forEach((line) => {
+    delete line.paused;
+    line.words.forEach((word) => delete word.oculta);
+  });
   renderCurrentLyrics(0);
 }
+
 
 function updateLyrics() {
   if (
@@ -217,22 +221,30 @@ function renderCurrentLyrics(currentTime) {
 
 function renderLine(container, line, currentTime) {
   if (!container || !line) return;
+
   if (currentTime < line.time) {
     container.textContent = "......";
     return;
   }
+
   container.innerHTML = line.words
     .map((word) => {
       let cssClass = "";
-      if (currentTime >= word.start && currentTime < word.end) {
+      let contenido = word.text;
+
+      if (word.oculta) {
+        contenido = "_".repeat(word.text.length);
+      } else if (currentTime >= word.start && currentTime < word.end) {
         cssClass = "cantandose"; // palabra cantándose
       } else if (currentTime >= word.end) {
         cssClass = "cantada"; // palabra ya cantada
       }
-      return `<span class="${cssClass}">${word.text}</span>`;
+
+      return `<span class="${cssClass}">${contenido}</span>`;
     })
     .join(" ");
 }
+
 
 function fadeOutVolume(duration = 1000) {
   if (isFading) return;
@@ -275,12 +287,27 @@ function mostrarOpcionesAleatorias(line1, line2) {
   const palabras = [...(line1?.words || []), ...(line2?.words || [])];
   if (palabras.length < 4) return;
 
+  // Escoger 4 palabras aleatorias únicas
   const seleccionadas = [];
   while (seleccionadas.length < 4) {
     const randIndex = Math.floor(Math.random() * palabras.length);
     const palabra = palabras[randIndex].text;
     if (!seleccionadas.includes(palabra)) {
       seleccionadas.push(palabra);
+    }
+  }
+
+  // Elegir una palabra para ocultar
+  const palabraOculta = seleccionadas[Math.floor(Math.random() * 4)];
+
+  // Marcarla como oculta dentro de line1 o line2
+  for (const line of [line1, line2]) {
+    if (!line) continue;
+    for (const word of line.words) {
+      if (word.text === palabraOculta) {
+        word.oculta = true;
+        break;
+      }
     }
   }
 
