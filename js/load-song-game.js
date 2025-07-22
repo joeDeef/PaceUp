@@ -314,4 +314,31 @@ function mostrarOpcionesAleatorias(line1, line2) {
   container.innerHTML = seleccionadas
     .map((word) => `<button class="opcion-palabra">${word}</button>`)
     .join("");
+
+  // 👇 Agrega listeners a las opciones
+  const botones = container.querySelectorAll(".opcion-palabra");
+  botones.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.textContent === palabraOculta) {
+        btn.classList.add("correcta"); // opcional: marcar verde
+        avanzarLineaConRespuestaCorrecta();
+      } else {
+        btn.classList.add("incorrecta"); // opcional: marcar rojo
+        // Puedes manejar fallos si deseas aquí
+      }
+    });
+  });
+}
+
+function avanzarLineaConRespuestaCorrecta() {
+  const nextLineIndex = currentPairIndex;
+  const nextLine = syncedLyrics[nextLineIndex];
+  if (nextLine && nextLine.words && nextLine.words.length > 0) {
+    const seekTime = nextLine.words[0].start;
+    youtubePlayer.seekTo(seekTime, true);
+  }
+
+  restoreVolume(); // Subir volumen gradualmente
+  startLyricsAnimation();
+  youtubePlayer.playVideo();
 }
