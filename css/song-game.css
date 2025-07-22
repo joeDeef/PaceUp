@@ -133,3 +133,48 @@
   /* fondo transparente para que no se vea */
   background: transparent;
 }
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+
+.option-btn {
+  background-color: #333;
+  border: none;
+  border-radius: 6px;
+  color: #00ffcc;
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #00ffcc;
+  color: #121212;
+}
+
+.option-btn.correcta {
+  background-color: #2ecc71 !important; /* Verde */
+  color: white;
+}
+
+.option-btn.incorrecta {
+  background-color: #e74c3c !important; /* Rojo */
+  color: white;
+}

@@ -6,6 +6,7 @@ let currentPairIndex = 0;
 let animationRunning = false;
 let fadeInterval;
 let isFading = false;
+let lastPairIndexShown = -1;
 
 export async function cargarVideo(levelId, videoId) {
   const container = document.getElementById("nivel-content");
@@ -161,6 +162,7 @@ function stopLyricsAnimation() {
 
 function resetState() {
   currentPairIndex = 0;
+  lastPairIndexShown = -1; // Reinicia para permitir mostrar opciones desde el principio
   stopLyricsAnimation();
   syncedLyrics.forEach((line) => delete line.paused);
   renderCurrentLyrics(0);
@@ -206,6 +208,11 @@ function renderCurrentLyrics(currentTime) {
 
   renderLine(document.getElementById("linea-actual"), line1, currentTime);
   renderLine(document.getElementById("linea-siguiente"), line2, currentTime);
+
+  if (currentPairIndex !== lastPairIndexShown) {
+    mostrarOpcionesAleatorias(line1, line2);
+    lastPairIndexShown = currentPairIndex;
+  }
 }
 
 function renderLine(container, line, currentTime) {
@@ -259,4 +266,25 @@ function restoreVolume(duration = 1000) {
     }
     youtubePlayer.setVolume(Math.round(current));
   }, 50);
+}
+
+function mostrarOpcionesAleatorias(line1, line2) {
+  const container = document.getElementById("game-options");
+  if (!container) return;
+
+  const palabras = [...(line1?.words || []), ...(line2?.words || [])];
+  if (palabras.length < 4) return;
+
+  const seleccionadas = [];
+  while (seleccionadas.length < 4) {
+    const randIndex = Math.floor(Math.random() * palabras.length);
+    const palabra = palabras[randIndex].text;
+    if (!seleccionadas.includes(palabra)) {
+      seleccionadas.push(palabra);
+    }
+  }
+
+  container.innerHTML = seleccionadas
+    .map((word) => `<button class="opcion-palabra">${word}</button>`)
+    .join("");
 }
