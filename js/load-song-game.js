@@ -7,6 +7,7 @@ let animationRunning = false;
 let fadeInterval;
 let isFading = false;
 let lastPairIndexShown = -1;
+let isPausedForAnswer = false;
 
 export async function cargarVideo(levelId, videoId) {
   const container = document.getElementById("nivel-content");
@@ -163,14 +164,32 @@ function stopLyricsAnimation() {
 function resetState() {
   currentPairIndex = 0;
   lastPairIndexShown = -1;
+  isPausedForAnswer = false;
   stopLyricsAnimation();
   syncedLyrics.forEach((line) => {
-    delete line.paused;
+    line.paused = false;
+    line.answered = false;
     line.words.forEach((word) => delete word.oculta);
   });
   renderCurrentLyrics(0);
 }
 
+function updateCurrentPairIndex(currentTime) {
+  // Actualiza currentPairIndex según el tiempo actual para re-renderizar correctamente
+  for (let i = 0; i < syncedLyrics.length; i += 2) {
+    const line = syncedLyrics[i];
+    if (line && line.words && line.words.length > 0) {
+      const start = line.words[0].start;
+      const end = syncedLyrics[i + 1]
+        ? syncedLyrics[i + 1].words[syncedLyrics[i + 1].words.length - 1].end
+        : line.words[line.words.length - 1].end;
+      if (currentTime >= start && currentTime <= end) {
+        currentPairIndex = i;
+        break;
+      }
+    }
+  }
+}
 
 function updateLyrics() {
   if (
@@ -188,17 +207,39 @@ function updateLyrics() {
   renderCurrentLyrics(currentTime);
 
   const lastWord = line2.words[line2.words.length - 1];
-  const pauseTime = lastWord.end + 1;
+  const pauseTime = line2.answered ? lastWord.end : lastWord.end + 1;
 
-  if (!line2.paused && currentTime >= lastWord.end && currentTime < pauseTime) {
+  if (
+    !line2.paused &&
+    !line2.answered &&
+    currentTime >= lastWord.end &&
+    currentTime < pauseTime
+  ) {
     fadeOutVolume(1000);
   }
 
-  if (!line2.paused && currentTime >= pauseTime) {
-    youtubePlayer.pauseVideo();
-    stopLyricsAnimation();
-    line2.paused = true;
+  if (!line2.paused) {
+    if (line2.answered) {
+      // Ya respondió antes → dejar que el video fluya sin pausar
+      // Avance se realizará automáticamente al final del bloque
+      //currentPairIndex += 2;
+      //line2.paused = true;
+      //renderCurrentLyrics(currentTime);
+    } else if (currentTime >= lastWord.end && currentTime < pauseTime) {
+      fadeOutVolume(1000); // baja volumen antes de pausa
+    } else if (currentTime >= pauseTime) {
+      youtubePlayer.pauseVideo();
+      stopLyricsAnimation();
+      isPausedForAnswer = true;
+      line2.paused = true;
+    }
+  }
+
+  // Avanzar automáticamente si ya se respondió y el bloque terminó
+  if (line2.answered && !line2.paused && currentTime >= pauseTime) {
     currentPairIndex += 2;
+    line2.paused = true;
+    renderCurrentLyrics(currentTime);
   }
 
   if (animationRunning) {
@@ -244,7 +285,6 @@ function renderLine(container, line, currentTime) {
     })
     .join(" ");
 }
-
 
 function fadeOutVolume(duration = 1000) {
   if (isFading) return;
@@ -319,26 +359,65 @@ function mostrarOpcionesAleatorias(line1, line2) {
   const botones = container.querySelectorAll(".opcion-palabra");
   botones.forEach((btn) => {
     btn.addEventListener("click", () => {
+      if (
+        btn.classList.contains("correcta") ||
+        btn.classList.contains("incorrecta")
+      ) {
+        // Ignorar clicks múltiples
+        return;
+      }
       if (btn.textContent === palabraOculta) {
         btn.classList.add("correcta"); // opcional: marcar verde
         avanzarLineaConRespuestaCorrecta();
       } else {
         btn.classList.add("incorrecta"); // opcional: marcar rojo
-        // Puedes manejar fallos si deseas aquí
+        // Aquí puedes manejar intentos fallidos si quieres
       }
     });
   });
 }
 
 function avanzarLineaConRespuestaCorrecta() {
-  const nextLineIndex = currentPairIndex;
-  const nextLine = syncedLyrics[nextLineIndex];
-  if (nextLine && nextLine.words && nextLine.words.length > 0) {
-    const seekTime = nextLine.words[0].start;
-    youtubePlayer.seekTo(seekTime, true);
+  const line1 = syncedLyrics[currentPairIndex];
+  const line2 = syncedLyrics[currentPairIndex + 1];
+
+  if (line1) line1.answered = true;
+  if (line2) line2.answered = true;
+
+  if (isPausedForAnswer) {
+    isPausedForAnswer = false;
+    currentPairIndex += 2;
+
+    if (currentPairIndex >= syncedLyrics.length) {
+      stopLyricsAnimation();
+      return;
+    }
+
+    const nextLine = syncedLyrics[currentPairIndex];
+    if (nextLine && nextLine.words?.length > 0) {
+      youtubePlayer.seekTo(nextLine.words[0].start, true);
+    }
+
+    restoreVolume();
+    startLyricsAnimation();
+    youtubePlayer.playVideo();
+    resetLineState(currentPairIndex);
+  }
+}
+
+function resetLineState(pairIndex) {
+  if (!syncedLyrics[pairIndex]) return;
+
+  syncedLyrics[pairIndex].paused = false;
+  syncedLyrics[pairIndex].answered = false;
+  syncedLyrics[pairIndex].words.forEach((word) => delete word.oculta);
+
+  const nextPairIndex = pairIndex + 1;
+  if (syncedLyrics[nextPairIndex]) {
+    syncedLyrics[nextPairIndex].paused = false;
+    syncedLyrics[nextPairIndex].answered = false;
+    syncedLyrics[nextPairIndex].words.forEach((word) => delete word.oculta);
   }
 
-  restoreVolume(); // Subir volumen gradualmente
-  startLyricsAnimation();
-  youtubePlayer.playVideo();
+  lastPairIndexShown = -1; // para que vuelva a mostrar opciones
 }
