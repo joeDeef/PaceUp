@@ -274,6 +274,8 @@ function renderLine(container, line, currentTime) {
 
       if (word.oculta) {
         contenido = "_".repeat(word.text.length);
+      } else if (word.completada) {
+        cssClass = "completada";
       } else if (currentTime >= word.start && currentTime < word.end) {
         cssClass = "cantandose";
       } else if (currentTime >= word.end) {
@@ -381,6 +383,19 @@ function avanzarLineaConRespuestaCorrecta() {
   const line1 = syncedLyrics[currentPairIndex];
   const line2 = syncedLyrics[currentPairIndex + 1];
 
+  // Mostrar la palabra oculta inmediatamente al acertar
+  [line1, line2].forEach((line) => {
+    if (!line) return;
+    line.words.forEach((word) => {
+      if (word.oculta) {
+        delete word.oculta;
+        word.completada = true; // ✅ Marcamos como completada
+      }
+    });
+  });
+
+  renderCurrentLyrics(youtubePlayer.getCurrentTime());
+
   if (line1) line1.answered = true;
   if (line2) line2.answered = true;
 
@@ -425,7 +440,8 @@ function resetLineState(pairIndex) {
 let porcentajeActual = 0;
 
 function actualizarBarraProgreso() {
-  if (!youtubePlayer || typeof youtubePlayer.getCurrentTime !== "function") return;
+  if (!youtubePlayer || typeof youtubePlayer.getCurrentTime !== "function")
+    return;
 
   const currentTime = youtubePlayer.getCurrentTime();
   const duration = youtubePlayer.getDuration();
