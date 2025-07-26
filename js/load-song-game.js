@@ -58,18 +58,18 @@ function createPlayer(song) {
 function handlePlayerReady(song) {
   document.getElementById("playpause-btn").onclick = () => {
     const state = youtubePlayer.getPlayerState();
+    const line2 = syncedLyrics[currentPairIndex + 1];
+    const esJugable = line2?.jugable ?? true;
 
-    // Verificar si estamos pausados esperando respuesta
-    if (isPausedForAnswer) {
-      const line2 = syncedLyrics[currentPairIndex + 1];
+    if (isPausedForAnswer && esJugable) {
       if (!line2 || !line2.answered) {
-        // Mostrar mensaje
         mostrarModal("Primero debes contestar antes de continuar.");
-        return; // ❌ No reproducir
+        return; // No reproducir
       }
     }
 
-    if (state === YT.PlayerState.PLAYING) {
+    // Solo permitir pausa si el bloque es jugable
+    if (esJugable && state === YT.PlayerState.PLAYING) {
       youtubePlayer.pauseVideo();
     } else {
       restoreVolume();
@@ -77,13 +77,6 @@ function handlePlayerReady(song) {
       startLyricsAnimation();
     }
   };
-
-  // Eliminar el listener del botón adelantar
-  // document.getElementById("adelantar-btn").onclick = () => {
-  //   const newTime = youtubePlayer.getCurrentTime() + 2;
-  //   youtubePlayer.seekTo(newTime, true);
-  //   resetState();
-  // };
 
   document.getElementById("retroceder-btn").onclick = () => {
     const newTime = Math.max(0, youtubePlayer.getCurrentTime() - 2);
@@ -209,31 +202,59 @@ function updateLyrics() {
 
   renderCurrentLyrics(currentTime);
 
+  const esJugable = line2.jugable ?? true; // true por defecto
+
   const lastWord = line2.words[line2.words.length - 1];
   const pauseTime = line2.answered ? lastWord.end : lastWord.end + 1;
 
-  if (
-    !line2.paused &&
-    !line2.answered &&
-    currentTime >= lastWord.end &&
-    currentTime < pauseTime
-  ) {
-    fadeOutVolume(1000);
-  }
-
-  if (!line2.paused) {
-    if (line2.answered) {
-      // Ya respondió antes → dejar que el video fluya sin pausar
-    } else if (currentTime >= lastWord.end && currentTime < pauseTime) {
+  if (esJugable) {
+    // Lógica normal para jugables
+    if (
+      !line2.paused &&
+      !line2.answered &&
+      currentTime >= lastWord.end &&
+      currentTime < pauseTime
+    ) {
       fadeOutVolume(1000);
-    } else if (currentTime >= pauseTime) {
-      youtubePlayer.pauseVideo();
-      stopLyricsAnimation();
-      isPausedForAnswer = true;
-      line2.paused = true;
+    }
+
+    if (!line2.paused) {
+      if (line2.answered) {
+        // deja fluir
+      } else if (currentTime >= lastWord.end && currentTime < pauseTime) {
+        fadeOutVolume(1000);
+      } else if (currentTime >= pauseTime) {
+        console.log("Pausando video porque bloque es jugable", currentPairIndex);
+        youtubePlayer.pauseVideo();
+        stopLyricsAnimation();
+        isPausedForAnswer = true;
+        line2.paused = true;
+      }
+    }
+  } else {
+      console.log("Bloque no jugable, no pausar, avance automático", currentPairIndex);
+    // Bloque NO jugable: nunca pausar, ni isPausedForAnswer true
+    isPausedForAnswer = false; // <-- limpiar bandera
+
+    // Si por alguna razón está pausado, reproducir
+    if (youtubePlayer.getPlayerState() !== YT.PlayerState.PLAYING) {
+      youtubePlayer.playVideo();
+    }
+
+    // Avanzar automáticamente si tiempo pasó
+    if (currentTime >= pauseTime) {
+      currentPairIndex += 2;
+      renderCurrentLyrics(currentTime);
+      resetLineState(currentPairIndex);
+
+      const nextLine = syncedLyrics[currentPairIndex];
+      if (nextLine && nextLine.words?.length > 0) {
+        youtubePlayer.seekTo(nextLine.words[0].start, true);
+      }
     }
   }
 
+  // Avanzar cuando ya respondió y no está pausado
   if (line2.answered && !line2.paused && currentTime >= pauseTime) {
     currentPairIndex += 2;
     line2.paused = true;
@@ -241,6 +262,7 @@ function updateLyrics() {
   }
 
   actualizarBarraProgreso();
+
   if (animationRunning) {
     requestAnimationFrame(updateLyrics);
   }
@@ -325,8 +347,20 @@ function mostrarOpcionesAleatorias(line1, line2) {
   const container = document.getElementById("game-options");
   if (!container) return;
 
+  // Solo mostrar opciones si alguna línea es jugable
+  if (
+    (line1?.jugable ?? true) === false &&
+    (line2?.jugable ?? true) === false
+  ) {
+    container.innerHTML = ""; // Vaciar opciones
+    return;
+  }
+
   const palabras = [...(line1?.words || []), ...(line2?.words || [])];
-  if (palabras.length < 4) return;
+  if (palabras.length < 4) {
+    container.innerHTML = "";
+    return;
+  }
 
   const seleccionadas = [];
   while (seleccionadas.length < 4) {
@@ -383,13 +417,12 @@ function avanzarLineaConRespuestaCorrecta() {
   const line1 = syncedLyrics[currentPairIndex];
   const line2 = syncedLyrics[currentPairIndex + 1];
 
-  // Mostrar la palabra oculta inmediatamente al acertar
   [line1, line2].forEach((line) => {
     if (!line) return;
     line.words.forEach((word) => {
       if (word.oculta) {
         delete word.oculta;
-        word.completada = true; // ✅ Marcamos como completada
+        word.completada = true;
       }
     });
   });
@@ -402,6 +435,14 @@ function avanzarLineaConRespuestaCorrecta() {
   if (isPausedForAnswer) {
     isPausedForAnswer = false;
     currentPairIndex += 2;
+
+    // Saltar bloques no jugables automáticamente
+    while (
+      currentPairIndex < syncedLyrics.length &&
+      syncedLyrics[currentPairIndex]?.jugable === false
+    ) {
+      currentPairIndex += 2;
+    }
 
     if (currentPairIndex >= syncedLyrics.length) {
       stopLyricsAnimation();
