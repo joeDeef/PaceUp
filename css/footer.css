@@ -1,0 +1,31 @@
+/* === Footer general === */
+.footer {
+  background-color: #103D7C;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(16, 61, 124, 0.3);
+}
+
+.footer-content p {
+  margin: 0 0 0.5rem 0;
+}
+
+.footer-nav a {
+  color: #a8c6ff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
