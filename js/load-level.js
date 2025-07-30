@@ -74,15 +74,26 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
           const modo = catalogModes[keyModo];
           if (!modo) return;
 
+          let onClick;
+          if (keyModo === "gramatica") {
+            // Si el modo es gramática, redirige a la página gramatica.html
+            onClick = () => {
+              actualizarVista(nivel, "gramatica");
+            };
+          } else {
+            // Para los demás modos sigue como antes
+            onClick = () => {
+              actualizarVista(nivel, keyModo);
+            };
+          }
+
           const { fragment } = createCard(
             {
               image: modo.imagen,
               title: modo.titulo,
               description: modo.descripcion,
               imageBgColor: "#f5f5f5",
-              onClick: () => {
-                actualizarVista(nivel, keyModo);
-              },
+              onClick,
             },
             cardTemplate
           );
