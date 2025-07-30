@@ -1,0 +1,2667 @@
+[
+  {
+    "time": 2,
+    "words": [
+      {
+        "text": "They",
+        "start": 2,
+        "end": 2.3
+      },
+      {
+        "text": "tell",
+        "start": 2.3,
+        "end": 2.6
+      },
+      {
+        "text": "me",
+        "start": 2.6,
+        "end": 2.9
+      },
+      {
+        "text": "Keep",
+        "start": 2.9,
+        "end": 3.2
+      },
+      {
+        "text": "it",
+        "start": 3.2,
+        "end": 3.5
+      },
+      {
+        "text": "simple",
+        "start": 3.5,
+        "end": 3.8
+      },
+      {
+        "text": "I",
+        "start": 3.8,
+        "end": 4.1
+      },
+      {
+        "text": "tell",
+        "start": 4.1,
+        "end": 4.4
+      },
+      {
+        "text": "them",
+        "start": 4.4,
+        "end": 4.7
+      },
+      {
+        "text": "Take",
+        "start": 4.7,
+        "end": 5.0
+      },
+      {
+        "text": "it",
+        "start": 5.0,
+        "end": 5.3
+      },
+      {
+        "text": "slow",
+        "start": 5.3,
+        "end": 5.6
+      }
+    ]
+  },
+  {
+    "time": 4,
+    "words": [
+      {
+        "text": "I",
+        "start": 4,
+        "end": 4.3
+      },
+      {
+        "text": "feed",
+        "start": 4.3,
+        "end": 4.6
+      },
+      {
+        "text": "and",
+        "start": 4.6,
+        "end": 4.9
+      },
+      {
+        "text": "water",
+        "start": 4.9,
+        "end": 5.2
+      },
+      {
+        "text": "an",
+        "start": 5.2,
+        "end": 5.5
+      },
+      {
+        "text": "idea",
+        "start": 5.5,
+        "end": 5.8
+      },
+      {
+        "text": "so",
+        "start": 5.8,
+        "end": 6.1
+      },
+      {
+        "text": "I",
+        "start": 6.1,
+        "end": 6.4
+      },
+      {
+        "text": "let",
+        "start": 6.4,
+        "end": 6.7
+      },
+      {
+        "text": "it",
+        "start": 6.7,
+        "end": 7.0
+      },
+      {
+        "text": "grow",
+        "start": 7.0,
+        "end": 7.3
+      }
+    ]
+  },
+  {
+    "time": 6,
+    "words": [
+      {
+        "text": "I",
+        "start": 6,
+        "end": 6.3
+      },
+      {
+        "text": "tell",
+        "start": 6.3,
+        "end": 6.6
+      },
+      {
+        "text": "them",
+        "start": 6.6,
+        "end": 6.9
+      },
+      {
+        "text": "Take",
+        "start": 6.9,
+        "end": 7.2
+      },
+      {
+        "text": "it",
+        "start": 7.2,
+        "end": 7.5
+      },
+      {
+        "text": "easy",
+        "start": 7.5,
+        "end": 7.8
+      },
+      {
+        "text": "they",
+        "start": 7.8,
+        "end": 8.1
+      },
+      {
+        "text": "laugh",
+        "start": 8.1,
+        "end": 8.4
+      },
+      {
+        "text": "and",
+        "start": 8.4,
+        "end": 8.7
+      },
+      {
+        "text": "tell",
+        "start": 8.7,
+        "end": 9.0
+      },
+      {
+        "text": "me",
+        "start": 9.0,
+        "end": 9.3
+      },
+      {
+        "text": "No",
+        "start": 9.3,
+        "end": 9.6
+      }
+    ]
+  },
+  {
+    "time": 8,
+    "words": [
+      {
+        "text": "Its",
+        "start": 8,
+        "end": 8.3
+      },
+      {
+        "text": "cool",
+        "start": 8.3,
+        "end": 8.6
+      },
+      {
+        "text": "but",
+        "start": 8.6,
+        "end": 8.9
+      },
+      {
+        "text": "I",
+        "start": 8.9,
+        "end": 9.2
+      },
+      {
+        "text": "dont",
+        "start": 9.2,
+        "end": 9.5
+      },
+      {
+        "text": "see",
+        "start": 9.5,
+        "end": 9.8
+      },
+      {
+        "text": "them",
+        "start": 9.8,
+        "end": 10.1
+      },
+      {
+        "text": "laughin",
+        "start": 10.1,
+        "end": 10.4
+      },
+      {
+        "text": "at",
+        "start": 10.4,
+        "end": 10.7
+      },
+      {
+        "text": "my",
+        "start": 10.7,
+        "end": 11.0
+      },
+      {
+        "text": "money",
+        "start": 11.0,
+        "end": 11.3
+      },
+      {
+        "text": "though",
+        "start": 11.3,
+        "end": 11.6
+      }
+    ]
+  },
+  {
+    "time": 10,
+    "words": [
+      {
+        "text": "They",
+        "start": 10,
+        "end": 10.3
+      },
+      {
+        "text": "spittin",
+        "start": 10.3,
+        "end": 10.6
+      },
+      {
+        "text": "facts",
+        "start": 10.6,
+        "end": 10.9
+      },
+      {
+        "text": "at",
+        "start": 10.9,
+        "end": 11.2
+      },
+      {
+        "text": "me",
+        "start": 11.2,
+        "end": 11.5
+      },
+      {
+        "text": "Im",
+        "start": 11.5,
+        "end": 11.8
+      },
+      {
+        "text": "spittin",
+        "start": 11.8,
+        "end": 12.1
+      },
+      {
+        "text": "tracks",
+        "start": 12.1,
+        "end": 12.4
+      },
+      {
+        "text": "catch",
+        "start": 12.4,
+        "end": 12.7
+      },
+      {
+        "text": "me?",
+        "start": 12.7,
+        "end": 13.0
+      }
+    ]
+  },
+  {
+    "time": 12,
+    "words": [
+      {
+        "text": "Im",
+        "start": 12,
+        "end": 12.3
+      },
+      {
+        "text": "spinning",
+        "start": 12.3,
+        "end": 12.6
+      },
+      {
+        "text": "gold",
+        "start": 12.6,
+        "end": 12.9
+      },
+      {
+        "text": "out",
+        "start": 12.9,
+        "end": 13.2
+      },
+      {
+        "text": "my",
+        "start": 13.2,
+        "end": 13.5
+      },
+      {
+        "text": "records",
+        "start": 13.5,
+        "end": 13.8
+      },
+      {
+        "text": "know",
+        "start": 13.8,
+        "end": 14.1
+      },
+      {
+        "text": "you",
+        "start": 14.1,
+        "end": 14.4
+      },
+      {
+        "text": "cant",
+        "start": 14.4,
+        "end": 14.7
+      },
+      {
+        "text": "combat",
+        "start": 14.7,
+        "end": 15.0
+      },
+      {
+        "text": "me",
+        "start": 15.0,
+        "end": 15.3
+      }
+    ]
+  },
+  {
+    "time": 14,
+    "words": [
+      {
+        "text": "They",
+        "start": 14,
+        "end": 14.3
+      },
+      {
+        "text": "tell",
+        "start": 14.3,
+        "end": 14.6
+      },
+      {
+        "text": "me",
+        "start": 14.6,
+        "end": 14.9
+      },
+      {
+        "text": "Jesus",
+        "start": 14.9,
+        "end": 15.2
+      },
+      {
+        "text": "walks",
+        "start": 15.2,
+        "end": 15.5
+      },
+      {
+        "text": "I",
+        "start": 15.5,
+        "end": 15.8
+      },
+      {
+        "text": "tell",
+        "start": 15.8,
+        "end": 16.1
+      },
+      {
+        "text": "them",
+        "start": 16.1,
+        "end": 16.4
+      },
+      {
+        "text": "Money",
+        "start": 16.4,
+        "end": 16.7
+      },
+      {
+        "text": "talks",
+        "start": 16.7,
+        "end": 17.0
+      }
+    ]
+  },
+  {
+    "time": 16,
+    "words": [
+      {
+        "text": "Bling",
+        "start": 16,
+        "end": 16.3
+      },
+      {
+        "text": "got",
+        "start": 16.3,
+        "end": 16.6
+      },
+      {
+        "text": "me",
+        "start": 16.6,
+        "end": 16.9
+      },
+      {
+        "text": "chill",
+        "start": 16.9,
+        "end": 17.2
+      },
+      {
+        "text": "cause",
+        "start": 17.2,
+        "end": 17.5
+      },
+      {
+        "text": "Im",
+        "start": 17.5,
+        "end": 17.8
+      },
+      {
+        "text": "living",
+        "start": 17.8,
+        "end": 18.1
+      },
+      {
+        "text": "in",
+        "start": 18.1,
+        "end": 18.4
+      },
+      {
+        "text": "an",
+        "start": 18.4,
+        "end": 18.7
+      },
+      {
+        "text": "icebox",
+        "start": 18.7,
+        "end": 19.0
+      }
+    ]
+  },
+  {
+    "time": 18,
+    "words": [
+      {
+        "text": "They",
+        "start": 18,
+        "end": 18.3
+      },
+      {
+        "text": "tell",
+        "start": 18.3,
+        "end": 18.6
+      },
+      {
+        "text": "me",
+        "start": 18.6,
+        "end": 18.9
+      },
+      {
+        "text": "Ive",
+        "start": 18.9,
+        "end": 19.2
+      },
+      {
+        "text": "been",
+        "start": 19.2,
+        "end": 19.5
+      },
+      {
+        "text": "sleepin",
+        "start": 19.5,
+        "end": 19.8
+      },
+      {
+        "text": "I",
+        "start": 19.8,
+        "end": 20.1
+      },
+      {
+        "text": "say",
+        "start": 20.1,
+        "end": 20.4
+      },
+      {
+        "text": "Im",
+        "start": 20.4,
+        "end": 20.7
+      },
+      {
+        "text": "wide",
+        "start": 20.7,
+        "end": 21.0
+      },
+      {
+        "text": "awake",
+        "start": 21.0,
+        "end": 21.3
+      }
+    ]
+  },
+  {
+    "time": 20,
+    "words": [
+      {
+        "text": "Tracks",
+        "start": 20,
+        "end": 20.3
+      },
+      {
+        "text": "hot",
+        "start": 20.3,
+        "end": 20.6
+      },
+      {
+        "text": "and",
+        "start": 20.6,
+        "end": 20.9
+      },
+      {
+        "text": "ready",
+        "start": 20.9,
+        "end": 21.2
+      },
+      {
+        "text": "so",
+        "start": 21.2,
+        "end": 21.5
+      },
+      {
+        "text": "they",
+        "start": 21.5,
+        "end": 21.8
+      },
+      {
+        "text": "call",
+        "start": 21.8,
+        "end": 22.1
+      },
+      {
+        "text": "me",
+        "start": 22.1,
+        "end": 22.4
+      },
+      {
+        "text": "Mr.",
+        "start": 22.4,
+        "end": 22.7
+      },
+      {
+        "text": "Easy-Bake",
+        "start": 22.7,
+        "end": 23.0
+      }
+    ]
+  },
+  {
+    "time": 22,
+    "words": [
+      {
+        "text": "They",
+        "start": 22,
+        "end": 22.3
+      },
+      {
+        "text": "say",
+        "start": 22.3,
+        "end": 22.6
+      },
+      {
+        "text": "the",
+        "start": 22.6,
+        "end": 22.9
+      },
+      {
+        "text": "grass",
+        "start": 22.9,
+        "end": 23.2
+      },
+      {
+        "text": "is",
+        "start": 23.2,
+        "end": 23.5
+      },
+      {
+        "text": "greener",
+        "start": 23.5,
+        "end": 23.8
+      },
+      {
+        "text": "I",
+        "start": 23.8,
+        "end": 24.1
+      },
+      {
+        "text": "think",
+        "start": 24.1,
+        "end": 24.4
+      },
+      {
+        "text": "my",
+        "start": 24.4,
+        "end": 24.7
+      },
+      {
+        "text": "grass",
+        "start": 24.7,
+        "end": 25.0
+      },
+      {
+        "text": "is",
+        "start": 25.0,
+        "end": 25.3
+      },
+      {
+        "text": "dank",
+        "start": 25.3,
+        "end": 25.6
+      }
+    ]
+  },
+  {
+    "time": 24,
+    "words": [
+      {
+        "text": "Drivin",
+        "start": 24,
+        "end": 24.3
+      },
+      {
+        "text": "with",
+        "start": 24.3,
+        "end": 24.6
+      },
+      {
+        "text": "a",
+        "start": 24.6,
+        "end": 24.9
+      },
+      {
+        "text": "drank",
+        "start": 24.9,
+        "end": 25.2
+      },
+      {
+        "text": "on",
+        "start": 25.2,
+        "end": 25.5
+      },
+      {
+        "text": "an",
+        "start": 25.5,
+        "end": 25.8
+      },
+      {
+        "text": "empty",
+        "start": 25.8,
+        "end": 26.1
+      },
+      {
+        "text": "tank",
+        "start": 26.1,
+        "end": 26.4
+      },
+      {
+        "text": "to",
+        "start": 26.4,
+        "end": 26.7
+      },
+      {
+        "text": "the",
+        "start": 26.7,
+        "end": 27.0
+      },
+      {
+        "text": "bank",
+        "start": 27.0,
+        "end": 27.3
+      }
+    ]
+  },
+  {
+    "time": 26,
+    "words": [
+      {
+        "text": "Do",
+        "start": 26,
+        "end": 26.3
+      },
+      {
+        "text": "you",
+        "start": 26.3,
+        "end": 26.6
+      },
+      {
+        "text": "feel",
+        "start": 26.6,
+        "end": 26.9
+      },
+      {
+        "text": "me?",
+        "start": 26.9,
+        "end": 27.2
+      },
+      {
+        "text": "Take",
+        "start": 27.2,
+        "end": 27.5
+      },
+      {
+        "text": "a",
+        "start": 27.5,
+        "end": 27.8
+      },
+      {
+        "text": "look",
+        "start": 27.8,
+        "end": 28.1
+      },
+      {
+        "text": "inside",
+        "start": 28.1,
+        "end": 28.4
+      },
+      {
+        "text": "my",
+        "start": 28.4,
+        "end": 28.7
+      },
+      {
+        "text": "brain",
+        "start": 28.7,
+        "end": 29.0
+      }
+    ]
+  },
+  {
+    "time": 28,
+    "words": [
+      {
+        "text": "The",
+        "start": 28,
+        "end": 28.3
+      },
+      {
+        "text": "people",
+        "start": 28.3,
+        "end": 28.6
+      },
+      {
+        "text": "always",
+        "start": 28.6,
+        "end": 28.9
+      },
+      {
+        "text": "different",
+        "start": 28.9,
+        "end": 29.2
+      },
+      {
+        "text": "but",
+        "start": 29.2,
+        "end": 29.5
+      },
+      {
+        "text": "it",
+        "start": 29.5,
+        "end": 29.8
+      },
+      {
+        "text": "always",
+        "start": 29.8,
+        "end": 30.1
+      },
+      {
+        "text": "feels",
+        "start": 30.1,
+        "end": 30.4
+      },
+      {
+        "text": "the",
+        "start": 30.4,
+        "end": 30.7
+      },
+      {
+        "text": "same",
+        "start": 30.7,
+        "end": 31.0
+      }
+    ]
+  },
+  {
+    "time": 30,
+    "words": [
+      {
+        "text": "Thats",
+        "start": 30,
+        "end": 30.3
+      },
+      {
+        "text": "the",
+        "start": 30.3,
+        "end": 30.6
+      },
+      {
+        "text": "real",
+        "start": 30.6,
+        "end": 30.9
+      },
+      {
+        "text": "me",
+        "start": 30.9,
+        "end": 31.2
+      },
+      {
+        "text": "pop",
+        "start": 31.2,
+        "end": 31.5
+      },
+      {
+        "text": "the",
+        "start": 31.5,
+        "end": 31.8
+      },
+      {
+        "text": "champagne",
+        "start": 31.8,
+        "end": 32.1
+      }
+    ]
+  },
+  {
+    "time": 32,
+    "words": [
+      {
+        "text": "The",
+        "start": 32,
+        "end": 32.3
+      },
+      {
+        "text": "haters",
+        "start": 32.3,
+        "end": 32.6
+      },
+      {
+        "text": "wanna",
+        "start": 32.6,
+        "end": 32.9
+      },
+      {
+        "text": "hurt",
+        "start": 32.9,
+        "end": 33.2
+      },
+      {
+        "text": "me",
+        "start": 33.2,
+        "end": 33.5
+      },
+      {
+        "text": "and",
+        "start": 33.5,
+        "end": 33.8
+      },
+      {
+        "text": "Im",
+        "start": 33.8,
+        "end": 34.1
+      },
+      {
+        "text": "laughin",
+        "start": 34.1,
+        "end": 34.4
+      },
+      {
+        "text": "at",
+        "start": 34.4,
+        "end": 34.7
+      },
+      {
+        "text": "the",
+        "start": 34.7,
+        "end": 35.0
+      },
+      {
+        "text": "pain",
+        "start": 35.0,
+        "end": 35.3
+      }
+    ]
+  },
+  {
+    "time": 34,
+    "words": [
+      {
+        "text": "Stayin",
+        "start": 34,
+        "end": 34.3
+      },
+      {
+        "text": "still",
+        "start": 34.3,
+        "end": 34.6
+      },
+      {
+        "text": "eyes",
+        "start": 34.6,
+        "end": 34.9
+      },
+      {
+        "text": "closed",
+        "start": 34.9,
+        "end": 35.2
+      }
+    ]
+  },
+  {
+    "time": 36,
+    "words": [
+      {
+        "text": "Let",
+        "start": 36,
+        "end": 36.3
+      },
+      {
+        "text": "the",
+        "start": 36.3,
+        "end": 36.6
+      },
+      {
+        "text": "world",
+        "start": 36.6,
+        "end": 36.9
+      },
+      {
+        "text": "just",
+        "start": 36.9,
+        "end": 37.2
+      },
+      {
+        "text": "pass",
+        "start": 37.2,
+        "end": 37.5
+      },
+      {
+        "text": "me",
+        "start": 37.5,
+        "end": 37.8
+      },
+      {
+        "text": "by",
+        "start": 37.8,
+        "end": 38.1
+      }
+    ]
+  },
+  {
+    "time": 38,
+    "words": [
+      {
+        "text": "Pain",
+        "start": 38,
+        "end": 38.3
+      },
+      {
+        "text": "pills",
+        "start": 38.3,
+        "end": 38.6
+      },
+      {
+        "text": "nice",
+        "start": 38.6,
+        "end": 38.9
+      },
+      {
+        "text": "clothes",
+        "start": 38.9,
+        "end": 39.2
+      }
+    ]
+  },
+  {
+    "time": 40,
+    "words": [
+      {
+        "text": "If",
+        "start": 40,
+        "end": 40.3
+      },
+      {
+        "text": "I",
+        "start": 40.3,
+        "end": 40.6
+      },
+      {
+        "text": "fall",
+        "start": 40.6,
+        "end": 40.9
+      },
+      {
+        "text": "I",
+        "start": 40.9,
+        "end": 41.2
+      },
+      {
+        "text": "think",
+        "start": 41.2,
+        "end": 41.5
+      },
+      {
+        "text": "Ill",
+        "start": 41.5,
+        "end": 41.8
+      },
+      {
+        "text": "fly",
+        "start": 41.8,
+        "end": 42.1
+      }
+    ]
+  },
+  {
+    "time": 42,
+    "words": [
+      {
+        "text": "Touch",
+        "start": 42,
+        "end": 42.3
+      },
+      {
+        "text": "me",
+        "start": 42.3,
+        "end": 42.6
+      },
+      {
+        "text": "Midas",
+        "start": 42.6,
+        "end": 42.9
+      }
+    ]
+  },
+  {
+    "time": 44,
+    "words": [
+      {
+        "text": "Make",
+        "start": 44,
+        "end": 44.3
+      },
+      {
+        "text": "me",
+        "start": 44.3,
+        "end": 44.6
+      },
+      {
+        "text": "part",
+        "start": 44.6,
+        "end": 44.9
+      },
+      {
+        "text": "of",
+        "start": 44.9,
+        "end": 45.2
+      },
+      {
+        "text": "your",
+        "start": 45.2,
+        "end": 45.5
+      },
+      {
+        "text": "design",
+        "start": 45.5,
+        "end": 45.8
+      }
+    ]
+  },
+  {
+    "time": 46,
+    "words": [
+      {
+        "text": "None",
+        "start": 46,
+        "end": 46.3
+      },
+      {
+        "text": "to",
+        "start": 46.3,
+        "end": 46.6
+      },
+      {
+        "text": "guide",
+        "start": 46.6,
+        "end": 46.9
+      },
+      {
+        "text": "us",
+        "start": 46.9,
+        "end": 47.2
+      }
+    ]
+  },
+  {
+    "time": 48,
+    "words": [
+      {
+        "text": "I",
+        "start": 48,
+        "end": 48.3
+      },
+      {
+        "text": "feel",
+        "start": 48.3,
+        "end": 48.6
+      },
+      {
+        "text": "fear",
+        "start": 48.6,
+        "end": 48.9
+      },
+      {
+        "text": "for",
+        "start": 48.9,
+        "end": 49.2
+      },
+      {
+        "text": "the",
+        "start": 49.2,
+        "end": 49.5
+      },
+      {
+        "text": "very",
+        "start": 49.5,
+        "end": 49.8
+      },
+      {
+        "text": "last",
+        "start": 49.8,
+        "end": 50.1
+      },
+      {
+        "text": "time",
+        "start": 50.1,
+        "end": 50.4
+      }
+    ]
+  },
+  {
+    "time": 50,
+    "words": [
+      {
+        "text": "They",
+        "start": 50,
+        "end": 50.3
+      },
+      {
+        "text": "tell",
+        "start": 50.3,
+        "end": 50.6
+      },
+      {
+        "text": "me",
+        "start": 50.6,
+        "end": 50.9
+      },
+      {
+        "text": "that",
+        "start": 50.9,
+        "end": 51.2
+      },
+      {
+        "text": "Im",
+        "start": 51.2,
+        "end": 51.5
+      },
+      {
+        "text": "special",
+        "start": 51.5,
+        "end": 51.8
+      },
+      {
+        "text": "I",
+        "start": 51.8,
+        "end": 52.1
+      },
+      {
+        "text": "smile",
+        "start": 52.1,
+        "end": 52.4
+      },
+      {
+        "text": "and",
+        "start": 52.4,
+        "end": 52.7
+      },
+      {
+        "text": "shake",
+        "start": 52.7,
+        "end": 53.0
+      },
+      {
+        "text": "my",
+        "start": 53.0,
+        "end": 53.3
+      },
+      {
+        "text": "head",
+        "start": 53.3,
+        "end": 53.6
+      }
+    ]
+  },
+  {
+    "time": 52,
+    "words": [
+      {
+        "text": "Ill",
+        "start": 52,
+        "end": 52.3
+      },
+      {
+        "text": "give",
+        "start": 52.3,
+        "end": 52.6
+      },
+      {
+        "text": "them",
+        "start": 52.6,
+        "end": 52.9
+      },
+      {
+        "text": "stories",
+        "start": 52.9,
+        "end": 53.2
+      },
+      {
+        "text": "to",
+        "start": 53.2,
+        "end": 53.5
+      },
+      {
+        "text": "tell",
+        "start": 53.5,
+        "end": 53.8
+      },
+      {
+        "text": "friends",
+        "start": 53.8,
+        "end": 54.1
+      },
+      {
+        "text": "about",
+        "start": 54.1,
+        "end": 54.4
+      },
+      {
+        "text": "the",
+        "start": 54.4,
+        "end": 54.7
+      },
+      {
+        "text": "things",
+        "start": 54.7,
+        "end": 55.0
+      },
+      {
+        "text": "I",
+        "start": 55.0,
+        "end": 55.3
+      },
+      {
+        "text": "said",
+        "start": 55.3,
+        "end": 55.6
+      }
+    ]
+  },
+  {
+    "time": 54,
+    "words": [
+      {
+        "text": "They",
+        "start": 54,
+        "end": 54.3
+      },
+      {
+        "text": "tell",
+        "start": 54.3,
+        "end": 54.6
+      },
+      {
+        "text": "me",
+        "start": 54.6,
+        "end": 54.9
+      },
+      {
+        "text": "Im",
+        "start": 54.9,
+        "end": 55.2
+      },
+      {
+        "text": "so",
+        "start": 55.2,
+        "end": 55.5
+      },
+      {
+        "text": "humble",
+        "start": 55.5,
+        "end": 55.8
+      },
+      {
+        "text": "I",
+        "start": 55.8,
+        "end": 56.1
+      },
+      {
+        "text": "say",
+        "start": 56.1,
+        "end": 56.4
+      },
+      {
+        "text": "Im",
+        "start": 56.4,
+        "end": 56.7
+      },
+      {
+        "text": "turning",
+        "start": 56.7,
+        "end": 57.0
+      },
+      {
+        "text": "red",
+        "start": 57.0,
+        "end": 57.3
+      }
+    ]
+  },
+  {
+    "time": 56,
+    "words": [
+      {
+        "text": "They",
+        "start": 56,
+        "end": 56.3
+      },
+      {
+        "text": "let",
+        "start": 56.3,
+        "end": 56.6
+      },
+      {
+        "text": "me",
+        "start": 56.6,
+        "end": 56.9
+      },
+      {
+        "text": "lie",
+        "start": 56.9,
+        "end": 57.2
+      },
+      {
+        "text": "to",
+        "start": 57.2,
+        "end": 57.5
+      },
+      {
+        "text": "them",
+        "start": 57.5,
+        "end": 57.8
+      },
+      {
+        "text": "and",
+        "start": 57.8,
+        "end": 58.1
+      },
+      {
+        "text": "dont",
+        "start": 58.1,
+        "end": 58.4
+      },
+      {
+        "text": "feel",
+        "start": 58.4,
+        "end": 58.7
+      },
+      {
+        "text": "like",
+        "start": 58.7,
+        "end": 59.0
+      },
+      {
+        "text": "theyve",
+        "start": 59.0,
+        "end": 59.3
+      },
+      {
+        "text": "been",
+        "start": 59.3,
+        "end": 59.6
+      },
+      {
+        "text": "misled",
+        "start": 59.6,
+        "end": 59.9
+      }
+    ]
+  },
+  {
+    "time": 58,
+    "words": [
+      {
+        "text": "They",
+        "start": 58,
+        "end": 58.3
+      },
+      {
+        "text": "give",
+        "start": 58.3,
+        "end": 58.6
+      },
+      {
+        "text": "so",
+        "start": 58.6,
+        "end": 58.9
+      },
+      {
+        "text": "much",
+        "start": 58.9,
+        "end": 59.2
+      },
+      {
+        "text": "to",
+        "start": 59.2,
+        "end": 59.5
+      },
+      {
+        "text": "me",
+        "start": 59.5,
+        "end": 59.8
+      },
+      {
+        "text": "Im",
+        "start": 59.8,
+        "end": 60.1
+      },
+      {
+        "text": "losing",
+        "start": 60.1,
+        "end": 60.4
+      },
+      {
+        "text": "touch",
+        "start": 60.4,
+        "end": 60.7
+      },
+      {
+        "text": "get",
+        "start": 60.7,
+        "end": 61.0
+      },
+      {
+        "text": "me?",
+        "start": 61.0,
+        "end": 61.3
+      }
+    ]
+  },
+  {
+    "time": 60,
+    "words": [
+      {
+        "text": "Served",
+        "start": 60,
+        "end": 60.3
+      },
+      {
+        "text": "on",
+        "start": 60.3,
+        "end": 60.6
+      },
+      {
+        "text": "a",
+        "start": 60.6,
+        "end": 60.9
+      },
+      {
+        "text": "silver",
+        "start": 60.9,
+        "end": 61.2
+      },
+      {
+        "text": "platter",
+        "start": 61.2,
+        "end": 61.5
+      },
+      {
+        "text": "ask",
+        "start": 61.5,
+        "end": 61.8
+      },
+      {
+        "text": "for",
+        "start": 61.8,
+        "end": 62.1
+      },
+      {
+        "text": "seconds",
+        "start": 62.1,
+        "end": 62.4
+      },
+      {
+        "text": "they",
+        "start": 62.4,
+        "end": 62.7
+      },
+      {
+        "text": "just",
+        "start": 62.7,
+        "end": 63.0
+      },
+      {
+        "text": "let",
+        "start": 63.0,
+        "end": 63.3
+      },
+      {
+        "text": "me",
+        "start": 63.3,
+        "end": 63.6
+      }
+    ]
+  },
+  {
+    "time": 62,
+    "words": [
+      {
+        "text": "They",
+        "start": 62,
+        "end": 62.3
+      },
+      {
+        "text": "tell",
+        "start": 62.3,
+        "end": 62.6
+      },
+      {
+        "text": "me",
+        "start": 62.6,
+        "end": 62.9
+      },
+      {
+        "text": "Im",
+        "start": 62.9,
+        "end": 63.2
+      },
+      {
+        "text": "a",
+        "start": 63.2,
+        "end": 63.5
+      },
+      {
+        "text": "god",
+        "start": 63.5,
+        "end": 63.8
+      },
+      {
+        "text": "Im",
+        "start": 63.8,
+        "end": 64.1
+      },
+      {
+        "text": "lost",
+        "start": 64.1,
+        "end": 64.4
+      },
+      {
+        "text": "in",
+        "start": 64.4,
+        "end": 64.7
+      },
+      {
+        "text": "the",
+        "start": 64.7,
+        "end": 65.0
+      },
+      {
+        "text": "façade",
+        "start": 65.0,
+        "end": 65.3
+      }
+    ]
+  },
+  {
+    "time": 64,
+    "words": [
+      {
+        "text": "Six",
+        "start": 64,
+        "end": 64.3
+      },
+      {
+        "text": "feet",
+        "start": 64.3,
+        "end": 64.6
+      },
+      {
+        "text": "off",
+        "start": 64.6,
+        "end": 64.9
+      },
+      {
+        "text": "the",
+        "start": 64.9,
+        "end": 65.2
+      },
+      {
+        "text": "ground",
+        "start": 65.2,
+        "end": 65.5
+      },
+      {
+        "text": "at",
+        "start": 65.5,
+        "end": 65.8
+      },
+      {
+        "text": "all",
+        "start": 65.8,
+        "end": 66.1
+      },
+      {
+        "text": "times",
+        "start": 66.1,
+        "end": 66.4
+      },
+      {
+        "text": "I",
+        "start": 66.4,
+        "end": 66.7
+      },
+      {
+        "text": "think",
+        "start": 66.7,
+        "end": 67.0
+      },
+      {
+        "text": "Im",
+        "start": 67.0,
+        "end": 67.3
+      },
+      {
+        "text": "feelin",
+        "start": 67.3,
+        "end": 67.6
+      },
+      {
+        "text": "odd",
+        "start": 67.6,
+        "end": 67.9
+      }
+    ]
+  },
+  {
+    "time": 66,
+    "words": [
+      {
+        "text": "No",
+        "start": 66,
+        "end": 66.3
+      },
+      {
+        "text": "matter",
+        "start": 66.3,
+        "end": 66.6
+      },
+      {
+        "text": "what",
+        "start": 66.6,
+        "end": 66.9
+      },
+      {
+        "text": "I",
+        "start": 66.9,
+        "end": 67.2
+      },
+      {
+        "text": "make",
+        "start": 67.2,
+        "end": 67.5
+      },
+      {
+        "text": "they",
+        "start": 67.5,
+        "end": 67.8
+      },
+      {
+        "text": "never",
+        "start": 67.8,
+        "end": 68.1
+      },
+      {
+        "text": "see",
+        "start": 68.1,
+        "end": 68.4
+      },
+      {
+        "text": "mistakes",
+        "start": 68.4,
+        "end": 68.7
+      }
+    ]
+  },
+  {
+    "time": 68,
+    "words": [
+      {
+        "text": "Makin",
+        "start": 68,
+        "end": 68.3
+      },
+      {
+        "text": "so",
+        "start": 68.3,
+        "end": 68.6
+      },
+      {
+        "text": "much",
+        "start": 68.6,
+        "end": 68.9
+      },
+      {
+        "text": "bread",
+        "start": 68.9,
+        "end": 69.2
+      },
+      {
+        "text": "I",
+        "start": 69.2,
+        "end": 69.5
+      },
+      {
+        "text": "dont",
+        "start": 69.5,
+        "end": 69.8
+      },
+      {
+        "text": "care",
+        "start": 69.8,
+        "end": 70.1
+      },
+      {
+        "text": "that",
+        "start": 70.1,
+        "end": 70.4
+      },
+      {
+        "text": "theyre",
+        "start": 70.4,
+        "end": 70.7
+      },
+      {
+        "text": "just",
+        "start": 70.7,
+        "end": 71.0
+      },
+      {
+        "text": "being",
+        "start": 71.0,
+        "end": 71.3
+      },
+      {
+        "text": "fake",
+        "start": 71.3,
+        "end": 71.6
+      }
+    ]
+  },
+  {
+    "time": 70,
+    "words": [
+      {
+        "text": "They",
+        "start": 70,
+        "end": 70.3
+      },
+      {
+        "text": "tell",
+        "start": 70.3,
+        "end": 70.6
+      },
+      {
+        "text": "me",
+        "start": 70.6,
+        "end": 70.9
+      },
+      {
+        "text": "theyre",
+        "start": 70.9,
+        "end": 71.2
+      },
+      {
+        "text": "below",
+        "start": 71.2,
+        "end": 71.5
+      },
+      {
+        "text": "me",
+        "start": 71.5,
+        "end": 71.8
+      },
+      {
+        "text": "I",
+        "start": 71.8,
+        "end": 72.1
+      },
+      {
+        "text": "act",
+        "start": 72.1,
+        "end": 72.4
+      },
+      {
+        "text": "like",
+        "start": 72.4,
+        "end": 72.7
+      },
+      {
+        "text": "Im",
+        "start": 72.7,
+        "end": 73.0
+      },
+      {
+        "text": "above",
+        "start": 73.0,
+        "end": 73.3
+      }
+    ]
+  },
+  {
+    "time": 72,
+    "words": [
+      {
+        "text": "The",
+        "start": 72,
+        "end": 72.3
+      },
+      {
+        "text": "people",
+        "start": 72.3,
+        "end": 72.6
+      },
+      {
+        "text": "blend",
+        "start": 72.6,
+        "end": 72.9
+      },
+      {
+        "text": "together",
+        "start": 72.9,
+        "end": 73.2
+      },
+      {
+        "text": "but",
+        "start": 73.2,
+        "end": 73.5
+      },
+      {
+        "text": "I",
+        "start": 73.5,
+        "end": 73.8
+      },
+      {
+        "text": "would",
+        "start": 73.8,
+        "end": 74.1
+      },
+      {
+        "text": "be",
+        "start": 74.1,
+        "end": 74.4
+      },
+      {
+        "text": "lost",
+        "start": 74.4,
+        "end": 74.7
+      },
+      {
+        "text": "without",
+        "start": 74.7,
+        "end": 75.0
+      },
+      {
+        "text": "their",
+        "start": 75.0,
+        "end": 75.3
+      },
+      {
+        "text": "love",
+        "start": 75.3,
+        "end": 75.6
+      }
+    ]
+  },
+  {
+    "time": 74,
+    "words": [
+      {
+        "text": "Can",
+        "start": 74,
+        "end": 74.3
+      },
+      {
+        "text": "you",
+        "start": 74.3,
+        "end": 74.6
+      },
+      {
+        "text": "heal",
+        "start": 74.6,
+        "end": 74.9
+      },
+      {
+        "text": "me?",
+        "start": 74.9,
+        "end": 75.2
+      },
+      {
+        "text": "Have",
+        "start": 75.2,
+        "end": 75.5
+      },
+      {
+        "text": "I",
+        "start": 75.5,
+        "end": 75.8
+      },
+      {
+        "text": "gained",
+        "start": 75.8,
+        "end": 76.1
+      },
+      {
+        "text": "too",
+        "start": 76.1,
+        "end": 76.4
+      },
+      {
+        "text": "much?",
+        "start": 76.4,
+        "end": 76.7
+      }
+    ]
+  },
+  {
+    "time": 76,
+    "words": [
+      {
+        "text": "When",
+        "start": 76,
+        "end": 76.3
+      },
+      {
+        "text": "you",
+        "start": 76.3,
+        "end": 76.6
+      },
+      {
+        "text": "become",
+        "start": 76.6,
+        "end": 76.9
+      },
+      {
+        "text": "untouchable",
+        "start": 76.9,
+        "end": 77.2
+      },
+      {
+        "text": "youre",
+        "start": 77.2,
+        "end": 77.5
+      },
+      {
+        "text": "unable",
+        "start": 77.5,
+        "end": 77.8
+      },
+      {
+        "text": "to",
+        "start": 77.8,
+        "end": 78.1
+      },
+      {
+        "text": "touch",
+        "start": 78.1,
+        "end": 78.4
+      }
+    ]
+  },
+  {
+    "time": 78,
+    "words": [
+      {
+        "text": "Is",
+        "start": 78,
+        "end": 78.3
+      },
+      {
+        "text": "there",
+        "start": 78.3,
+        "end": 78.6
+      },
+      {
+        "text": "a",
+        "start": 78.6,
+        "end": 78.9
+      },
+      {
+        "text": "real",
+        "start": 78.9,
+        "end": 79.2
+      },
+      {
+        "text": "me?",
+        "start": 79.2,
+        "end": 79.5
+      },
+      {
+        "text": "Pop",
+        "start": 79.5,
+        "end": 79.8
+      },
+      {
+        "text": "the",
+        "start": 79.8,
+        "end": 80.1
+      },
+      {
+        "text": "champagne",
+        "start": 80.1,
+        "end": 80.4
+      }
+    ]
+  },
+  {
+    "time": 80,
+    "words": [
+      {
+        "text": "It",
+        "start": 80,
+        "end": 80.3
+      },
+      {
+        "text": "hurts",
+        "start": 80.3,
+        "end": 80.6
+      },
+      {
+        "text": "me",
+        "start": 80.6,
+        "end": 80.9
+      },
+      {
+        "text": "just",
+        "start": 80.9,
+        "end": 81.2
+      },
+      {
+        "text": "to",
+        "start": 81.2,
+        "end": 81.5
+      },
+      {
+        "text": "think",
+        "start": 81.5,
+        "end": 81.8
+      },
+      {
+        "text": "and",
+        "start": 81.8,
+        "end": 82.1
+      },
+      {
+        "text": "I",
+        "start": 82.1,
+        "end": 82.4
+      },
+      {
+        "text": "dont",
+        "start": 82.4,
+        "end": 82.7
+      },
+      {
+        "text": "do",
+        "start": 82.7,
+        "end": 83.0
+      },
+      {
+        "text": "pain",
+        "start": 83.0,
+        "end": 83.3
+      }
+    ]
+  },
+  {
+    "time": 82,
+    "words": [
+      {
+        "text": "Stayin",
+        "start": 82,
+        "end": 82.3
+      },
+      {
+        "text": "still",
+        "start": 82.3,
+        "end": 82.6
+      },
+      {
+        "text": "eyes",
+        "start": 82.6,
+        "end": 82.9
+      },
+      {
+        "text": "closed",
+        "start": 82.9,
+        "end": 83.2
+      }
+    ]
+  },
+  {
+    "time": 84,
+    "words": [
+      {
+        "text": "Let",
+        "start": 84,
+        "end": 84.3
+      },
+      {
+        "text": "the",
+        "start": 84.3,
+        "end": 84.6
+      },
+      {
+        "text": "world",
+        "start": 84.6,
+        "end": 84.9
+      },
+      {
+        "text": "just",
+        "start": 84.9,
+        "end": 85.2
+      },
+      {
+        "text": "pass",
+        "start": 85.2,
+        "end": 85.5
+      },
+      {
+        "text": "me",
+        "start": 85.5,
+        "end": 85.8
+      },
+      {
+        "text": "by",
+        "start": 85.8,
+        "end": 86.1
+      }
+    ]
+  },
+  {
+    "time": 86,
+    "words": [
+      {
+        "text": "Pain",
+        "start": 86,
+        "end": 86.3
+      },
+      {
+        "text": "pills",
+        "start": 86.3,
+        "end": 86.6
+      },
+      {
+        "text": "nice",
+        "start": 86.6,
+        "end": 86.9
+      },
+      {
+        "text": "clothes",
+        "start": 86.9,
+        "end": 87.2
+      }
+    ]
+  },
+  {
+    "time": 88,
+    "words": [
+      {
+        "text": "If",
+        "start": 88,
+        "end": 88.3
+      },
+      {
+        "text": "I",
+        "start": 88.3,
+        "end": 88.6
+      },
+      {
+        "text": "fall",
+        "start": 88.6,
+        "end": 88.9
+      },
+      {
+        "text": "I",
+        "start": 88.9,
+        "end": 89.2
+      },
+      {
+        "text": "think",
+        "start": 89.2,
+        "end": 89.5
+      },
+      {
+        "text": "Ill",
+        "start": 89.5,
+        "end": 89.8
+      },
+      {
+        "text": "fly",
+        "start": 89.8,
+        "end": 90.1
+      }
+    ]
+  },
+  {
+    "time": 90,
+    "words": [
+      {
+        "text": "Touch",
+        "start": 90,
+        "end": 90.3
+      },
+      {
+        "text": "me",
+        "start": 90.3,
+        "end": 90.6
+      },
+      {
+        "text": "Midas",
+        "start": 90.6,
+        "end": 90.9
+      }
+    ]
+  },
+  {
+    "time": 92,
+    "words": [
+      {
+        "text": "Make",
+        "start": 92,
+        "end": 92.3
+      },
+      {
+        "text": "me",
+        "start": 92.3,
+        "end": 92.6
+      },
+      {
+        "text": "part",
+        "start": 92.6,
+        "end": 92.9
+      },
+      {
+        "text": "of",
+        "start": 92.9,
+        "end": 93.2
+      },
+      {
+        "text": "your",
+        "start": 93.2,
+        "end": 93.5
+      },
+      {
+        "text": "design",
+        "start": 93.5,
+        "end": 93.8
+      }
+    ]
+  },
+  {
+    "time": 94,
+    "words": [
+      {
+        "text": "None",
+        "start": 94,
+        "end": 94.3
+      },
+      {
+        "text": "to",
+        "start": 94.3,
+        "end": 94.6
+      },
+      {
+        "text": "guide",
+        "start": 94.6,
+        "end": 94.9
+      },
+      {
+        "text": "us",
+        "start": 94.9,
+        "end": 95.2
+      }
+    ]
+  },
+  {
+    "time": 96,
+    "words": [
+      {
+        "text": "I",
+        "start": 96,
+        "end": 96.3
+      },
+      {
+        "text": "feel",
+        "start": 96.3,
+        "end": 96.6
+      },
+      {
+        "text": "fear",
+        "start": 96.6,
+        "end": 96.9
+      },
+      {
+        "text": "for",
+        "start": 96.9,
+        "end": 97.2
+      },
+      {
+        "text": "the",
+        "start": 97.2,
+        "end": 97.5
+      },
+      {
+        "text": "very",
+        "start": 97.5,
+        "end": 97.8
+      },
+      {
+        "text": "last",
+        "start": 97.8,
+        "end": 98.1
+      },
+      {
+        "text": "time",
+        "start": 98.1,
+        "end": 98.4
+      }
+    ]
+  },
+  {
+    "time": 98,
+    "words": [
+      {
+        "text": "Lay",
+        "start": 98,
+        "end": 98.3
+      },
+      {
+        "text": "still",
+        "start": 98.3,
+        "end": 98.6
+      },
+      {
+        "text": "restless",
+        "start": 98.6,
+        "end": 98.9
+      }
+    ]
+  },
+  {
+    "time": 100,
+    "words": [
+      {
+        "text": "Losing",
+        "start": 100,
+        "end": 100.3
+      },
+      {
+        "text": "sleep",
+        "start": 100.3,
+        "end": 100.6
+      },
+      {
+        "text": "while",
+        "start": 100.6,
+        "end": 100.9
+      },
+      {
+        "text": "I",
+        "start": 100.9,
+        "end": 101.2
+      },
+      {
+        "text": "lose",
+        "start": 101.2,
+        "end": 101.5
+      },
+      {
+        "text": "my",
+        "start": 101.5,
+        "end": 101.8
+      },
+      {
+        "text": "mind",
+        "start": 101.8,
+        "end": 102.1
+      },
+      {
+        "text": "yeah",
+        "start": 102.1,
+        "end": 102.4
+      }
+    ]
+  },
+  {
+    "time": 102,
+    "words": [
+      {
+        "text": "All",
+        "start": 102,
+        "end": 102.3
+      },
+      {
+        "text": "thrill",
+        "start": 102.3,
+        "end": 102.6
+      },
+      {
+        "text": "no",
+        "start": 102.6,
+        "end": 102.9
+      },
+      {
+        "text": "stress",
+        "start": 102.9,
+        "end": 103.2
+      }
+    ]
+  },
+  {
+    "time": 104,
+    "words": [
+      {
+        "text": "All",
+        "start": 104,
+        "end": 104.3
+      },
+      {
+        "text": "my",
+        "start": 104.3,
+        "end": 104.6
+      },
+      {
+        "text": "muses",
+        "start": 104.6,
+        "end": 104.9
+      },
+      {
+        "text": "left",
+        "start": 104.9,
+        "end": 105.2
+      },
+      {
+        "text": "behind",
+        "start": 105.2,
+        "end": 105.5
+      },
+      {
+        "text": "left",
+        "start": 105.5,
+        "end": 105.8
+      },
+      {
+        "text": "behind",
+        "start": 105.8,
+        "end": 106.1
+      }
+    ]
+  },
+  {
+    "time": 106,
+    "words": [
+      {
+        "text": "World",
+        "start": 106,
+        "end": 106.3
+      },
+      {
+        "text": "is",
+        "start": 106.3,
+        "end": 106.6
+      },
+      {
+        "text": "below",
+        "start": 106.6,
+        "end": 106.9
+      }
+    ]
+  },
+  {
+    "time": 108,
+    "words": [
+      {
+        "text": "So",
+        "start": 108,
+        "end": 108.3
+      },
+      {
+        "text": "high",
+        "start": 108.3,
+        "end": 108.6
+      },
+      {
+        "text": "up",
+        "start": 108.6,
+        "end": 108.9
+      },
+      {
+        "text": "Im",
+        "start": 108.9,
+        "end": 109.2
+      },
+      {
+        "text": "near-divine",
+        "start": 109.2,
+        "end": 109.5
+      },
+      {
+        "text": "Im",
+        "start": 109.5,
+        "end": 109.8
+      },
+      {
+        "text": "so",
+        "start": 109.8,
+        "end": 110.1
+      },
+      {
+        "text": "high",
+        "start": 110.1,
+        "end": 110.4
+      },
+      {
+        "text": "up",
+        "start": 110.4,
+        "end": 110.7
+      }
+    ]
+  },
+  {
+    "time": 110,
+    "words": [
+      {
+        "text": "Lean",
+        "start": 110,
+        "end": 110.3
+      },
+      {
+        "text": "in",
+        "start": 110.3,
+        "end": 110.6
+      },
+      {
+        "text": "let",
+        "start": 110.6,
+        "end": 110.9
+      },
+      {
+        "text": "go",
+        "start": 110.9,
+        "end": 111.2
+      }
+    ]
+  },
+  {
+    "time": 112,
+    "words": [
+      {
+        "text": "I",
+        "start": 112,
+        "end": 112.3
+      },
+      {
+        "text": "feel",
+        "start": 112.3,
+        "end": 112.6
+      },
+      {
+        "text": "fear",
+        "start": 112.6,
+        "end": 112.9
+      },
+      {
+        "text": "for",
+        "start": 112.9,
+        "end": 113.2
+      },
+      {
+        "text": "the",
+        "start": 113.2,
+        "end": 113.5
+      },
+      {
+        "text": "very",
+        "start": 113.5,
+        "end": 113.8
+      },
+      {
+        "text": "last",
+        "start": 113.8,
+        "end": 114.1
+      },
+      {
+        "text": "time",
+        "start": 114.1,
+        "end": 114.4
+      }
+    ]
+  }
+]

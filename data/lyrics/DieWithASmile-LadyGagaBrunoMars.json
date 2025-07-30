@@ -1,0 +1,1774 @@
+[
+  {
+    "time": 0.63,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 0.63,
+        "end": 3.22
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 3.29,
+    "words": [
+      {
+        "text": "UHH",
+        "start": 4.05,
+        "end": 4.8
+      },
+      {
+        "text": "UHH",
+        "start": 4.8,
+        "end": 5.55
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 6.38,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 6.38,
+        "end": 8.55
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 8.63,
+    "words": [
+      {
+        "text": "I,",
+        "start": 9.26,
+        "end": 9.89
+      },
+      {
+        "text": "I",
+        "start": 9.89,
+        "end": 10.52
+      },
+      {
+        "text": "JUST",
+        "start": 10.52,
+        "end": 11.15
+      },
+      {
+        "text": "WOKE",
+        "start": 11.15,
+        "end": 11.78
+      },
+      {
+        "text": "UP",
+        "start": 11.78,
+        "end": 12.41
+      },
+      {
+        "text": "FROM",
+        "start": 12.41,
+        "end": 13.04
+      },
+      {
+        "text": "A",
+        "start": 13.04,
+        "end": 13.67
+      },
+      {
+        "text": "DREAM",
+        "start": 13.67,
+        "end": 14.3
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 15.56,
+    "words": [
+      {
+        "text": "WHERE",
+        "start": 15.9,
+        "end": 16.24
+      },
+      {
+        "text": "YOU",
+        "start": 16.24,
+        "end": 16.58
+      },
+      {
+        "text": "AND",
+        "start": 16.58,
+        "end": 16.92
+      },
+      {
+        "text": "I",
+        "start": 16.93,
+        "end": 17.27
+      },
+      {
+        "text": "HAD",
+        "start": 17.27,
+        "end": 17.61
+      },
+      {
+        "text": "TO",
+        "start": 17.61,
+        "end": 17.95
+      },
+      {
+        "text": "SAY",
+        "start": 17.95,
+        "end": 18.29
+      },
+      {
+        "text": "GOODBYE",
+        "start": 18.29,
+        "end": 18.63
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 20.27,
+    "words": [
+      {
+        "text": "AND",
+        "start": 20.64,
+        "end": 21.01
+      },
+      {
+        "text": "I",
+        "start": 21.0,
+        "end": 21.37
+      },
+      {
+        "text": "DON'T",
+        "start": 21.37,
+        "end": 21.74
+      },
+      {
+        "text": "KNOW",
+        "start": 21.74,
+        "end": 22.11
+      },
+      {
+        "text": "WHAT",
+        "start": 22.11,
+        "end": 22.48
+      },
+      {
+        "text": "IT",
+        "start": 22.47,
+        "end": 22.84
+      },
+      {
+        "text": "ALL",
+        "start": 22.84,
+        "end": 23.21
+      },
+      {
+        "text": "MEANS",
+        "start": 23.21,
+        "end": 23.58
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 24.77,
+    "words": [
+      {
+        "text": "BUT",
+        "start": 25.24,
+        "end": 25.71
+      },
+      {
+        "text": "SINCE",
+        "start": 25.71,
+        "end": 26.18
+      },
+      {
+        "text": "I",
+        "start": 26.18,
+        "end": 26.65
+      },
+      {
+        "text": "SURVIVED",
+        "start": 26.65,
+        "end": 27.12
+      },
+      {
+        "text": "I",
+        "start": 27.12,
+        "end": 27.59
+      },
+      {
+        "text": "REALIZED",
+        "start": 27.59,
+        "end": 28.06
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 29.07,
+    "words": [
+      {
+        "text": "WHEREVER",
+        "start": 29.59,
+        "end": 30.1
+      },
+      {
+        "text": "YOU",
+        "start": 30.1,
+        "end": 30.61
+      },
+      {
+        "text": "GO",
+        "start": 30.61,
+        "end": 31.12
+      },
+      {
+        "text": "THAT'S",
+        "start": 31.13,
+        "end": 31.64
+      },
+      {
+        "text": "WHERE",
+        "start": 31.64,
+        "end": 32.15
+      },
+      {
+        "text": "I'LL",
+        "start": 32.16,
+        "end": 32.67
+      },
+      {
+        "text": "FOLLOW",
+        "start": 32.67,
+        "end": 33.18
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 33.87,
+    "words": [
+      {
+        "text": "NOBODY’S",
+        "start": 34.69,
+        "end": 35.52
+      },
+      {
+        "text": "PROMISED",
+        "start": 35.52,
+        "end": 36.35
+      },
+      {
+        "text": "TOMORROW",
+        "start": 36.34,
+        "end": 37.17
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 38.5,
+    "words": [
+      {
+        "text": "SO",
+        "start": 38.77,
+        "end": 39.04
+      },
+      {
+        "text": "IMMA",
+        "start": 39.04,
+        "end": 39.31
+      },
+      {
+        "text": "LOVE",
+        "start": 39.32,
+        "end": 39.59
+      },
+      {
+        "text": "YOU",
+        "start": 39.59,
+        "end": 39.86
+      },
+      {
+        "text": "EVERY",
+        "start": 39.86,
+        "end": 40.13
+      },
+      {
+        "text": "NIGHT",
+        "start": 40.13,
+        "end": 40.4
+      },
+      {
+        "text": "LIKE",
+        "start": 40.41,
+        "end": 40.68
+      },
+      {
+        "text": "IT'S",
+        "start": 40.68,
+        "end": 40.95
+      },
+      {
+        "text": "THE",
+        "start": 40.95,
+        "end": 41.22
+      },
+      {
+        "text": "LAST",
+        "start": 41.22,
+        "end": 41.49
+      },
+      {
+        "text": "NIGHT",
+        "start": 41.5,
+        "end": 41.77
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 42.54,
+    "words": [
+      {
+        "text": "LIKE",
+        "start": 42.8,
+        "end": 43.06
+      },
+      {
+        "text": "IT’S",
+        "start": 43.05,
+        "end": 43.31
+      },
+      {
+        "text": "THE",
+        "start": 43.31,
+        "end": 43.57
+      },
+      {
+        "text": "LAST",
+        "start": 43.57,
+        "end": 43.83
+      },
+      {
+        "text": "NIGHT",
+        "start": 43.82,
+        "end": 44.08
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 44.71,
+    "words": [
+      {
+        "text": "IF",
+        "start": 45.38,
+        "end": 46.04
+      },
+      {
+        "text": "THE",
+        "start": 46.04,
+        "end": 46.7
+      },
+      {
+        "text": "WORLD",
+        "start": 46.7,
+        "end": 47.36
+      },
+      {
+        "text": "WAS",
+        "start": 47.37,
+        "end": 48.03
+      },
+      {
+        "text": "ENDING",
+        "start": 48.03,
+        "end": 48.69
+      },
+      {
+        "text": "I’D",
+        "start": 48.7,
+        "end": 49.36
+      },
+      {
+        "text": "WANNA",
+        "start": 49.36,
+        "end": 50.02
+      },
+      {
+        "text": "BE",
+        "start": 50.02,
+        "end": 50.68
+      },
+      {
+        "text": "NEXT",
+        "start": 50.69,
+        "end": 51.35
+      },
+      {
+        "text": "(TO",
+        "start": 51.35,
+        "end": 52.01
+      },
+      {
+        "text": "YOU)",
+        "start": 52.02,
+        "end": 52.68
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 53.68,
+    "words": [
+      {
+        "text": "IF",
+        "start": 54.31,
+        "end": 54.94
+      },
+      {
+        "text": "THE",
+        "start": 54.94,
+        "end": 55.57
+      },
+      {
+        "text": "PARTY",
+        "start": 55.57,
+        "end": 56.2
+      },
+      {
+        "text": "WAS",
+        "start": 56.21,
+        "end": 56.84
+      },
+      {
+        "text": "OVER",
+        "start": 56.84,
+        "end": 57.47
+      },
+      {
+        "text": "AND",
+        "start": 57.47,
+        "end": 58.1
+      },
+      {
+        "text": "OUR",
+        "start": 58.1,
+        "end": 58.73
+      },
+      {
+        "text": "TIME",
+        "start": 58.73,
+        "end": 59.36
+      },
+      {
+        "text": "ON",
+        "start": 59.36,
+        "end": 59.99
+      },
+      {
+        "text": "EARTH",
+        "start": 59.99,
+        "end": 60.62
+      },
+      {
+        "text": "(WAS",
+        "start": 60.63,
+        "end": 61.26
+      },
+      {
+        "text": "THROUGH)",
+        "start": 61.26,
+        "end": 61.89
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 62.77,
+    "words": [
+      {
+        "text": "I’D",
+        "start": 63.23,
+        "end": 63.69
+      },
+      {
+        "text": "WANNA",
+        "start": 63.69,
+        "end": 64.15
+      },
+      {
+        "text": "HOLD",
+        "start": 64.15,
+        "end": 64.61
+      },
+      {
+        "text": "YOU",
+        "start": 64.61,
+        "end": 65.07
+      },
+      {
+        "text": "JUST",
+        "start": 65.06,
+        "end": 65.52
+      },
+      {
+        "text": "FOR",
+        "start": 65.52,
+        "end": 65.98
+      },
+      {
+        "text": "A",
+        "start": 65.98,
+        "end": 66.44
+      },
+      {
+        "text": "WHILE",
+        "start": 66.44,
+        "end": 66.9
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 67.44,
+    "words": [
+      {
+        "text": "AND",
+        "start": 68.01,
+        "end": 68.58
+      },
+      {
+        "text": "DIE",
+        "start": 68.59,
+        "end": 69.16
+      },
+      {
+        "text": "WITH",
+        "start": 69.16,
+        "end": 69.73
+      },
+      {
+        "text": "A",
+        "start": 69.73,
+        "end": 70.3
+      },
+      {
+        "text": "SMILE",
+        "start": 70.3,
+        "end": 70.87
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 71.99,
+    "words": [
+      {
+        "text": "IF",
+        "start": 72.53,
+        "end": 73.07
+      },
+      {
+        "text": "THE",
+        "start": 73.07,
+        "end": 73.61
+      },
+      {
+        "text": "WORLD",
+        "start": 73.62,
+        "end": 74.16
+      },
+      {
+        "text": "WAS",
+        "start": 74.16,
+        "end": 74.7
+      },
+      {
+        "text": "ENDING",
+        "start": 74.7,
+        "end": 75.24
+      },
+      {
+        "text": "I’D",
+        "start": 75.24,
+        "end": 75.78
+      },
+      {
+        "text": "WANNA",
+        "start": 75.78,
+        "end": 76.32
+      },
+      {
+        "text": "BE",
+        "start": 76.33,
+        "end": 76.87
+      },
+      {
+        "text": "NEXT",
+        "start": 76.87,
+        "end": 77.41
+      },
+      {
+        "text": "TO",
+        "start": 77.41,
+        "end": 77.95
+      },
+      {
+        "text": "YOU",
+        "start": 77.95,
+        "end": 78.49
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 81.04,
+    "words": [
+      {
+        "text": "(WOO",
+        "start": 81.67,
+        "end": 82.31
+      },
+      {
+        "text": "OOH)",
+        "start": 82.31,
+        "end": 82.95
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 85.08,
+    "words": [
+      {
+        "text": "OOH",
+        "start": 85.7,
+        "end": 86.32
+      },
+      {
+        "text": "LOST",
+        "start": 86.32,
+        "end": 86.94
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 88.59,
+    "words": [
+      {
+        "text": "LOST",
+        "start": 88.95,
+        "end": 89.31
+      },
+      {
+        "text": "IN",
+        "start": 89.31,
+        "end": 89.67
+      },
+      {
+        "text": "THE",
+        "start": 89.67,
+        "end": 90.03
+      },
+      {
+        "text": "WORDS",
+        "start": 90.03,
+        "end": 90.39
+      },
+      {
+        "text": "THAT",
+        "start": 90.4,
+        "end": 90.76
+      },
+      {
+        "text": "WE",
+        "start": 90.76,
+        "end": 91.12
+      },
+      {
+        "text": "SCREAM",
+        "start": 91.12,
+        "end": 91.48
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 92.84,
+    "words": [
+      {
+        "text": "I",
+        "start": 93.34,
+        "end": 93.84
+      },
+      {
+        "text": "DON'T",
+        "start": 93.83,
+        "end": 94.33
+      },
+      {
+        "text": "EVEN",
+        "start": 94.33,
+        "end": 94.83
+      },
+      {
+        "text": "WANNA",
+        "start": 94.83,
+        "end": 95.33
+      },
+      {
+        "text": "DO",
+        "start": 95.32,
+        "end": 95.82
+      },
+      {
+        "text": "THIS",
+        "start": 95.82,
+        "end": 96.32
+      },
+      {
+        "text": "ANYMORE",
+        "start": 96.31,
+        "end": 96.81
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 97.64,
+    "words": [
+      {
+        "text": "[DUO]",
+        "start": 97.64,
+        "end": 97.91
+      },
+      {
+        "text": "CUZ",
+        "start": 98.18,
+        "end": 98.45
+      },
+      {
+        "text": "YOU",
+        "start": 98.45,
+        "end": 98.72
+      },
+      {
+        "text": "ALREADY",
+        "start": 98.72,
+        "end": 98.99
+      },
+      {
+        "text": "KNOW",
+        "start": 98.99,
+        "end": 99.26
+      },
+      {
+        "text": "WHAT",
+        "start": 99.27,
+        "end": 99.54
+      },
+      {
+        "text": "YOU",
+        "start": 99.54,
+        "end": 99.81
+      },
+      {
+        "text": "MEAN",
+        "start": 99.81,
+        "end": 100.08
+      },
+      {
+        "text": "TO",
+        "start": 100.08,
+        "end": 100.35
+      },
+      {
+        "text": "ME",
+        "start": 100.35,
+        "end": 100.62
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 101.23,
+    "words": [
+      {
+        "text": "AND",
+        "start": 101.59,
+        "end": 101.95
+      },
+      {
+        "text": "OUR",
+        "start": 101.95,
+        "end": 102.31
+      },
+      {
+        "text": "LOVE",
+        "start": 102.31,
+        "end": 102.67
+      },
+      {
+        "text": "IS",
+        "start": 102.67,
+        "end": 103.03
+      },
+      {
+        "text": "THE",
+        "start": 103.03,
+        "end": 103.39
+      },
+      {
+        "text": "ONLY",
+        "start": 103.39,
+        "end": 103.75
+      },
+      {
+        "text": "WAR",
+        "start": 103.76,
+        "end": 104.12
+      },
+      {
+        "text": "WORTH",
+        "start": 104.12,
+        "end": 104.48
+      },
+      {
+        "text": "FIGHTING",
+        "start": 104.48,
+        "end": 104.84
+      },
+      {
+        "text": "FOR",
+        "start": 104.84,
+        "end": 105.2
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 106.81,
+    "words": [
+      {
+        "text": "WHEREVER",
+        "start": 107.27,
+        "end": 107.73
+      },
+      {
+        "text": "YOU",
+        "start": 107.73,
+        "end": 108.19
+      },
+      {
+        "text": "GO",
+        "start": 108.19,
+        "end": 108.65
+      },
+      {
+        "text": "THAT'S",
+        "start": 108.65,
+        "end": 109.11
+      },
+      {
+        "text": "WHERE",
+        "start": 109.11,
+        "end": 109.57
+      },
+      {
+        "text": "I'LL",
+        "start": 109.57,
+        "end": 110.03
+      },
+      {
+        "text": "FOLLOW",
+        "start": 110.03,
+        "end": 110.49
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 111.44,
+    "words": [
+      {
+        "text": "NOBODY’S",
+        "start": 112.2,
+        "end": 112.95
+      },
+      {
+        "text": "PROMISED",
+        "start": 112.95,
+        "end": 113.7
+      },
+      {
+        "text": "TOMORROW",
+        "start": 113.7,
+        "end": 114.45
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 115.91,
+    "words": [
+      {
+        "text": "SO",
+        "start": 116.18,
+        "end": 116.45
+      },
+      {
+        "text": "IMMA",
+        "start": 116.45,
+        "end": 116.72
+      },
+      {
+        "text": "LOVE",
+        "start": 116.73,
+        "end": 117.0
+      },
+      {
+        "text": "YOU",
+        "start": 117.0,
+        "end": 117.27
+      },
+      {
+        "text": "EVERY",
+        "start": 117.27,
+        "end": 117.54
+      },
+      {
+        "text": "NIGHT",
+        "start": 117.54,
+        "end": 117.81
+      },
+      {
+        "text": "LIKE",
+        "start": 117.82,
+        "end": 118.09
+      },
+      {
+        "text": "IT’S",
+        "start": 118.09,
+        "end": 118.36
+      },
+      {
+        "text": "THE",
+        "start": 118.36,
+        "end": 118.63
+      },
+      {
+        "text": "LAST",
+        "start": 118.63,
+        "end": 118.9
+      },
+      {
+        "text": "NIGHT",
+        "start": 118.91,
+        "end": 119.18
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 119.83,
+    "words": [
+      {
+        "text": "LIKE",
+        "start": 120.07,
+        "end": 120.31
+      },
+      {
+        "text": "IT’S",
+        "start": 120.3,
+        "end": 120.54
+      },
+      {
+        "text": "THE",
+        "start": 120.54,
+        "end": 120.78
+      },
+      {
+        "text": "LAST",
+        "start": 120.78,
+        "end": 121.02
+      },
+      {
+        "text": "NIGHT",
+        "start": 121.02,
+        "end": 121.26
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 122.29,
+    "words": [
+      {
+        "text": "IF",
+        "start": 122.94,
+        "end": 123.59
+      },
+      {
+        "text": "THE",
+        "start": 123.6,
+        "end": 124.25
+      },
+      {
+        "text": "WORLD",
+        "start": 124.25,
+        "end": 124.9
+      },
+      {
+        "text": "WAS",
+        "start": 124.91,
+        "end": 125.56
+      },
+      {
+        "text": "ENDING",
+        "start": 125.56,
+        "end": 126.21
+      },
+      {
+        "text": "I’D",
+        "start": 126.22,
+        "end": 126.87
+      },
+      {
+        "text": "WANNA",
+        "start": 126.87,
+        "end": 127.52
+      },
+      {
+        "text": "BE",
+        "start": 127.52,
+        "end": 128.17
+      },
+      {
+        "text": "NEXT",
+        "start": 128.18,
+        "end": 128.83
+      },
+      {
+        "text": "TO",
+        "start": 128.83,
+        "end": 129.48
+      },
+      {
+        "text": "YOU",
+        "start": 129.49,
+        "end": 130.14
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 131.17,
+    "words": [
+      {
+        "text": "IF",
+        "start": 131.55,
+        "end": 131.93
+      },
+      {
+        "text": "THE",
+        "start": 131.94,
+        "end": 132.32
+      },
+      {
+        "text": "PARTY",
+        "start": 132.32,
+        "end": 132.7
+      },
+      {
+        "text": "WAS",
+        "start": 132.7,
+        "end": 133.08
+      },
+      {
+        "text": "OVER",
+        "start": 133.08,
+        "end": 133.46
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 133.93,
+    "words": [
+      {
+        "text": "AND",
+        "start": 134.62,
+        "end": 135.31
+      },
+      {
+        "text": "OUR",
+        "start": 135.31,
+        "end": 136.0
+      },
+      {
+        "text": "TIME",
+        "start": 136.0,
+        "end": 136.69
+      },
+      {
+        "text": "ON",
+        "start": 136.69,
+        "end": 137.38
+      },
+      {
+        "text": "EARTH",
+        "start": 137.38,
+        "end": 138.07
+      },
+      {
+        "text": "WAS",
+        "start": 138.07,
+        "end": 138.76
+      },
+      {
+        "text": "THROUGH",
+        "start": 138.76,
+        "end": 139.45
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 140.22,
+    "words": [
+      {
+        "text": "I’D",
+        "start": 140.55,
+        "end": 140.88
+      },
+      {
+        "text": "WANNA",
+        "start": 140.88,
+        "end": 141.21
+      },
+      {
+        "text": "HOLD",
+        "start": 141.2,
+        "end": 141.53
+      },
+      {
+        "text": "YOU",
+        "start": 141.53,
+        "end": 141.86
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 142.6,
+    "words": [
+      {
+        "text": "JUST",
+        "start": 142.87,
+        "end": 143.14
+      },
+      {
+        "text": "FOR",
+        "start": 143.14,
+        "end": 143.41
+      },
+      {
+        "text": "A",
+        "start": 143.41,
+        "end": 143.68
+      },
+      {
+        "text": "WHILE",
+        "start": 143.69,
+        "end": 143.96
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 144.81,
+    "words": [
+      {
+        "text": "AND",
+        "start": 145.39,
+        "end": 145.97
+      },
+      {
+        "text": "DIE",
+        "start": 145.97,
+        "end": 146.55
+      },
+      {
+        "text": "WITH",
+        "start": 146.55,
+        "end": 147.13
+      },
+      {
+        "text": "A",
+        "start": 147.12,
+        "end": 147.7
+      },
+      {
+        "text": "SMILE",
+        "start": 147.7,
+        "end": 148.28
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 149.57,
+    "words": [
+      {
+        "text": "IF",
+        "start": 150.04,
+        "end": 150.51
+      },
+      {
+        "text": "THE",
+        "start": 150.51,
+        "end": 150.98
+      },
+      {
+        "text": "WORLD",
+        "start": 150.98,
+        "end": 151.45
+      },
+      {
+        "text": "WAS",
+        "start": 151.45,
+        "end": 151.92
+      },
+      {
+        "text": "ENDING",
+        "start": 151.92,
+        "end": 152.39
+      },
+      {
+        "text": "I’D",
+        "start": 152.4,
+        "end": 152.87
+      },
+      {
+        "text": "WANNA",
+        "start": 152.87,
+        "end": 153.34
+      },
+      {
+        "text": "BE",
+        "start": 153.34,
+        "end": 153.81
+      },
+      {
+        "text": "NEXT",
+        "start": 153.81,
+        "end": 154.28
+      },
+      {
+        "text": "TO",
+        "start": 154.28,
+        "end": 154.75
+      },
+      {
+        "text": "YOU",
+        "start": 154.75,
+        "end": 155.22
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 158.12,
+    "words": [
+      {
+        "text": "RIGHT",
+        "start": 158.56,
+        "end": 159.0
+      },
+      {
+        "text": "NEXT",
+        "start": 159.01,
+        "end": 159.45
+      },
+      {
+        "text": "TO",
+        "start": 159.45,
+        "end": 159.89
+      },
+      {
+        "text": "YOU",
+        "start": 159.9,
+        "end": 160.34
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 162.95,
+    "words": [
+      {
+        "text": "NEXT",
+        "start": 163.53,
+        "end": 164.11
+      },
+      {
+        "text": "TO",
+        "start": 164.11,
+        "end": 164.69
+      },
+      {
+        "text": "YOU",
+        "start": 164.68,
+        "end": 165.26
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 167.46,
+    "words": [
+      {
+        "text": "RIGHT",
+        "start": 167.95,
+        "end": 168.44
+      },
+      {
+        "text": "NEXT",
+        "start": 168.45,
+        "end": 168.94
+      },
+      {
+        "text": "TO",
+        "start": 168.94,
+        "end": 169.43
+      },
+      {
+        "text": "YOU",
+        "start": 169.43,
+        "end": 169.92
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 171.17,
+    "words": [
+      {
+        "text": "[BOTH",
+        "start": 171.93,
+        "end": 172.69
+      },
+      {
+        "text": "VOCALIZING]",
+        "start": 172.69,
+        "end": 173.45
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 175.97,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 175.97,
+        "end": 179.64
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 190.48,
+    "words": [
+      {
+        "text": "IF",
+        "start": 191.0,
+        "end": 191.52
+      },
+      {
+        "text": "THE",
+        "start": 191.53,
+        "end": 192.05
+      },
+      {
+        "text": "WORLD",
+        "start": 192.05,
+        "end": 192.57
+      },
+      {
+        "text": "WAS",
+        "start": 192.57,
+        "end": 193.09
+      },
+      {
+        "text": "ENDING",
+        "start": 193.1,
+        "end": 193.62
+      },
+      {
+        "text": "I’D",
+        "start": 193.62,
+        "end": 194.14
+      },
+      {
+        "text": "WANNA",
+        "start": 194.14,
+        "end": 194.66
+      },
+      {
+        "text": "BE",
+        "start": 194.67,
+        "end": 195.19
+      },
+      {
+        "text": "NEXT",
+        "start": 195.19,
+        "end": 195.71
+      },
+      {
+        "text": "(TO",
+        "start": 195.71,
+        "end": 196.23
+      },
+      {
+        "text": "YOU)",
+        "start": 196.23,
+        "end": 196.75
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 199.57,
+    "words": [
+      {
+        "text": "IF",
+        "start": 200.1,
+        "end": 200.63
+      },
+      {
+        "text": "THE",
+        "start": 200.63,
+        "end": 201.16
+      },
+      {
+        "text": "PARTY",
+        "start": 201.16,
+        "end": 201.69
+      },
+      {
+        "text": "WAS",
+        "start": 201.68,
+        "end": 202.21
+      },
+      {
+        "text": "OVER",
+        "start": 202.21,
+        "end": 202.74
+      },
+      {
+        "text": "AND",
+        "start": 202.74,
+        "end": 203.27
+      },
+      {
+        "text": "OUR",
+        "start": 203.27,
+        "end": 203.8
+      },
+      {
+        "text": "TIME",
+        "start": 203.79,
+        "end": 204.32
+      },
+      {
+        "text": "ON",
+        "start": 204.32,
+        "end": 204.85
+      },
+      {
+        "text": "EARTH",
+        "start": 204.85,
+        "end": 205.38
+      },
+      {
+        "text": "(WAS",
+        "start": 205.37,
+        "end": 205.9
+      },
+      {
+        "text": "THROUGH)",
+        "start": 205.9,
+        "end": 206.43
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 208.67,
+    "words": [
+      {
+        "text": "I’D",
+        "start": 209.07,
+        "end": 209.47
+      },
+      {
+        "text": "WANNA",
+        "start": 209.48,
+        "end": 209.88
+      },
+      {
+        "text": "HOLD",
+        "start": 209.88,
+        "end": 210.28
+      },
+      {
+        "text": "YOU",
+        "start": 210.28,
+        "end": 210.68
+      },
+      {
+        "text": "JUST",
+        "start": 210.69,
+        "end": 211.09
+      },
+      {
+        "text": "FOR",
+        "start": 211.09,
+        "end": 211.49
+      },
+      {
+        "text": "A",
+        "start": 211.5,
+        "end": 211.9
+      },
+      {
+        "text": "WHILE",
+        "start": 211.9,
+        "end": 212.3
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 213.34,
+    "words": [
+      {
+        "text": "AND",
+        "start": 213.9,
+        "end": 214.46
+      },
+      {
+        "text": "DIE",
+        "start": 214.46,
+        "end": 215.02
+      },
+      {
+        "text": "WITH",
+        "start": 215.02,
+        "end": 215.58
+      },
+      {
+        "text": "A",
+        "start": 215.58,
+        "end": 216.14
+      },
+      {
+        "text": "SMILE",
+        "start": 216.14,
+        "end": 216.7
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 217.97,
+    "words": [
+      {
+        "text": "IF",
+        "start": 218.51,
+        "end": 219.06
+      },
+      {
+        "text": "THE",
+        "start": 219.06,
+        "end": 219.61
+      },
+      {
+        "text": "WORLD",
+        "start": 219.6,
+        "end": 220.15
+      },
+      {
+        "text": "WAS",
+        "start": 220.15,
+        "end": 220.7
+      },
+      {
+        "text": "ENDING",
+        "start": 220.69,
+        "end": 221.24
+      },
+      {
+        "text": "I’D",
+        "start": 221.24,
+        "end": 221.79
+      },
+      {
+        "text": "WANNA",
+        "start": 221.79,
+        "end": 222.34
+      },
+      {
+        "text": "BE",
+        "start": 222.33,
+        "end": 222.88
+      },
+      {
+        "text": "NEXT",
+        "start": 222.88,
+        "end": 223.43
+      },
+      {
+        "text": "TO",
+        "start": 223.42,
+        "end": 223.97
+      },
+      {
+        "text": "YOU",
+        "start": 223.97,
+        "end": 224.52
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 226.69,
+    "words": [
+      {
+        "text": "IF",
+        "start": 227.2,
+        "end": 227.71
+      },
+      {
+        "text": "THE",
+        "start": 227.71,
+        "end": 228.22
+      },
+      {
+        "text": "WORLD",
+        "start": 228.22,
+        "end": 228.73
+      },
+      {
+        "text": "WAS",
+        "start": 228.74,
+        "end": 229.25
+      },
+      {
+        "text": "ENDING",
+        "start": 229.25,
+        "end": 229.76
+      },
+      {
+        "text": "I’D",
+        "start": 229.76,
+        "end": 230.27
+      },
+      {
+        "text": "WANNA",
+        "start": 230.28,
+        "end": 230.79
+      },
+      {
+        "text": "BE",
+        "start": 230.79,
+        "end": 231.3
+      },
+      {
+        "text": "NEXT",
+        "start": 231.3,
+        "end": 231.81
+      },
+      {
+        "text": "TO",
+        "start": 231.82,
+        "end": 232.33
+      },
+      {
+        "text": "YOU",
+        "start": 232.33,
+        "end": 232.84
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 233.44,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 233.44,
+        "end": 235.23
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 235.94,
+    "words": [
+      {
+        "text": "[VOCALIZING]",
+        "start": 237.01,
+        "end": 238.08
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 239.24,
+    "words": [
+      {
+        "text": "I’D",
+        "start": 239.7,
+        "end": 240.16
+      },
+      {
+        "text": "WANNA",
+        "start": 240.16,
+        "end": 240.62
+      },
+      {
+        "text": "BE",
+        "start": 240.62,
+        "end": 241.08
+      },
+      {
+        "text": "NEXT",
+        "start": 241.07,
+        "end": 241.53
+      },
+      {
+        "text": "TO",
+        "start": 241.53,
+        "end": 241.99
+      },
+      {
+        "text": "YOU",
+        "start": 241.99,
+        "end": 242.45
+      }
+    ],
+    "jugable": true
+  }
+]

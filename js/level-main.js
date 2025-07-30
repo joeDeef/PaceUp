@@ -1,19 +1,5 @@
 import { setupSidebar } from "./load-sidebar.js";
 import { cargarContenidoNivel } from "./load-level.js";
-import { renderBreadcrumb } from "./load-breadcrumb.js";
-import { canciones as catalogSongs } from "../data/songs.js"; // Importar para breadcrumb
-
-// Cache para el breadcrumb HTML
-let breadcrumbHTML = null;
-
-async function loadBreadcrumbHTML() {
-  if (!breadcrumbHTML) {
-    const res = await fetch("./components/breadcrumb.html");
-    breadcrumbHTML = await res.text();
-  }
-  const container = document.getElementById("breadcrumb-container");
-  container.innerHTML = breadcrumbHTML;
-}
 
 /**
  * Actualiza la vista con nivel, modo e id opcional.
@@ -45,22 +31,6 @@ export async function actualizarVista(
 
   // Carga el contenido con nivel, modo e id
   cargarContenidoNivel(nivel, modo, id);
-
-  // Carga HTML breadcrumb y luego actualiza rutas dinámicas
-  await loadBreadcrumbHTML();
-
-  const ruta = [{ label: "Inicio", href: "home.html" }, { label: nivel }];
-
-  if (modo) {
-    ruta.push({ label: modo});
-
-    if ((modo === "canciones" || modo === "videos") && id) {
-      const cancion = catalogSongs.find((c) => c.id === id);
-      ruta.push({ label: cancion?.title || "Contenido" });
-    }
-  }
-
-  renderBreadcrumb(ruta);
 }
 
 // Carga inicial (sin modificar historial porque ya está la URL)

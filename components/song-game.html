@@ -17,10 +17,24 @@
     </aside>
   </div>
 
+  <!-- Barra de progreso -->
+  <div class="progress-wrapper">
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="progress-text">0%</div>
+  </div>
+
   <div class="video-controls">
-    <button id="retroceder-btn">⏪ Retroceder 5s</button>
-    <button id="playpause-btn">▶️ Play</button>
-    <button id="adelantar-btn">⏩ Adelantar 5s</button>
+    <button id="retroceder-btn" class="control-btn">
+      <img src="../assets/icons/backward-solid.svg" alt="Retroceder" class="control-icon" />
+      <span>Retroceder</span>
+    </button>
+
+    <button id="playpause-btn" class="control-btn">
+      <img id="playpause-icon" src="../assets/icons/play-solid.svg" alt="Play" class="control-icon" />
+      <span>Play</span>
+    </button>
   </div>
 
   <div class="video-lyrics" id="video-lyrics">
