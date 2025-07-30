@@ -1,5 +1,3 @@
-// modal.js
-
 // Insertar el HTML del modal en el body solo una vez
 function crearModal() {
   if (document.getElementById("modal-bloqueo")) return; // evitar duplicados

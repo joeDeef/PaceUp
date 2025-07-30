@@ -103,10 +103,6 @@ function handlePlayerReady(song) {
         e.preventDefault();
         retrocederBtn.click();
         break;
-      // case "ArrowRight": // flecha derecha
-      //   e.preventDefault();
-      //   adelantarBtn.click();
-      //   break;
     }
   });
 
