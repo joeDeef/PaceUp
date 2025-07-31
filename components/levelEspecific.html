@@ -1,26 +1,26 @@
-<div class="nivel-header" role="region" aria-label="Información del nivel" tabindex="0">
-  <h1 id="titulo-nivel">{{titulo}}</h1>
-  <p class="bienvenida" aria-live="polite">{{bienvenida}}</p>
+<div class="nivel-header" role="region" aria-label="Información del nivel">
+  <h1 id="titulo-nivel" tabindex="0">{{titulo}}</h1>
+  <p class="bienvenida" aria-live="polite" tabindex="0">{{bienvenida}}</p>
 
   <div class="nivel-main">
     <div class="descripcion-wrapper">
-      <p class="descripcion" aria-label="Descripción del nivel">{{descripcion}}</p>
+      <p class="descripcion" aria-label="Descripción del nivel" tabindex="0">{{descripcion}}</p>
 
-      <div class="estandar-sello" role="region" aria-label="Correspondencia con estándar internacional" tabindex="0">
+      <div class="estandar-sello" role="region" aria-label="Correspondencia con estándar internacional">
         <!-- Aquí va tu icono personalizado, ejemplo SVG simple MCER -->
         <svg class="icon-estandar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="24" height="24" aria-hidden="true" focusable="false">
           <circle cx="32" cy="32" r="30" stroke="#007acc" stroke-width="3" fill="none"/>
           <text x="32" y="37" font-size="20" text-anchor="middle" fill="#007acc" font-family="Arial, sans-serif">MCER</text>
         </svg>
-        <p class="estandar-texto" aria-label="Estándar internacional">{{estandar}}</p>
+        <p class="estandar-texto" aria-label="Estándar internacional" tabindex="0">{{estandar}}</p>
       </div>
     </div>
 
     <img src="{{imagen}}" alt="Imagen representativa del nivel {{titulo}}" role="img" aria-label="Imagen del nivel {{titulo}}" tabindex="0" />
   </div>
 
-  <section class="modos-aprendizaje" aria-label="Modos de aprendizaje" tabindex="0">
-    <h2 id="modos-aprendizaje-titulo">Modos de aprendizaje</h2>
+  <section class="modos-aprendizaje" aria-label="Modos de aprendizaje">
+    <h2 id="modos-aprendizaje-titulo" tabindex="0">Modos de aprendizaje</h2>
     <div id="modos-dinamicos" class="tarjetas-lista" role="list" aria-label="Lista de modos de aprendizaje"></div>
   </section>
 </div>

@@ -66,12 +66,6 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
 
 
       contenedor.innerHTML = htmlFinal;
-      // Accesibilidad: atributos al contenido dinámico
-      contenedor.setAttribute("role", "region");
-      contenedor.setAttribute("aria-label", `Vista general del nivel: ${contenido.titulo}`);
-      contenedor.setAttribute("tabindex", "0");
-      contenedor.setAttribute("aria-live", "polite");
-      contenedor.focus();
 
       const cardTemplate = document.getElementById("card-template");
       const lista = document.getElementById("modos-dinamicos");
@@ -106,7 +100,35 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
             cardTemplate
           );
 
-          if (fragment) lista.appendChild(fragment);
+          if (fragment) {
+            // Hacer toda la tarjeta y sus hijos accesibles al click y Enter
+            fragment.addEventListener("click", onClick);
+            fragment.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onClick();
+              }
+            });
+            // También para los hijos principales
+            const title = fragment.querySelector('.card-title');
+            const img = fragment.querySelector('.card-image');
+            const desc = fragment.querySelector('.card-description');
+            [title, img, desc].forEach((el) => {
+              if (el) {
+                el.addEventListener("click", (ev) => {
+                  ev.stopPropagation();
+                  onClick();
+                });
+                el.addEventListener("keydown", (e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onClick();
+                  }
+                });
+              }
+            });
+            lista.appendChild(fragment);
+          }
         });
       }
     });

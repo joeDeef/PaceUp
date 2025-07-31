@@ -29,8 +29,11 @@ async function initCarousel() {
   const carouselNode = carouselTemplate.content.cloneNode(true);
   wrapper.appendChild(carouselNode);
 
-  const carousel = document.getElementById("carousel");
 
+  // Seleccionar el carrusel y los botones después de insertar el template
+  const carousel = document.getElementById("carousel");
+  const btnLeft = document.querySelector('.carousel-arrow-left');
+  const btnRight = document.querySelector('.carousel-arrow-right');
 
   const cardElements = [];
 
@@ -57,6 +60,21 @@ async function initCarousel() {
   });
 
   let currentIndex = 0;
+
+  // Lógica de botones de flecha
+  if (btnLeft && btnRight) {
+    btnLeft.addEventListener('click', () => setActiveCard(currentIndex - 1, true));
+    btnRight.addEventListener('click', () => setActiveCard(currentIndex + 1, true));
+    // Accesibilidad: permitir Enter y barra
+    [btnLeft, btnRight].forEach(btn => {
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+  }
 
   function mod(n, m) {
     return ((n % m) + m) % m;

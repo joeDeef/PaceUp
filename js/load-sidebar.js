@@ -69,11 +69,25 @@ export function setupSidebar(selectedNivelId, onNivelChange) {
       }
     });
 
-    // Permitir activar con Enter (accesibilidad)
+    // Permitir activar con Enter (accesibilidad) y navegar con flechas
     li.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         li.click();
         e.preventDefault();
+      } else if (e.key === 'ArrowDown') {
+        // Buscar el siguiente li
+        const next = li.nextElementSibling;
+        if (next) {
+          next.focus();
+          e.preventDefault();
+        }
+      } else if (e.key === 'ArrowUp') {
+        // Buscar el anterior li
+        const prev = li.previousElementSibling;
+        if (prev) {
+          prev.focus();
+          e.preventDefault();
+        }
       }
     });
   });
