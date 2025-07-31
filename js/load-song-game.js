@@ -1,4 +1,4 @@
-import { canciones } from "../data/songs.js";
+
 import { mostrarModal } from "./mostrar-modal.js";
 
 let youtubePlayer;
@@ -10,13 +10,24 @@ let isFading = false;
 let lastPairIndexShown = -1;
 let isPausedForAnswer = false;
 
+
 export async function cargarVideo(levelId, videoId) {
   const container = document.getElementById("nivel-content");
   container.innerHTML = "";
 
-  const res = await fetch("./components/song-game.html");
+  const res = await fetch("../components/song-game.html");
   container.innerHTML = await res.text();
   await new Promise((r) => setTimeout(r, 0));
+
+  // Cargar canciones desde JSON
+  let canciones = [];
+  try {
+    const resCanciones = await fetch("../data/songs.json");
+    canciones = await resCanciones.json();
+  } catch (e) {
+    container.innerHTML = "<p>Error cargando canciones.</p>";
+    return;
+  }
 
   const song = canciones.find((c) => c.id === String(videoId));
   if (!song) {
@@ -125,7 +136,18 @@ function handlePlayerStateChange(event) {
     text.textContent = isPlaying ? "Pause" : "Play";
   }
 
+  // --- Lógica para bloquear play nativo si no ha respondido ---
   if (isPlaying) {
+    // Si está pausado esperando respuesta y el usuario da play desde el reproductor nativo
+    const line2 = syncedLyrics[currentPairIndex + 1];
+    const esJugable = line2?.jugable ?? true;
+    if (isPausedForAnswer && esJugable) {
+      if (!line2 || !line2.answered) {
+        youtubePlayer.pauseVideo();
+        mostrarModal("Primero debes contestar antes de continuar.");
+        return;
+      }
+    }
     startLyricsAnimation();
   } else {
     stopLyricsAnimation();

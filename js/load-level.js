@@ -22,7 +22,11 @@ async function cargarCatalogoModos() {
 }
 
 // Función para cargar el contenido de un nivel específico
-export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = null) {
+export async function cargarContenidoNivel(
+  nivel,
+  modoSeleccionado = null,
+  id = null
+) {
   await cargarDatosNivel();
   await cargarCatalogoModos();
 
@@ -38,13 +42,15 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
   if (modoSeleccionado) {
     switch (modoSeleccionado) {
       case "canciones":
-        import("./load-songs.js").then((m) => m.cargarCanciones(nivel));
+        import("./loadSongs.js").then((m) => m.cargarCanciones(nivel));
+        
         break;
       case "videos":
-        //import("./load-songs.js").then((m) => m.cargarCanciones(id));
         break;
       case "gramatica":
-        import("./cargarGramatica.js").then((m) => m.cargarGramaticaComponent(nivel));
+        import("./cargarGramatica.js").then((m) =>
+          m.cargarGramaticaComponent(nivel)
+        );
         break;
       default:
         contenedor.innerHTML = `<p>Modo "${modoSeleccionado}" aún no implementado.</p>`;
@@ -63,7 +69,6 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
         .replace(/{{imagen}}/g, contenido.imagen)
         .replace(/{{descripcion}}/g, contenido.descripcion)
         .replace(/{{estandar}}/g, contenido.estandar || "");
-
 
       contenedor.innerHTML = htmlFinal;
 
@@ -110,9 +115,9 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
               }
             });
             // También para los hijos principales
-            const title = fragment.querySelector('.card-title');
-            const img = fragment.querySelector('.card-image');
-            const desc = fragment.querySelector('.card-description');
+            const title = fragment.querySelector(".card-title");
+            const img = fragment.querySelector(".card-image");
+            const desc = fragment.querySelector(".card-description");
             [title, img, desc].forEach((el) => {
               if (el) {
                 el.addEventListener("click", (ev) => {
