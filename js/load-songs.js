@@ -1,7 +1,8 @@
-import { canciones } from "../data/songs.js";
+
 import { createCard } from "./create-card.js";
 import { loadSearchBar } from "./load-search-bar.js";
 import { cargarVideo } from "./load-song-game.js";
+let canciones = [];
 
 // Extraer ID del video de YouTube desde la URL
 function extractVideoId(url) {
@@ -9,9 +10,14 @@ function extractVideoId(url) {
   return match ? match[1] : "";
 }
 
-export async function cargarCanciones(nivelActual) {
   const contenedor = document.getElementById("nivel-content");
   contenedor.innerHTML = "";
+
+  // Cargar canciones desde JSON
+  if (canciones.length === 0) {
+    const resCanciones = await fetch("./data/songs.json");
+    canciones = await resCanciones.json();
+  }
 
   const res = await fetch("./components/songs.html");
   const html = await res.text();
@@ -91,4 +97,3 @@ export async function cargarCanciones(nivelActual) {
     scrollAmount = Math.min(scrollAmount + cardWidth, maxScroll);
     carrusel.style.transform = `translateX(-${scrollAmount}px)`;
   });
-}

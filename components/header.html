@@ -1,21 +1,17 @@
-<header class="main-header">
-  <a href="home.html" class="logo-link">
+<header class="main-header" role="banner" aria-label="Encabezado principal del sitio web">
+  <!-- Enlace al inicio -->
+  <a href="home.html" class="logo-link" aria-label="Página principal de PaceUp" tabindex="0">
     <div class="logo">
-      <img src="../assets/img/logo_paceUp.png" alt="Logo" class="logo-img" />
-      <span>PaceUp</span>
+      <img src="../assets/img/logo_paceUp.png" alt="Logo de PaceUp" class="logo-img" />
+      <span aria-hidden="true">PaceUp</span>
     </div>
   </a>
 
-  <nav class="nav">
-    <a href="#niveles">Niveles</a>
-    <a href="#practicar-content">Practicar</a>
-    <a href="#section-herramientas">Herramientas</a>
+  <!-- Navegación principal -->
+  <nav class="nav" role="navigation" aria-label="Menú principal">
+    <a href="#niveles" tabindex="0">Niveles</a>
+    <a href="#practicar-content" tabindex="0">Practicar</a>
+    <a href="#section-herramientas" tabindex="0">Herramientas</a>
   </nav>
 
-  <div class="language-switcher">
-    <button id="languageBtn" class="language-btn">
-      Cambiar idioma | <span id="languageName">ESP</span>
-      <img id="languageFlag" class="flag-img" src="../assets/img/languages/spanish.png" alt="Bandera" />
-    </button>
-  </div>
 </header>

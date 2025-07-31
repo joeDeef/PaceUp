@@ -1,9 +1,14 @@
 <template id="card-template">
-  <div class="card">
-    <h3 class="card-title">Título</h3>
+  <article class="card" role="group" aria-labelledby="card-title" tabindex="0">
+    <h3 class="card-title" id="card-title" tabindex="-1">Título</h3>
     <div class="card-image-wrapper">
-      <img class="card-image" src="" alt="Imagen" />
+      <img
+        class="card-image"
+        src=""
+        alt="Descripción de la imagen relacionada con la tarjeta"
+        role="img"
+      />
     </div>
     <p class="card-description">Descripción breve</p>
-  </div>
+  </article>
 </template>

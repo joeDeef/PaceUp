@@ -41,7 +41,7 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
         import("./load-songs.js").then((m) => m.cargarCanciones(nivel));
         break;
       case "videos":
-        import("./load-songs.js").then((m) => m.cargarCanciones(id)); // <-- Tal vez deba ser otro módulo
+        //import("./load-songs.js").then((m) => m.cargarCanciones(id));
         break;
       case "gramatica":
         import("./cargarGramatica.js").then((m) => m.cargarGramaticaComponent(nivel));
@@ -64,7 +64,14 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
         .replace(/{{descripcion}}/g, contenido.descripcion)
         .replace(/{{estandar}}/g, contenido.estandar || "");
 
+
       contenedor.innerHTML = htmlFinal;
+      // Accesibilidad: atributos al contenido dinámico
+      contenedor.setAttribute("role", "region");
+      contenedor.setAttribute("aria-label", `Vista general del nivel: ${contenido.titulo}`);
+      contenedor.setAttribute("tabindex", "0");
+      contenedor.setAttribute("aria-live", "polite");
+      contenedor.focus();
 
       const cardTemplate = document.getElementById("card-template");
       const lista = document.getElementById("modos-dinamicos");
@@ -92,6 +99,7 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
               image: modo.imagen,
               title: modo.titulo,
               description: modo.descripcion,
+              altText: modo.altText,
               imageBgColor: "#f5f5f5",
               onClick,
             },

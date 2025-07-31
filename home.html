@@ -16,38 +16,36 @@
 </head>
 
 <body>
-  <div id="header-container"></div>
+  <div id="header-container" role="banner" aria-label="Encabezado principal del sitio"></div>
 
-  <main>
-    <div class="section-niveles">
-      <h1 id="niveles">Niveles de Inglés</h1>
-      <div id="carousel-wrapper"></div>
+  <main role="main">
+    <div class="section-niveles" role="region" aria-labelledby="niveles">
+      <h1 id="niveles" tabindex="0">Niveles de Inglés</h1>
+      <div id="carousel-wrapper" role="list" aria-label="Carrusel de niveles"></div>
     </div>
 
-    <section class="section-practicar">
-      <h2>Practicar</h2>
+    <section class="section-practicar" role="region" aria-labelledby="practicar-title">
+      <h2 id="practicar-title" tabindex="0">Practicar</h2>
       <div id="practicar-content">
-        <!-- Aquí puedes poner un carrusel o tarjetas con juegos, ejercicios, quizzes -->
-        <p>Próximamente: juegos interactivos, quizzes y ejercicios para practicar inglés.</p>
+        <p tabindex="0">Próximamente: juegos interactivos, quizzes y ejercicios para practicar inglés.</p>
       </div>
     </section>
 
-    <section class="section-herramientas">
-      <h2>Herramientas</h2>
+    <section class="section-herramientas" role="region" aria-labelledby="herramientas-title">
+      <h2 id="herramientas-title" tabindex="0">Herramientas</h2>
       <div id="herramientas-content">
-        <!-- Puedes agregar tarjetas o links a diccionario, traductor, etc. -->
-        <p>Próximamente: diccionario, traductor y recursos para facilitar tu aprendizaje.</p>
+        <p tabindex="0">Próximamente: diccionario, traductor y recursos para facilitar tu aprendizaje.</p>
       </div>
     </section>
   </main>
 
-  <div id="footer-container"></div>
+  <div id="footer-container" role="contentinfo" aria-label="Pie de página"></div>
 
   <script src="./js/load-header.js"></script>
   <script src="./js/search-bar.js"></script>
   <script type="module" src="./js/load-carousel.js"></script>
   <script type="module" src="./js/load-welcome-header.js"></script>
-  <script src="./js/load-footer.js"></script> <!-- Nuevo para footer -->
+  <script src="./js/load-footer.js"></script>
 </body>
 
 </html>

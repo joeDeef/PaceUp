@@ -30,8 +30,7 @@ async function initCarousel() {
   wrapper.appendChild(carouselNode);
 
   const carousel = document.getElementById("carousel");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
+
 
   const cardElements = [];
 
@@ -52,6 +51,9 @@ async function initCarousel() {
 
     cardElements.push(cardElement);
     carousel.appendChild(fragment);
+
+    // Sincronizar el enfoque con la carta activa
+    cardElement.addEventListener('focusin', () => setActiveCard(index));
   });
 
   let currentIndex = 0;
@@ -73,18 +75,33 @@ async function initCarousel() {
     });
   }
 
-  function setActiveCard(index) {
+  function setActiveCard(index, moveFocus = false) {
     const len = cardElements.length;
     currentIndex = mod(index, len);
     updateCarousel();
+    if (moveFocus) {
+      cardElements[currentIndex]?.focus();
+    }
   }
 
-  prevBtn.addEventListener("click", () => setActiveCard(currentIndex - 1));
-  nextBtn.addEventListener("click", () => setActiveCard(currentIndex + 1));
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") prevBtn.click();
-    if (e.key === "ArrowRight") nextBtn.click();
+  // Permitir que Enter siempre active la carta visualmente activa (encima)
+  carousel.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const activeCard = cardElements[currentIndex];
+      if (activeCard) {
+        activeCard.click();
+        e.preventDefault();
+      }
+    }
+    // Navegación con flechas izquierda/derecha
+    if (e.key === "ArrowLeft") {
+      setActiveCard(currentIndex - 1, true);
+      e.preventDefault();
+    }
+    if (e.key === "ArrowRight") {
+      setActiveCard(currentIndex + 1, true);
+      e.preventDefault();
+    }
   });
 
   updateCarousel();

@@ -5,24 +5,27 @@
   <title>Gramática - PaceUp</title>
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/sidebar.css" />
-  <link rel="stylesheet" href="css/breadcrumb.css" />
   <link rel="stylesheet" href="css/levelEspecific.css" />
   <link rel="stylesheet" href="css/gramatica.css" />
 </head>
 <body>
-  <div id="header-container"></div>
+  <div id="header-container" role="banner" aria-label="Encabezado principal"></div>
 
-  <main class="sidebar-layout">
-    <div id="sidebar-container"></div>
-    <div id="breadcrumb-container"></div>
+  <main class="sidebar-layout" role="main" aria-label="Contenido principal de gramática">
+    <div id="sidebar-container" role="navigation" aria-label="Menú lateral"></div>
+    <div id="breadcrumb-container" aria-label="Ruta de navegación" role="navigation"></div>
 
-    <div id="tema-navegacion" class="tema-navegacion">
-      <button id="prev-tema" aria-label="Tema anterior" class="nav-flecha">◀</button>
-      <span id="numero-tema"></span> / <span id="total-temas"></span>
-      <button id="next-tema" aria-label="Tema siguiente" class="nav-flecha">▶</button>
-    </div>
+    <nav id="tema-navegacion" class="tema-navegacion" aria-label="Navegación de temas" role="navigation">
+      <button id="prev-tema" aria-label="Tema anterior" class="nav-flecha" tabindex="0" title="Tema anterior">
+        <span aria-hidden="true">◀</span>
+      </button>
+      <span id="numero-tema" aria-live="polite" aria-atomic="true"></span> / <span id="total-temas" aria-live="polite" aria-atomic="true"></span>
+      <button id="next-tema" aria-label="Tema siguiente" class="nav-flecha" tabindex="0" title="Tema siguiente">
+        <span aria-hidden="true">▶</span>
+      </button>
+    </nav>
 
-    <section id="contenido-gramatica">
+    <section id="contenido-gramatica" aria-label="Contenido de gramática" tabindex="0" aria-live="polite">
       <!-- Aquí se cargará el contenido dinámico -->
     </section>
   </main>

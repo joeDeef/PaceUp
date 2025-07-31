@@ -26,16 +26,23 @@ export function setupSidebar(selectedNivelId, onNivelChange) {
   const items = lista.querySelectorAll('li');
 
   items.forEach(li => {
-    // Quita clase activa para resetear estado visual
+
+    // Quita clase activa y atributos de accesibilidad para resetear estado visual
     li.classList.remove('active');
+    li.removeAttribute('aria-selected');
+    li.removeAttribute('aria-current');
 
     // Elimina imagen preview si existe
     const existingImg = li.querySelector('.preview-img');
     if (existingImg) existingImg.remove();
 
     // Si el <li> corresponde al nivel seleccionado, activa estilos y añade imagen preview
+
     if (li.dataset.nivel === selectedNivelId) {
       li.classList.add('active');
+      li.setAttribute('aria-selected', 'true');
+      li.setAttribute('aria-current', 'true');
+      li.setAttribute('tabindex', '0');
 
       // Busca datos del nivel para añadir imagen
       const nivelData = niveles.find(n => n.id === li.dataset.nivel);
@@ -45,14 +52,28 @@ export function setupSidebar(selectedNivelId, onNivelChange) {
         img.src = nivelData.img;
         img.alt = nivelData.label;
         img.classList.add('preview-img');
+        img.setAttribute('role', 'img');
+        img.setAttribute('aria-label', nivelData.label);
         li.appendChild(img);
       }
+    } else {
+      li.setAttribute('aria-selected', 'false');
+      li.removeAttribute('aria-current');
+      li.setAttribute('tabindex', '0');
     }
 
     // Añade evento click a cada <li> para disparar el callback con el nivel seleccionado
     li.addEventListener('click', () => {
       if (typeof onNivelChange === 'function') {
         onNivelChange(li.dataset.nivel);
+      }
+    });
+
+    // Permitir activar con Enter (accesibilidad)
+    li.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        li.click();
+        e.preventDefault();
       }
     });
   });

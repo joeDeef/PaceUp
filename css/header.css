@@ -67,39 +67,3 @@
   color: #007bff;
 }
 
-/* === Selector de idioma === */
-.language-switcher {
-  display: flex;
-  align-items: center;
-}
-
-/* === Botón de cambio de idioma === */
-.language-btn {
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.language-btn:hover {
-  background-color: #f0f0f0;
-}
-
-/* === Icono o bandera como texto === */
-.flag {
-  font-size: 1.2rem;
-}
-
-/* === Imagen redonda de bandera === */
-.flag-img {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #ccc;
-}
