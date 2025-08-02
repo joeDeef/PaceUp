@@ -10,20 +10,22 @@
   <link rel="stylesheet" href="css/gramatica.css" />
 </head>
 <body>
+  <a href="#contenido-gramatica" class="skip-link">Saltar al contenido principal</a>
   <div id="header-container"></div>
 
-  <main class="sidebar-layout">
+  <main class="sidebar-layout" role="main">
     <div id="sidebar-container"></div>
     <div id="breadcrumb-container"></div>
 
-    <div id="tema-navegacion" class="tema-navegacion">
-      <button id="prev-tema" aria-label="Tema anterior" class="nav-flecha">◀</button>
-      <span id="numero-tema"></span> / <span id="total-temas"></span>
-      <button id="next-tema" aria-label="Tema siguiente" class="nav-flecha">▶</button>
-    </div>
+    <nav id="tema-navegacion" aria-label="Navegación de temas" class="tema-navegacion">
+      <button id="prev-tema" aria-label="Ir al tema anterior" class="nav-flecha">◀</button>
+      <span id="numero-tema" aria-live="polite"></span> / 
+      <span id="total-temas"></span>
+      <button id="next-tema" aria-label="Ir al tema siguiente" class="nav-flecha">▶</button>
+    </nav>
 
-    <section id="contenido-gramatica">
-      <!-- Aquí se cargará el contenido dinámico -->
+    <section id="contenido-gramatica" aria-live="polite">
+      <!-- Contenido dinámico aquí -->
     </section>
   </main>
 

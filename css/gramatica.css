@@ -184,6 +184,7 @@ body {
   position: absolute;
   top: 10px;
   right: 20px;
+  z-index: 10;
   background-color: var(--gris-fondo);
   padding: 8px 12px;
   border: 1px solid var(--borde);
@@ -199,4 +200,26 @@ body {
 #show-answers-[data-tema],
 #try-again-[data-tema] {
   margin-top: 10px;
+}
+
+/* Evita que el header se recorte */
+#header-container {
+  display: block;
+  width: 100%;
+  min-height: 90px; /* Altura mínima segura */
+  position: fixed;
+  z-index: 100;
+}
+
+/* Asegura que el main nunca lo tape */
+main.sidebar-layout {
+  position: relative;
+  z-index: 1;
+  margin-top: 100 px;
+  padding-top: 0; /* Evita hueco extra */
+}
+
+/* Si usas sticky header, dale margen al main */
+body.has-sticky-header main.sidebar-layout {
+  margin-top: 100px;
 }
