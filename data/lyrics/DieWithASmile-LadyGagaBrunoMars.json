@@ -8,7 +8,7 @@
         "end": 3.22
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 3.29,
@@ -35,7 +35,7 @@
         "end": 8.55
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 8.63,
@@ -1374,7 +1374,7 @@
         "end": 173.45
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 175.97,
@@ -1385,7 +1385,7 @@
         "end": 179.64
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 190.48,
@@ -1722,7 +1722,7 @@
         "end": 235.23
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 235.94,

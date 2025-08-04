@@ -14,27 +14,53 @@ function crearModal() {
   document.body.insertAdjacentHTML("beforeend", modalHTML);
 
   // Agregar listener al botón OK para cerrar modal
-  document
-    .getElementById("modal-ok-btn")
-    .addEventListener("click", ocultarModal);
+  const okBtn = document.getElementById("modal-ok-btn");
+  okBtn.addEventListener("click", ocultarModal);
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+    if (e.key === "Escape" || e.key === "Enter") {
       ocultarModal();
     }
+    trapFocus(e);
   });
+}
+
+// Bloqueo de foco/tabulación global para el modal
+function trapFocus(e) {
+  const modal = document.getElementById("modal-bloqueo");
+  if (!modal || modal.style.display !== "flex") return;
+  const focusable = modal.querySelectorAll('button, [tabindex]:not([tabindex="-1"])');
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.key === "Tab") {
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  }
 }
 
 function mostrarModal(mensaje) {
   crearModal();
   const modal = document.getElementById("modal-bloqueo");
   const mensajeElem = document.getElementById("modal-mensaje");
-  if (!modal || !mensajeElem) return;
+  const okBtn = document.getElementById("modal-ok-btn");
+  if (!modal || !mensajeElem || !okBtn) return;
 
   mensajeElem.textContent = mensaje;
   modal.style.display = "flex";
 
-  // Opcional: bloquear scroll de fondo mientras está abierto
+  // Bloquear scroll y foco
   document.body.style.overflow = "hidden";
+  okBtn.focus();
 }
 
 function ocultarModal() {

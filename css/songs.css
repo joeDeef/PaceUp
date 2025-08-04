@@ -1,11 +1,14 @@
 .canciones-section {
-  padding: 1rem;
+  padding-top: 0.25rem; /* menos espacio arriba */
+  padding-right: 1rem; /* o el valor que ya tenías */
+  padding-bottom: 1rem; /* o el valor que ya tenías */
+  padding-left: 1rem; /* o el valor que ya tenías */
 }
 
 .titulo-populares,
 .titulo-lista {
   font-size: 1.5rem;
-  margin: 1.5rem 0 0.5rem;
+  margin: 1.2rem 0 0.5rem;
 }
 
 /* Carrusel: sin scroll, con botones para navegar */

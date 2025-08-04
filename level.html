@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Nivel de Inglés</title>
+  <link rel="stylesheet" href="css/focus.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/sidebar.css" />
   <link rel="stylesheet" href="css/level.css" />
@@ -17,16 +18,19 @@
 </head>
 
 <body>
-  <div id="header-container"></div>
 
-  <main class="sidebar-layout">
-    <div id="sidebar-container"></div><br>
-    <h2>Encuentra tu canción favorita</h2>
+  <div id="header-container" role="banner" aria-label="Encabezado principal"></div>
+
+  <main class="sidebar-layout" role="main" aria-label="Contenido principal del nivel">
+    <div id="sidebar-container" role="navigation" aria-label="Navegación de niveles"></div><br>
     <section id="nivel-content"></section>
   </main>
 
+  <div id="footer-container" role="contentinfo" aria-label="Pie de página"></div>
+
   <script src="js/load-header.js"></script>
   <script type="module" src="js/level-main.js"></script>
+  <script src="./js/load-footer.js"></script>
 </body>
 
 </html>

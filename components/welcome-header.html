@@ -1,8 +1,8 @@
 <template id="welcome-header-template">
-  <section class="welcome-header">
-    <h1 class="welcome-title">¡Bienvenido a PaceUp!</h1>
-    <p class="welcome-subtitle">Comienza tu camino. Avanza a tu ritmo.</p>
-    <br>
-    <div id="search-bar-container"></div>
+  <section class="welcome-header" role="region" aria-labelledby="welcome-title">
+    <h1 class="welcome-title" id="welcome-title" tabindex="0">¡Bienvenido a PaceUp!</h1>
+    <p class="welcome-subtitle" tabindex="0">Comienza tu camino. Avanza a tu ritmo.</p>
+    <br />
+    <div id="search-bar-container" role="search" aria-label="Barra de búsqueda"></div>
   </section>
 </template>

@@ -1,9 +1,10 @@
-// Función para cargar el buscador desde un template y agregarlo a un contenedor
-export async function loadSearchBar(container) {
+import { handleSearch, removeHighlights } from './highlightSearch.js';
+window.handleSearch = handleSearch;
+
+export async function loadSearchBar(container, context = "") {
   const res = await fetch('./components/search-bar.html');
   const html = await res.text();
 
-  // Parsear el HTML y obtener el template
   const tempDiv = document.createElement('div');
   tempDiv.innerHTML = html;
   const template = tempDiv.querySelector('#search-bar-template');
@@ -12,16 +13,38 @@ export async function loadSearchBar(container) {
     return;
   }
 
-  // Clonar y agregar el contenido al contenedor dado
   const clone = template.content.cloneNode(true);
+
+  const form = clone.querySelector('form');
+  form.dataset.context = context;
+
+  container.innerHTML = '';
   container.appendChild(clone);
 
-  // Agregar CSS solo si no existe
   if (!document.getElementById('search-bar-css')) {
     const link = document.createElement('link');
     link.id = 'search-bar-css';
     link.rel = 'stylesheet';
     link.href = '../css/search-bar.css';
     document.head.appendChild(link);
+  }
+
+  const input = container.querySelector('input[type="search"]');
+  if (input) {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.keyCode === 13) {
+        e.preventDefault();
+        const form = input.closest('form');
+        if (form) {
+          handleSearch(form);
+        }
+      }
+    });
+
+    input.addEventListener('input', () => {
+      if (input.value.trim() === '') {
+        removeHighlights();
+      }
+    });
   }
 }

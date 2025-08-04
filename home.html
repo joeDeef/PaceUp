@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PaceUp</title>
+  <link rel="stylesheet" href="css/focus.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/carousel.css" />
   <link rel="stylesheet" href="css/card.css" />
@@ -13,41 +14,73 @@
   <link rel="stylesheet" href="css/fonts.css" />
   <link rel="stylesheet" href="css/search-bar.css" />
   <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/modesCards.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 
 <body>
-  <div id="header-container"></div>
+  <div id="header-container" role="banner" aria-label="Encabezado principal del sitio"></div>
 
-  <main>
-    <div class="section-niveles">
-      <h1 id="niveles">Niveles de Inglés</h1>
-      <div id="carousel-wrapper"></div>
+  <main role="main">
+    <div class="section-niveles" role="region" aria-labelledby="niveles">
+      <h1 id="niveles" tabindex="0">Niveles de Inglés</h1>
+      <div id="carousel-wrapper" role="list" aria-label="Carrusel de niveles"></div>
     </div>
 
-    <section class="section-practicar">
-      <h2>Practicar</h2>
+    <section class="section-practicar" role="region" aria-labelledby="practicar-title">
+      <h2 id="practicar-title" tabindex="0">Practicar</h2>
       <div id="practicar-content">
-        <!-- Aquí puedes poner un carrusel o tarjetas con juegos, ejercicios, quizzes -->
-        <p>Próximamente: juegos interactivos, quizzes y ejercicios para practicar inglés.</p>
+        <section id="practicar-section" class="practicar-section"></section>
       </div>
     </section>
 
-    <section class="section-herramientas">
-      <h2>Herramientas</h2>
-      <div id="herramientas-content">
-        <!-- Puedes agregar tarjetas o links a diccionario, traductor, etc. -->
-        <p>Próximamente: diccionario, traductor y recursos para facilitar tu aprendizaje.</p>
+    <section class="section-herramientas" role="region" aria-labelledby="herramientas-title">
+      <h2 id="herramientas-title" tabindex="0" aria-label="Título de la sección Herramientas">Herramientas</h2>
+      <div id="herramientas-content" class="herramientas-grid" role="list"
+        aria-label="Lista de herramientas disponibles">
+        <article class="herramienta-card" tabindex="0" aria-label="Herramienta Cambridge Dictionary" role="listitem">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrOHyCpKBIKgN5vOVKKCS97oOmP5nuxzeUhA&s"
+            alt="Logo Cambridge Dictionary" class="herramienta-img" tabindex="0"
+            aria-label="Logo Cambridge Dictionary" />
+          <h3 tabindex="0">Cambridge Dictionary</h3>
+          <p tabindex="0">Diccionario confiable con definiciones claras, ejemplos y pronunciación en audio.</p>
+          <a href="https://dictionary.cambridge.org/" target="_blank" rel="noopener noreferrer" tabindex="0"
+            aria-label="Visitar Cambridge Dictionary">Visitar Cambridge Dictionary</a>
+        </article>
+
+        <article class="herramienta-card" tabindex="0" aria-label="Herramienta ELSA Speak" role="listitem">
+          <img
+            src="https://yt3.googleusercontent.com/hcNRYlARllCgyW157IJpGprKI_DYfleTQo9j8TB7N7ck_95hqPypaUwXNluzEK_SSZ2yLbnKRg=s900-c-k-c0x00ffffff-no-rj"
+            alt="Logo ELSA Speak" class="herramienta-img" tabindex="0" aria-label="Logo ELSA Speak" />
+          <h3 tabindex="0">ELSA Speak</h3>
+          <p tabindex="0">App con inteligencia artificial para mejorar tu pronunciación y acento en inglés.</p>
+          <a href="https://elsaspeak.com/" target="_blank" rel="noopener noreferrer" tabindex="0"
+            aria-label="Probar ELSA Speak">Probar ELSA Speak</a>
+        </article>
+
+        <article class="herramienta-card" tabindex="0" aria-label="Herramienta British Council LearnEnglish"
+          role="listitem">
+          <img
+            src="https://play-lh.googleusercontent.com/V0D8RnpUxoQIFAxXiEyIT2-9XjTfm0TUA1aRtdFG2PFOLkGX_hlvxUW_U1aOL8rkQZ0"
+            alt="Logo British Council LearnEnglish" class="herramienta-img" tabindex="0"
+            aria-label="Logo British Council LearnEnglish" />
+          <h3 tabindex="0">British Council LearnEnglish</h3>
+          <p tabindex="0">Recursos gratuitos con ejercicios, juegos y actividades para practicar inglés.</p>
+          <a href="https://learnenglish.britishcouncil.org/" target="_blank" rel="noopener noreferrer" tabindex="0"
+            aria-label="Explorar British Council">Explorar British Council</a>
+        </article>
       </div>
     </section>
   </main>
 
-  <div id="footer-container"></div>
+  <div id="footer-container" role="contentinfo" aria-label="Pie de página"></div>
 
   <script src="./js/load-header.js"></script>
-  <script src="./js/search-bar.js"></script>
   <script type="module" src="./js/load-carousel.js"></script>
   <script type="module" src="./js/load-welcome-header.js"></script>
-  <script src="./js/load-footer.js"></script> <!-- Nuevo para footer -->
+  <script src="./js/load-footer.js"></script>
+  <script src="./js/load-cards-home.js"></script>
+
 </body>
 
 </html>

@@ -248,6 +248,11 @@ export async function cargarGramaticaComponent(nivel) {
     const tema = temas[numeroTema];
 
     if (contGramatica && tema) {
+      // Agregar tabindex y aria-label al contenedor principal
+      contGramatica.setAttribute("tabindex", "0");
+      contGramatica.setAttribute("role", "region");
+      contGramatica.setAttribute("aria-label", `Contenido de gramática: ${tema.titulo.replace(/<[^>]+>/g, '')}`);
+
       contGramatica.innerHTML = tema.titulo + tema.contenido;
 
       // Actualiza números de navegación
@@ -260,6 +265,21 @@ export async function cargarGramaticaComponent(nivel) {
       if (tema.ejercicios && tema.ejercicios.length > 0) {
         const ejerciciosHTML = generarHTMLDeEjercicios(tema.ejercicios, numeroTema);
         contGramatica.insertAdjacentHTML("beforeend", ejerciciosHTML);
+        // Agregar accesibilidad a los ejercicios
+        const ejerciciosContainer = contGramatica.querySelector('.ejercicios-container');
+        if (ejerciciosContainer) {
+          ejerciciosContainer.setAttribute('tabindex', '0');
+          ejerciciosContainer.setAttribute('role', 'region');
+          ejerciciosContainer.setAttribute('aria-label', 'Ejercicios interactivos de gramática');
+        }
+        contGramatica.querySelectorAll('.ejercicio').forEach((ejDiv, idx) => {
+          ejDiv.setAttribute('tabindex', '0');
+          ejDiv.setAttribute('role', 'group');
+          ejDiv.setAttribute('aria-label', `Ejercicio ${idx + 1}`);
+        });
+        contGramatica.querySelectorAll('input, button, label').forEach(el => {
+          el.setAttribute('tabindex', '0');
+        });
       }
     }
   }

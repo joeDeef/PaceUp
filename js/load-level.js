@@ -22,7 +22,11 @@ async function cargarCatalogoModos() {
 }
 
 // Función para cargar el contenido de un nivel específico
-export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = null) {
+export async function cargarContenidoNivel(
+  nivel,
+  modoSeleccionado = null,
+  id = null
+) {
   await cargarDatosNivel();
   await cargarCatalogoModos();
 
@@ -38,13 +42,14 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
   if (modoSeleccionado) {
     switch (modoSeleccionado) {
       case "canciones":
-        import("./load-songs.js").then((m) => m.cargarCanciones(nivel));
+        import("./loadSongs.js").then((m) => m.cargarCanciones(nivel));
         break;
       case "videos":
-        import("./load-songs.js").then((m) => m.cargarCanciones(id)); // <-- Tal vez deba ser otro módulo
         break;
       case "gramatica":
-        import("./cargarGramatica.js").then((m) => m.cargarGramaticaComponent(nivel));
+        import("./cargarGramatica.js").then((m) =>
+          m.cargarGramaticaComponent(nivel)
+        );
         break;
       default:
         contenedor.innerHTML = `<p>Modo "${modoSeleccionado}" aún no implementado.</p>`;
@@ -92,13 +97,42 @@ export async function cargarContenidoNivel(nivel, modoSeleccionado = null, id = 
               image: modo.imagen,
               title: modo.titulo,
               description: modo.descripcion,
+              altText: modo.altText,
               imageBgColor: "#f5f5f5",
               onClick,
             },
             cardTemplate
           );
 
-          if (fragment) lista.appendChild(fragment);
+          if (fragment) {
+            // Hacer toda la tarjeta y sus hijos accesibles al click y Enter
+            fragment.addEventListener("click", onClick);
+            fragment.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onClick();
+              }
+            });
+            // También para los hijos principales
+            const title = fragment.querySelector(".card-title");
+            const img = fragment.querySelector(".card-image");
+            const desc = fragment.querySelector(".card-description");
+            [title, img, desc].forEach((el) => {
+              if (el) {
+                el.addEventListener("click", (ev) => {
+                  ev.stopPropagation();
+                  onClick();
+                });
+                el.addEventListener("keydown", (e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onClick();
+                  }
+                });
+              }
+            });
+            lista.appendChild(fragment);
+          }
         });
       }
     });

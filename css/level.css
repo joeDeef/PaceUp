@@ -16,11 +16,13 @@
   top: 100px;
   left: 0;
   width: 250px;
-  height: calc(100vh - 60px);
+  height: 500px;
   background-color: #f9f9f9;
   border-right: 1px solid #ddd;
   overflow-y: auto;
   z-index: 999;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 /* === Contenedor principal (contenido) con espacio para sidebar y header === */

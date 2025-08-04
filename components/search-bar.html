@@ -1,10 +1,29 @@
 <template id="search-bar-template">
-  <form class="search-form" role="search" onsubmit="event.preventDefault(); handleSearch(this);">
+  <form
+    class="search-form"
+    role="search"
+    onsubmit="event.preventDefault(); handleSearch(this);"
+    aria-label="Formulario de búsqueda"
+  >
     <div class="search-input-container">
       <span class="search-icon" aria-hidden="true">
-        <img src="../assets/icons/magnifying-glass-solid.svg" alt="Buscar" />
-      </span> <input type="search" placeholder="Introduce aquí el texto para buscar" aria-label="Buscar" required />
-      <button type="submit">Buscar</button>
+        <img
+          src="../assets/icons/magnifying-glass-solid.svg"
+          alt=""
+          aria-hidden="true"
+          focusable="false"
+        />
+      </span>
+      <input
+        type="search"
+        placeholder="Introduce aquí el texto para buscar"
+        aria-label="Buscar"
+        required
+        tabindex="0"
+      />
+      <button type="submit" tabindex="0" aria-label="Enviar búsqueda">
+        Buscar
+      </button>
     </div>
   </form>
 </template>
