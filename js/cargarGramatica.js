@@ -288,22 +288,42 @@ export async function cargarGramaticaComponent(nivel) {
     let html = `<div class="ejercicios-container" data-tema="${numeroTema}">`;
 
     ejercicios.forEach((ej, idx) => {
+      const ejercicioId = `ej-${numeroTema}-${idx}`;
       html += `<div class="ejercicio" data-index="${idx}" data-tema="${numeroTema}">`;
-      html += `<p><strong>${ej.pregunta}</strong></p>`;
 
       if (ej.tipo === "completar") {
-        html += `<input type="text" class="ejercicio-input" />`;
+        html += `
+          <label for="${ejercicioId}">
+            <strong>${ej.pregunta}</strong>
+          </label>
+          <input 
+            type="text" 
+            class="ejercicio-input" 
+            id="${ejercicioId}"
+            aria-label="Respuesta del ejercicio ${idx+1} del tema ${numeroTema}" 
+          />
+        `;
       }
 
       if (ej.tipo === "seleccion") {
+        html += `
+          <fieldset>
+            <legend>${ej.pregunta}</legend>
+        `;
         ej.opciones.forEach(opt => {
           html += `
             <label>
-              <input type="radio" name="ejercicio-${numeroTema}-${idx}" value="${opt}" />
+              <input 
+                type="radio" 
+                name="ejercicio-${numeroTema}-${idx}" 
+                value="${opt}" 
+                aria-label="${opt}"
+              />
               ${opt}
             </label><br/>
           `;
         });
+        html += `</fieldset>`;
       }
 
       html += `</div>`;
@@ -435,21 +455,28 @@ export async function cargarGramaticaComponent(nivel) {
   }
 
   function mostrarScore(temaNum, correctos, total) {
-  const container = document.querySelector(`.ejercicios-container[data-tema="${temaNum}"]`);
-  if (!container) return;
+    const container = document.querySelector(`.ejercicios-container[data-tema="${temaNum}"]`);
+    if (!container) return;
 
-  // Elimina score previo si existe
-  const oldScore = container.querySelector(".score-result");
-  if (oldScore) oldScore.remove();
+    const oldScore = container.querySelector(".score-result");
+    if (oldScore) oldScore.remove();
 
-  const scoreHTML = `
-    <div class="score-result">
-      ✅ Your score: <strong>${correctos} / ${total}</strong>
-    </div>
-  `;
+    const scoreHTML = `
+      <div 
+        class="score-result" 
+        role="status" 
+        aria-live="assertive" 
+        tabindex="-1"
+      >
+        ✅ Your score: <strong>${correctos} / ${total}</strong>
+      </div>
+    `;
 
-  container.insertAdjacentHTML("beforeend", scoreHTML);
-}
+    container.insertAdjacentHTML("beforeend", scoreHTML);
+
+    // Mueve el foco al score para que lo anuncie el lector de pantalla
+    container.querySelector(".score-result").focus();
+  }
 
   // Mostrar el primer tema
   mostrarTema(temaActual);
