@@ -1,0 +1,11 @@
+/* Estilo para todos los elementos enfocados (con teclado) */
+:focus-visible {
+  outline: 3px solid #1e70bf; /* azul fuerte */
+  outline-offset: 3px;
+  /* Puedes agregar más estilos si quieres */
+}
+
+/* Opcional: para no mostrar outline cuando se usa mouse */
+:focus:not(:focus-visible) {
+  outline: none;
+}

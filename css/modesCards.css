@@ -1,0 +1,79 @@
+.practicar-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 40px 20px;
+}
+
+.practicar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.practicar-card:hover {
+  transform: translateY(-4px);
+}
+
+.practicar-card.inactivo {
+  opacity: 0.6;
+  pointer-events: none;
+  transform: none;
+}
+
+.practicar-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.practicar-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.practicar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.practicar-content p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #444;
+  max-width: 220px;
+}
+
+.practicar-content button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #0053ba;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.practicar-content button:hover {
+  background-color: #003e8a;
+}
+
+.proximamente-label {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #888;
+  background-color: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+}

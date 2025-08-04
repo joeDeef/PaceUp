@@ -1,0 +1,77 @@
+.section-herramientas {
+  padding: 40px 20px;
+  background-color: #f4f7fc;
+  color: #1a2638;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-herramientas h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #0e1a2b;
+  font-weight: 700;
+}
+
+.herramientas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.herramienta-card {
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.herramienta-card:focus,
+.herramienta-card:hover {
+  outline: none;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+.herramienta-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.herramienta-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #0e1a2b;
+  font-weight: 600;
+}
+
+.herramienta-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #3b4a66;
+  margin-bottom: 20px;
+}
+
+.herramienta-card a {
+  text-decoration: none;
+  color: #1e70bf;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.herramienta-card a:hover,
+.herramienta-card a:focus {
+  border-color: #1e70bf;
+  outline: none;
+}
