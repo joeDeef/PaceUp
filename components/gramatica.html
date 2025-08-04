@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gramática - PaceUp</title>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/levelEspecific.css" />
+  <link rel="stylesheet" href="css/gramatica.css" />
+</head>
+<body>
+  <a href="#contenido-gramatica" class="skip-link">Saltar al contenido principal</a>
+  <div id="header-container"></div>
+
+  <main class="sidebar-layout" role="main">
+    <div id="sidebar-container"></div>
+    <div id="breadcrumb-container"></div>
+
+    <nav id="tema-navegacion" aria-label="Navegación de temas" class="tema-navegacion">
+      <button id="prev-tema" aria-label="Ir al tema anterior" class="nav-flecha">◀</button>
+      <span id="numero-tema" aria-live="polite"></span> / 
+      <span id="total-temas"></span>
+      <button id="next-tema" aria-label="Ir al tema siguiente" class="nav-flecha">▶</button>
+    </nav>
+
+    <section id="contenido-gramatica" aria-live="polite">
+      <!-- Contenido dinámico aquí -->
+    </section>
+  </main>
+
+  <script src="js/load-header.js"></script>
+  <script src="js/load-sidebar.js"></script>
+  <script src="js/load-breadcrumb.js"></script>
+  <script type="module" src="js/gramatica-main.js"></script>
+</body>
+</html>

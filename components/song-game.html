@@ -1,0 +1,68 @@
+<section class="video-section" role="main" aria-label="Juego de canción" tabindex="0">
+  <h2 class="video-title" id="video-title" aria-label="Título del video: nombre de la canción actual" tabindex="0">Título del Video</h2>
+
+  <div class="main-content-grid">
+    <!-- Lateral Izquierdo: Play + Status -->
+    <aside class="left-panel" role="region" aria-label="Controles y estado del juego" tabindex="0">
+      <div class="play-box" aria-label="Caja de control de reproducción">
+        <button id="playpause-btn" class="control-btn" aria-label="Reproducir o pausar el video de la canción" tabindex="2" aria-pressed="false">
+          <img id="playpause-icon" src="../assets/icons/play-solid.svg" alt="Icono de reproducir o pausar" class="control-icon" />
+        </button>
+      </div>
+
+      <div class="status-items">
+        <div class="status-item" role="status" aria-label="Puntos obtenidos" tabindex="0">
+          <span class="status-label" id="label-puntos" tabindex="0">Puntos</span>
+          <div class="status-value-box" id="status-puntos" aria-live="polite" aria-labelledby="label-puntos" tabindex="0">000</div>
+        </div>
+        <div class="status-item" role="status" aria-label="Huecos completados" tabindex="6">
+          <span class="status-label" id="label-huecos" tabindex="0">Huecos</span>
+          <div class="status-value-box" id="status-huecos" aria-live="polite" aria-labelledby="label-huecos" tabindex="0">0/0</div>
+        </div>
+        <div class="status-item" role="status" aria-label="Aciertos realizados" tabindex="9">
+          <span class="status-label" id="label-aciertos" tabindex="0">Aciertos</span>
+          <div class="status-value-box" id="status-aciertos" aria-live="polite" aria-labelledby="label-aciertos" tabindex="0">0</div>
+        </div>
+        <div class="status-item" role="status" aria-label="Fallas cometidas" tabindex="12">
+          <span class="status-label" id="label-fallas" tabindex="0">Fallas</span>
+          <div class="status-value-box" id="status-fallas" aria-live="polite" aria-labelledby="label-fallas" tabindex="0">0</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Centro: Video + barra progreso + letra + retroceder -->
+    <div class="center-panel">
+      <div class="video-player-wrapper" role="region" aria-label="Reproductor de video" tabindex="0">
+        <div class="video-player" id="video-container"></div>
+      </div>
+
+      <div class="progress-wrapper" role="region" aria-label="Progreso del juego" tabindex="0">
+        <div class="progress-container">
+          <div id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="0"></div>
+        </div>
+      </div>
+
+      <div class="lyrics-with-back">
+        <button id="retroceder-btn" class="control-btn retroceder-btn-letra" aria-label="Retroceder 10 segundos" tabindex="0">
+          <img src="../assets/icons/backward-solid.svg" alt="Retroceder" class="control-icon" />
+        </button>
+        <div class="video-lyrics" id="video-lyrics" role="region" aria-label="Letra de la canción" tabindex="0">
+          <div class="letras-texto">
+            <p id="linea-actual" aria-live="polite" tabindex="0"></p>
+            <p id="linea-siguiente" aria-live="polite" tabindex="0"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lateral Derecho: reloj + opciones -->
+    <aside class="right-panel" role="region" aria-label="Opciones de respuesta" tabindex="0">
+      <div class="reloj-box" aria-live="polite" aria-label="Tiempo restante" tabindex="21">
+        ⏱ <span id="reloj" tabindex="0">5s</span>
+      </div>
+      <div class="game-options" id="game-options" role="region" aria-label="Opciones de respuesta" tabindex="23">
+        <!-- Opciones dinámicas -->
+      </div>
+    </aside>
+  </div>
+</section>

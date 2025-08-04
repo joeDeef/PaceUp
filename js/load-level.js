@@ -1,25 +1,67 @@
 import { createCard } from "./create-card.js";
-import { levelContent } from "../data/level-content.js";
-import { catalogModes } from "../data/modes.js";
+import { actualizarVista } from "./level-main.js";
+
+// Variables que contendrán los datos cargados desde JSON
+let levelContent = {};
+let catalogModes = {};
+
+// Función para cargar el contenido del nivel desde JSON
+async function cargarDatosNivel() {
+  if (Object.keys(levelContent).length === 0) {
+    const res = await fetch("../data/level-content.json");
+    levelContent = await res.json();
+  }
+}
+
+// Función para cargar los modos desde JSON
+async function cargarCatalogoModos() {
+  if (Object.keys(catalogModes).length === 0) {
+    const res = await fetch("../data/modes.json");
+    catalogModes = await res.json();
+  }
+}
 
 // Función para cargar el contenido de un nivel específico
-export function cargarContenidoNivel(nivel) {
-  // Obtiene el contenido correspondiente al nivel solicitado
+export async function cargarContenidoNivel(
+  nivel,
+  modoSeleccionado = null,
+  id = null
+) {
+  await cargarDatosNivel();
+  await cargarCatalogoModos();
+
   const contenido = levelContent[nivel];
-  // Obtiene el contenedor donde se insertará el contenido del nivel
   const contenedor = document.getElementById("nivel-content");
 
-  // Si no existe contenido para el nivel, muestra mensaje de error y termina
   if (!contenido) {
     contenedor.innerHTML = "<p>Nivel no encontrado.</p>";
     return;
   }
 
-  // Carga la plantilla HTML para el contenido específico del nivel
+  // Si ya se seleccionó un modo específico, cargar su componente
+  if (modoSeleccionado) {
+    switch (modoSeleccionado) {
+      case "canciones":
+        import("./loadSongs.js").then((m) => m.cargarCanciones(nivel));
+        break;
+      case "videos":
+        break;
+      case "gramatica":
+        import("./cargarGramatica.js").then((m) =>
+          m.cargarGramaticaComponent(nivel)
+        );
+        break;
+      default:
+        contenedor.innerHTML = `<p>Modo "${modoSeleccionado}" aún no implementado.</p>`;
+        break;
+    }
+    return;
+  }
+
+  // Si no hay modo seleccionado, mostrar vista general del nivel
   fetch("./components/levelEspecific.html")
     .then((res) => res.text())
     .then((template) => {
-      // Reemplaza los marcadores en la plantilla con los datos del nivel
       let htmlFinal = template
         .replace(/{{titulo}}/g, contenido.titulo)
         .replace(/{{bienvenida}}/g, contenido.bienvenida)
@@ -27,34 +69,70 @@ export function cargarContenidoNivel(nivel) {
         .replace(/{{descripcion}}/g, contenido.descripcion)
         .replace(/{{estandar}}/g, contenido.estandar || "");
 
-      // Inserta el HTML generado en el contenedor del nivel
       contenedor.innerHTML = htmlFinal;
 
-      // Obtiene la plantilla para las tarjetas y el contenedor donde se añadirán las tarjetas dinámicas
       const cardTemplate = document.getElementById("card-template");
       const lista = document.getElementById("modos-dinamicos");
 
-      // Si existe plantilla, contenedor y modos definidos, crea tarjetas para cada modo
       if (cardTemplate && lista && contenido.modos) {
         contenido.modos.forEach((keyModo) => {
-          // Busca los datos del modo en el catálogo de modos
           const modo = catalogModes[keyModo];
-          if (!modo) return; // Si no existe, salta
+          if (!modo) return;
 
-          // Crea la tarjeta usando la función createCard con los datos del modo
+          let onClick;
+          if (keyModo === "gramatica") {
+            // Si el modo es gramática, redirige a la página gramatica.html
+            onClick = () => {
+              actualizarVista(nivel, "gramatica");
+            };
+          } else {
+            // Para los demás modos sigue como antes
+            onClick = () => {
+              actualizarVista(nivel, keyModo);
+            };
+          }
+
           const { fragment } = createCard(
             {
               image: modo.imagen,
               title: modo.titulo,
               description: modo.descripcion,
+              altText: modo.altText,
               imageBgColor: "#f5f5f5",
-              onClick: () => console.log(`Clic en ${modo.titulo}`), // Evento click para debug
+              onClick,
             },
             cardTemplate
           );
 
-          // Si la tarjeta se creó correctamente, la añade al contenedor dinámico
-          if (fragment) lista.appendChild(fragment);
+          if (fragment) {
+            // Hacer toda la tarjeta y sus hijos accesibles al click y Enter
+            fragment.addEventListener("click", onClick);
+            fragment.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onClick();
+              }
+            });
+            // También para los hijos principales
+            const title = fragment.querySelector(".card-title");
+            const img = fragment.querySelector(".card-image");
+            const desc = fragment.querySelector(".card-description");
+            [title, img, desc].forEach((el) => {
+              if (el) {
+                el.addEventListener("click", (ev) => {
+                  ev.stopPropagation();
+                  onClick();
+                });
+                el.addEventListener("keydown", (e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onClick();
+                  }
+                });
+              }
+            });
+            lista.appendChild(fragment);
+          }
         });
       }
     });

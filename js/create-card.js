@@ -1,5 +1,5 @@
 export function createCard(
-  { image, title, description, imageBgColor, onClick },
+  { image, title, description, imageBgColor, onClick, altText },
   template
 ) {
   if (!template) return null;
@@ -13,9 +13,14 @@ export function createCard(
   const p = cardElement.querySelector(".card-description");
 
   img.src = image;
-  img.alt = title;
+  img.alt = altText;
   h3.textContent = title;
   p.textContent = description;
+
+  // Agregar tabindex a los elementos solicitados
+  img.tabIndex = 0;
+  h3.tabIndex = 0;
+  p.tabIndex = 0;
 
   if (imageBgColor) {
     imgWrapper.style.backgroundColor = imageBgColor;

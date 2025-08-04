@@ -1,0 +1,38 @@
+<!-- Componente de Canciones -->
+<section class="canciones-section" aria-labelledby="titulo-encuentra-cancion" role="region">
+
+  <h2 class="titulo-populares" id="titulo-encuentra-cancion" tabindex="0" aria-label="Encuentra tu canción favorita">Encuentra tu canción favorita</h2>
+  <!-- Contenedor para la barra de búsqueda -->
+  <div id="search-bar-container" aria-label="Barra de búsqueda de canciones" role="search"></div>
+
+  <!-- Canciones más populares -->
+  <h2 class="titulo-populares" id="titulo-populares" tabindex="0" aria-label="Canciones más populares">Canciones más populares</h2>
+  <div class="carrusel-populares" role="region" aria-labelledby="titulo-populares">
+    <button class="carrusel-btn prev" aria-label="Anterior canción popular" tabindex="-1" type="button">‹</button>
+    <div class="carrusel-inner" id="carrusel-populares" role="list" aria-label="Carrusel de canciones más populares">
+      <!-- Aquí se insertan dinámicamente las 5 canciones más buscadas -->
+    </div>
+    <button class="carrusel-btn next" aria-label="Siguiente canción popular" tabindex="-1" type="button">›</button>
+  </div>
+
+  <!-- Lista general de canciones -->
+  <h2 class="titulo-lista" id="titulo-lista-canciones" tabindex="0" aria-label="Lista de canciones">Lista de canciones</h2>
+  <div class="tarjetas-lista" id="lista-canciones" role="list" aria-labelledby="titulo-lista-canciones" aria-description="Listado general de canciones disponibles">
+    <!-- Aquí se insertan el resto de las tarjetas -->
+  </div>
+
+</section>
+
+<!-- Template para tarjetas con botón play -->
+<template id="card-template">
+  <div class="card" role="listitem" tabindex="0" aria-label="Tarjeta de canción">
+    <h3 class="card-title" tabindex="0" aria-label="Título de la canción">Título</h3>
+    <div class="card-image-wrapper">
+      <img class="card-image" src="" alt="Imagen de la canción" />
+      <button class="btn-play" aria-label="Reproducir canción" tabindex="0">
+        ▶
+      </button>
+    </div>
+    <p class="card-description" tabindex="0" aria-label="Descripción de la canción">Descripción breve</p>
+  </div>
+</template>
