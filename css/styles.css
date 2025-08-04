@@ -33,3 +33,32 @@
   font-weight: 700;
   color: #103D7C;
 }
+
+/* === Sección Practicar y Herramientas === */
+.section-practicar,
+.section-herramientas {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb; /* fondo suave para diferenciar */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(16, 61, 124, 0.1);
+  text-align: center;
+}
+
+.section-practicar h2,
+.section-herramientas h2 {
+  font-size: 1.75rem;
+  font-family: Title1, sans-serif;
+  color: #103D7C;
+  margin-bottom: 1rem;
+}
+
+#practicar-content,
+#herramientas-content {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100px; /* espacio mínimo para cuando haya contenido */
+}

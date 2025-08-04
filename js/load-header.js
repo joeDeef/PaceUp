@@ -4,10 +4,6 @@ fetch('components/header.html')
   .then(data => {
     document.getElementById('header-container').innerHTML = data;
 
-    // Después de cargar el header, añade el script para el cambio de idioma
-    const script = document.createElement('script');
-    script.src = 'js/select-language.js';
-    document.body.appendChild(script);
   })
   .catch(err => {
     console.error('Error al cargar el header:', err);

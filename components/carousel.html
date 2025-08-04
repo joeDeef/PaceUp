@@ -1,9 +1,9 @@
 <template id="carousel-template">
-  <div class="carousel-wrapper">
-    <div class="carousel-container" id="carousel"></div>
+  <div class="carousel-wrapper" role="region" aria-label="Carrusel de canciones populares">
+    <div class="carousel-container" id="carousel" role="list" aria-live="polite" tabindex="0"></div>
     <div class="carousel-buttons">
-      <button id="prev-btn"></button>
-      <button id="next-btn"></button>
+      <button class="carousel-arrow carousel-arrow-left" aria-label="Anterior" tabindex="-1" type="button">&#8592;</button>
+      <button class="carousel-arrow carousel-arrow-right" aria-label="Siguiente" tabindex="-1" type="button">&#8594;</button>
     </div>
   </div>
 </template>

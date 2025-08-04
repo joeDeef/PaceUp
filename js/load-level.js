@@ -1,10 +1,35 @@
 import { createCard } from "./create-card.js";
-import { levelContent } from "../data/level-content.js";
-import { catalogModes } from "../data/modes.js";
 import { actualizarVista } from "./level-main.js";
 
+// Variables que contendrán los datos cargados desde JSON
+let levelContent = {};
+let catalogModes = {};
+
+// Función para cargar el contenido del nivel desde JSON
+async function cargarDatosNivel() {
+  if (Object.keys(levelContent).length === 0) {
+    const res = await fetch("../data/level-content.json");
+    levelContent = await res.json();
+  }
+}
+
+// Función para cargar los modos desde JSON
+async function cargarCatalogoModos() {
+  if (Object.keys(catalogModes).length === 0) {
+    const res = await fetch("../data/modes.json");
+    catalogModes = await res.json();
+  }
+}
+
 // Función para cargar el contenido de un nivel específico
-export function cargarContenidoNivel(nivel, modoSeleccionado = null, id = null) {
+export async function cargarContenidoNivel(
+  nivel,
+  modoSeleccionado = null,
+  id = null
+) {
+  await cargarDatosNivel();
+  await cargarCatalogoModos();
+
   const contenido = levelContent[nivel];
   const contenedor = document.getElementById("nivel-content");
 
@@ -17,13 +42,14 @@ export function cargarContenidoNivel(nivel, modoSeleccionado = null, id = null) 
   if (modoSeleccionado) {
     switch (modoSeleccionado) {
       case "canciones":
-        import("./load-songs.js").then((m) => m.cargarCanciones(nivel));
+        import("./loadSongs.js").then((m) => m.cargarCanciones(nivel));
         break;
       case "videos":
-        import("./load-songs.js").then((m) => m.cargarCanciones(id));
         break;
       case "gramatica":
-        import("./cargarGramatica.js").then((m) => m.cargarGramaticaComponent(nivel));
+        import("./cargarGramatica.js").then((m) =>
+          m.cargarGramaticaComponent(nivel)
+        );
         break;
       default:
         contenedor.innerHTML = `<p>Modo "${modoSeleccionado}" aún no implementado.</p>`;
@@ -71,13 +97,42 @@ export function cargarContenidoNivel(nivel, modoSeleccionado = null, id = null) 
               image: modo.imagen,
               title: modo.titulo,
               description: modo.descripcion,
+              altText: modo.altText,
               imageBgColor: "#f5f5f5",
               onClick,
             },
             cardTemplate
           );
 
-          if (fragment) lista.appendChild(fragment);
+          if (fragment) {
+            // Hacer toda la tarjeta y sus hijos accesibles al click y Enter
+            fragment.addEventListener("click", onClick);
+            fragment.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onClick();
+              }
+            });
+            // También para los hijos principales
+            const title = fragment.querySelector(".card-title");
+            const img = fragment.querySelector(".card-image");
+            const desc = fragment.querySelector(".card-description");
+            [title, img, desc].forEach((el) => {
+              if (el) {
+                el.addEventListener("click", (ev) => {
+                  ev.stopPropagation();
+                  onClick();
+                });
+                el.addEventListener("keydown", (e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onClick();
+                  }
+                });
+              }
+            });
+            lista.appendChild(fragment);
+          }
         });
       }
     });

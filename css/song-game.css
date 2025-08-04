@@ -1,128 +1,354 @@
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === CONTENEDOR GENERAL === */
 .video-section {
   padding: 20px;
-  color: #ffffff;
-  background-color: #121212;
+  background-color: #0e1a2b; /* fondo oscuro azulado */
+  color: #eaf2fb; /* texto claro */
   font-family: sans-serif;
-}
-
-.video-title {
-  font-size: 26px;
-  margin-bottom: 10px;
-  color: #fff;
-  text-align: center;
-}
-
-.status-bar {
+min-height: auto;
+height: 100%;
   display: flex;
-  justify-content: space-between;
-  background-color: #1f1f1f;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.status-bar span {
-  flex: 1;
-  text-align: center;
-}
-
-.status-bar strong {
-  color: #00ffcc;
-}
-
-.game-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
 }
 
+/* === TÍTULO === */
+.video-title {
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  color: #eaf2fb;
+}
+
+/* === GRID PRINCIPAL: Lateral Izq, Centro, Lateral Der === */
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr 200px;
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: start;
+}
+
+/* === LATERAL IZQUIERDO === */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 140px;
+  font-weight: 700;
+  color: #eaf2fb;
+}
+
+/* Caja de reproducción */
+.play-box {
+  background: #1c2e4a;
+  color: #eaf2fb;
+  border-radius: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Botones de control */
+.control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-icon {
+  width: 36px;
+  height: 36px;
+  filter: invert(0.8) sepia(0.3) saturate(4) hue-rotate(180deg);
+  user-select: none;
+}
+
+/* Status items: título arriba y valor en cuadro debajo */
+.status-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.status-item {
+  text-align: center;
+  color: #ffffff; /* blanco puro para contraste */
+}
+
+.status-label {
+  color: #ffffff; /* blanco puro para contraste */
+  font-size: 16px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.status-value-box {
+  background: #1c2e4a;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  user-select: none;
+}
+
+/* === CENTRO === */
+.center-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Video */
+.video-player-wrapper {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  background-color: black;
+  height: 350px;
+  position: relative;
+}
+
+.video-player,
 .video-player iframe {
   width: 100%;
-  height: 360px;
-  border-radius: 12px;
+  height: 100%;
 }
 
-.game-options {
-  background-color: #202020;
-  padding: 15px;
-  border-radius: 12px;
-  min-height: 360px;
-  color: #eee;
+/* Barra de progreso */
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  user-select: none;
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 6px;
+  background-color: #cfddee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4da8ff; /* azul claro vibrante */
+  border-radius: 4px;
+  transition: width 0.4s ease-out;
+}
+
+#progress-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #7ea2c4;
+  min-width: 35px;
+}
+
+/* Contenedor letra + botón retroceder */
+.lyrics-with-back {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Botón retroceder */
+.retroceder-btn-letra {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #1c2e4a;
+  border: 2px solid #103D7C;
+  color: #eaf2fb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.retroceder-btn-letra:hover {
+  background: #103D7C;
+  color: #ffffff;
+}
+
+/* Letra */
+.video-lyrics {
+  flex-grow: 1;
+  background: #1c2e4a;
+  color: #eaf2fb;
+  border-radius: 10px;
+  min-height: 60px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  user-select: none;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 18px 24px;
 }
 
-.video-controls {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
+.letras-texto {
+  margin: 0;
+  width: 100%;
 }
 
-.video-controls button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #2e2e2e;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-}
-
-.video-lyrics {
-  background-color: #1a1a1a;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 18px;
-  text-align: center;
-  color: #cccccc;
-  min-height: 72px; /* para que no salte al cambiar líneas */
-}
-
-#linea-actual {
-  color: #bbb; /* gris claro para palabras no cantadas */
+.letras-texto p {
+  margin: 0;
   font-weight: bold;
-  margin: 0;
+  line-height: 1.3;
 }
 
-#linea-actual span.cantada {
-  color: #fff; /* blanco para palabras ya cantadas */
+#linea-actual span.cantandose,
+#linea-siguiente span.cantandose {
+  color: #FFD966;
 }
 
-#linea-actual span.cantandose {
-  color: #ffec8b; /* amarillo suave para palabra cantándose */
+/* === LATERAL DERECHO === */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 200px;
+  color: #eaf2fb;
 }
 
-#linea-siguiente {
-  color: #777; /* gris medio para la siguiente línea */
-  font-style: italic;
-  margin: 0;
-}
-
-.hueco {
-  display: inline-block;
-  width: 60px;
-  border-bottom: 2px solid #ccc;
-  color: #999;
+/* Reloj */
+.reloj-box {
+  background: #1c2e4a;
+  color: #eaf2fb;
+  font-size: 28px;
+  font-weight: bold;
   text-align: center;
+  padding: 12px 0;
+  border-radius: 12px;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.opcion-btn {
-  margin: 0.3em;
-  padding: 0.4em 0.8em;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+/* Opciones */
+.game-options {
+  background: #1c2e4a;
+  color: #eaf2fb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 18px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Opciones individuales */
+.opcion-palabra {
+  background-color: #0e1a2b;
+  border: 2px solid #3d5a80;
   border-radius: 8px;
-  transition: background-color 0.2s;
+  color: #eaf2fb;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(61, 90, 128, 0.3);
+  user-select: none;
 }
 
-.opcion-btn:hover:not(:disabled) {
-  background-color: #dceeff;
+.opcion-palabra:hover {
+  background-color: #aec8e2; /* azul claro suave */
+  color: #0e1a2b; /* texto oscuro para contraste */
+}
+
+.opcion-palabra.correcta {
+  background-color: #2ECC71 !important;
+  border-color: #2ECC71 !important;
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.8);
+}
+
+.opcion-palabra.incorrecta {
+  background-color: #E74C3C !important;
+  border-color: #E74C3C !important;
+  box-shadow: 0 0 12px rgba(231, 76, 60, 0.8);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .main-content-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .left-panel,
+  .right-panel {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    min-width: auto;
+  }
+
+  .status-items {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .play-box {
+    height: 44px;
+  }
+
+  .video-player-wrapper {
+    height: 220px;
+  }
+
+  .progress-wrapper {
+    margin-top: 8px;
+  }
+
+  .lyrics-with-back {
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .retroceder-btn-letra {
+    align-self: flex-start;
+  }
+
+  .video-lyrics {
+    font-size: 16px;
+    padding: 12px 16px;
+    min-height: auto;
+  }
+
+  .game-options {
+    max-height: 200px;
+  }
 }
