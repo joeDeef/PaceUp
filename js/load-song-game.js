@@ -36,6 +36,8 @@ let lastSeekTime = 0; // Para detectar si el usuario retrocede
 
 
 export async function cargarVideo(levelId, videoId) {
+  document.body.classList.add("modo-juego");
+
   const container = document.getElementById("nivel-content");
   container.innerHTML = "";
 
