@@ -1,33 +1,11 @@
 [
   {
-    "time": 5.7,
-    "words": [
-      {
-        "text": "[Applause]",
-        "start": 5.7,
-        "end": 14.08
-      }
-    ],
-    "jugable": false
-  },
-  {
-    "time": 8.28,
+    "time": 0,
     "words": [
       {
         "text": "[Music]",
         "start": 8.28,
         "end": 14.08
-      }
-    ],
-    "jugable": false
-  },
-  {
-    "time": 21.06,
-    "words": [
-      {
-        "text": "[Music]",
-        "start": 21.06,
-        "end": 27.0
       }
     ],
     "jugable": false

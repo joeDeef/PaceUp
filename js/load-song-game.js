@@ -1,3 +1,12 @@
+// Determina si el tiempo actual está dentro del rango permitido para escuchar la palabra
+function isInAnswerRange(currentTime) {
+  const line2 = syncedLyrics[currentPairIndex + 1];
+  if (!line2 || !line2.words || line2.words.length === 0) return true;
+  const start = line2.words[0].start;
+  const lastWord = line2.words[line2.words.length - 1];
+  const end = lastWord.end + 1; // 1 segundo extra para escuchar
+  return currentTime >= start && currentTime <= end;
+}
 // --- STATUS ITEM ---
 let puntos = 0, aciertos = 0, fallas = 0, totalHuecos = 0;
 
@@ -22,7 +31,8 @@ function actualizarStatusItem() {
 import { mostrarModal } from "./mostrar-modal.js";
 
 
-let youtubePlayer, syncedLyrics = [], currentPairIndex = 0, animationRunning = false, fadeInterval, isFading = false, lastPairIndexShown = -1, isPausedForAnswer = false;
+let youtubePlayer, syncedLyrics = [], currentPairIndex = 0, animationRunning = false, fadeInterval, isFading = false, lastPairIndexShown = -1, isPausedForAnswer = false, isTryingToGoBack = false;
+let lastSeekTime = 0; // Para detectar si el usuario retrocede
 
 
 export async function cargarVideo(levelId, videoId) {
@@ -83,18 +93,38 @@ function createPlayer(song) {
 
 function handlePlayerReady(song) {
   document.getElementById("playpause-btn").onclick = () => {
-    const state = youtubePlayer.getPlayerState(), line2 = syncedLyrics[currentPairIndex + 1], esJugable = line2?.jugable ?? true;
-    if (isPausedForAnswer && esJugable && (!line2 || !line2.answered)) return mostrarModal("Primero debes contestar antes de continuar.");
+    const state = youtubePlayer.getPlayerState();
+    const line2 = syncedLyrics[currentPairIndex + 1];
+    const esJugable = line2?.jugable ?? true;
+    const currentTime = youtubePlayer.getCurrentTime();
+    // Si el usuario acaba de intentar retroceder, permite reproducir sin mostrar el modal
+    if (isTryingToGoBack) {
+      isTryingToGoBack = false;
+      isPausedForAnswer = false;
+      if (line2) line2.paused = false;
+    } else if (isPausedForAnswer && esJugable && (!line2 || !line2.answered)) {
+      if (!isInAnswerRange(currentTime)) {
+        return mostrarModal("Primero debes contestar antes de continuar.");
+      } else {
+        // Si está dentro del rango, desactiva la pausa forzada
+        isPausedForAnswer = false;
+        if (line2) line2.paused = false;
+      }
+    }
     (esJugable && state === YT.PlayerState.PLAYING) ? youtubePlayer.pauseVideo() : (restoreVolume(), youtubePlayer.playVideo(), startLyricsAnimation());
+    lastSeekTime = currentTime;
   };
   document.getElementById("retroceder-btn").onclick = () => {
-    const newTime = Math.max(0, youtubePlayer.getCurrentTime() - 2);
+    isTryingToGoBack = true;
+    const prevTime = youtubePlayer.getCurrentTime();
+    const newTime = Math.max(0, prevTime - 2);
     youtubePlayer.seekTo(newTime, true);
     updateCurrentPairIndex(newTime);
     renderCurrentLyrics(newTime);
     restoreVolume();
     startLyricsAnimation();
     youtubePlayer.playVideo();
+    lastSeekTime = newTime;
   };
   window.addEventListener("keydown", (e) => {
     const playPauseBtn = document.getElementById("playpause-btn"), retrocederBtn = document.getElementById("retroceder-btn");
@@ -116,17 +146,27 @@ function handlePlayerStateChange(event) {
 
   // --- Lógica para bloquear play nativo si no ha respondido ---
   if (isPlaying) {
-    // Si está pausado esperando respuesta y el usuario da play desde el reproductor nativo
+    const currentTime = youtubePlayer.getCurrentTime();
     const line2 = syncedLyrics[currentPairIndex + 1];
     const esJugable = line2?.jugable ?? true;
-    if (isPausedForAnswer && esJugable) {
-      if (!line2 || !line2.answered) {
+    // Si el usuario acaba de intentar retroceder, permite reproducir sin mostrar el modal
+    if (isTryingToGoBack) {
+      isTryingToGoBack = false;
+      isPausedForAnswer = false;
+      if (line2) line2.paused = false;
+    } else if (isPausedForAnswer && esJugable && (!line2 || !line2.answered)) {
+      if (!isInAnswerRange(currentTime)) {
         youtubePlayer.pauseVideo();
         mostrarModal("Primero debes contestar antes de continuar.");
         return;
+      } else {
+        // Si está dentro del rango, desactiva la pausa forzada
+        isPausedForAnswer = false;
+        if (line2) line2.paused = false;
       }
     }
     startLyricsAnimation();
+    lastSeekTime = currentTime;
   } else {
     stopLyricsAnimation();
   }
@@ -370,6 +410,6 @@ function actualizarBarraProgreso() {
   const currentTime = youtubePlayer.getCurrentTime(), duration = youtubePlayer.getDuration();
   if (!duration) return;
   const porcentaje = Math.floor((currentTime / duration) * 100);
-  const barra = document.getElementById("progress-bar"), texto = document.getElementById("progress-text");
-  if (barra && texto) barra.style.width = texto.textContent = porcentaje + "%";
+  const barra = document.getElementById("progress-bar");
+  if (barra) barra.style.width = porcentaje + "%";
 }
