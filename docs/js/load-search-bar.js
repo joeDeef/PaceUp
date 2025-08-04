@@ -2,7 +2,7 @@ import { handleSearch, removeHighlights } from './highlightSearch.js';
 window.handleSearch = handleSearch;
 
 export async function loadSearchBar(container, context = "") {
-  const res = await fetch('./components/search-bar.html');
+  const res = await fetch('components/search-bar.html');
   const html = await res.text();
 
   const tempDiv = document.createElement('div');
@@ -25,7 +25,7 @@ export async function loadSearchBar(container, context = "") {
     const link = document.createElement('link');
     link.id = 'search-bar-css';
     link.rel = 'stylesheet';
-    link.href = '../css/search-bar.css';
+    link.href = 'css/search-bar.css';
     document.head.appendChild(link);
   }
 

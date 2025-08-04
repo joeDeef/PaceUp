@@ -1,3 +1,5 @@
+import { mostrarModal } from "./mostrar-modal.js";
+
 // Determina si el tiempo actual está dentro del rango permitido para escuchar la palabra
 function isInAnswerRange(currentTime) {
   const line2 = syncedLyrics[currentPairIndex + 1];
@@ -62,8 +64,6 @@ function actualizarStatusItem() {
   }
 }
 
-import { mostrarModal } from "./mostrar-modal.js";
-
 let youtubePlayer,
   syncedLyrics = [],
   currentPairIndex = 0,
@@ -81,14 +81,14 @@ export async function cargarVideo(levelId, videoId) {
   const container = document.getElementById("nivel-content");
   container.innerHTML = "";
 
-  const res = await fetch("../components/song-game.html");
+  const res = await fetch("components/song-game.html");
   container.innerHTML = await res.text();
   await new Promise((r) => setTimeout(r, 0));
 
   // Cargar canciones desde JSON
   let canciones = [];
   try {
-    const resCanciones = await fetch("../data/songs.json");
+    const resCanciones = await fetch("data/songs.json");
     canciones = await resCanciones.json();
   } catch (e) {
     container.innerHTML = "<p>Error cargando canciones.</p>";
@@ -197,8 +197,8 @@ function handlePlayerStateChange(event) {
 
   if (icon) {
     icon.src = isPlaying
-      ? "../assets/icons/pause-solid.svg"
-      : "../assets/icons/play-solid.svg";
+      ? "assets/icons/pause-solid.svg"
+      : "assets/icons/play-solid.svg";
     icon.alt = isPlaying ? "Pause" : "Play";
   }
   if (text) text.textContent = isPlaying ? "Pause" : "Play";
@@ -236,7 +236,7 @@ function extractVideoId(url) {
 }
 
 async function loadLyrics(fileName) {
-  const res = await fetch(`../data/lyrics/${fileName}`);
+  const res = await fetch(`data/lyrics/${fileName}`);
   syncedLyrics = await res.json();
   currentPairIndex = 0;
 }

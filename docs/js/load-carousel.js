@@ -3,8 +3,8 @@ import { createCard } from "./create-card.js";
 // Carga las plantillas HTML para tarjetas y carrusel
 async function loadTemplates() {
   const [cardHTML, carouselHTML] = await Promise.all([
-    fetch("./components/card.html").then((res) => res.text()),
-    fetch("./components/carousel.html").then((res) => res.text()),
+    fetch("components/card.html").then((res) => res.text()),
+    fetch("components/carousel.html").then((res) => res.text()),
   ]);
   document.body.insertAdjacentHTML("beforeend", cardHTML);
   document.body.insertAdjacentHTML("beforeend", carouselHTML);
@@ -12,7 +12,7 @@ async function loadTemplates() {
 
 // Carga los datos de niveles desde un archivo JSON
 async function loadLevelsData() {
-  const response = await fetch("../data/levels.json");
+  const response = await fetch("data/levels.json");
   return await response.json();
 }
 
@@ -29,11 +29,10 @@ async function initCarousel() {
   const carouselNode = carouselTemplate.content.cloneNode(true);
   wrapper.appendChild(carouselNode);
 
-
   // Seleccionar el carrusel y los botones después de insertar el template
   const carousel = document.getElementById("carousel");
-  const btnLeft = document.querySelector('.carousel-arrow-left');
-  const btnRight = document.querySelector('.carousel-arrow-right');
+  const btnLeft = document.querySelector(".carousel-arrow-left");
+  const btnRight = document.querySelector(".carousel-arrow-right");
 
   const cardElements = [];
 
@@ -56,19 +55,23 @@ async function initCarousel() {
     carousel.appendChild(fragment);
 
     // Sincronizar el enfoque con la carta activa
-    cardElement.addEventListener('focusin', () => setActiveCard(index));
+    cardElement.addEventListener("focusin", () => setActiveCard(index));
   });
 
   let currentIndex = 0;
 
   // Lógica de botones de flecha
   if (btnLeft && btnRight) {
-    btnLeft.addEventListener('click', () => setActiveCard(currentIndex - 1, true));
-    btnRight.addEventListener('click', () => setActiveCard(currentIndex + 1, true));
+    btnLeft.addEventListener("click", () =>
+      setActiveCard(currentIndex - 1, true)
+    );
+    btnRight.addEventListener("click", () =>
+      setActiveCard(currentIndex + 1, true)
+    );
     // Accesibilidad: permitir Enter y barra
-    [btnLeft, btnRight].forEach(btn => {
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+    [btnLeft, btnRight].forEach((btn) => {
+      btn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           btn.click();
         }

@@ -8,7 +8,7 @@ let catalogModes = {};
 // Función para cargar el contenido del nivel desde JSON
 async function cargarDatosNivel() {
   if (Object.keys(levelContent).length === 0) {
-    const res = await fetch("../data/level-content.json");
+    const res = await fetch("data/level-content.json");
     levelContent = await res.json();
   }
 }
@@ -16,7 +16,7 @@ async function cargarDatosNivel() {
 // Función para cargar los modos desde JSON
 async function cargarCatalogoModos() {
   if (Object.keys(catalogModes).length === 0) {
-    const res = await fetch("../data/modes.json");
+    const res = await fetch("data/modes.json");
     catalogModes = await res.json();
   }
 }
@@ -59,7 +59,7 @@ export async function cargarContenidoNivel(
   }
 
   // Si no hay modo seleccionado, mostrar vista general del nivel
-  fetch("./components/levelEspecific.html")
+  fetch("components/levelEspecific.html")
     .then((res) => res.text())
     .then((template) => {
       let htmlFinal = template
