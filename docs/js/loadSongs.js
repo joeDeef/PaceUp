@@ -12,13 +12,13 @@ function extractVideoId(url) {
 export async function cargarCanciones(nivelActual) {
   // Cargar canciones desde JSON
   let canciones = [];
-  const resCanciones = await fetch("../data/songs.json");
+  const resCanciones = await fetch("data/songs.json");
   canciones = await resCanciones.json();
 
   const contenedor = document.getElementById("nivel-content");
   contenedor.innerHTML = "";
 
-  const res = await fetch("../components/songs.html");
+  const res = await fetch("components/songs.html");
   const html = await res.text();
   contenedor.innerHTML = html;
 

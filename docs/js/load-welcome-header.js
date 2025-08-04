@@ -2,7 +2,7 @@ import { loadSearchBar } from './load-search-bar.js';
 
 // Carga el header de bienvenida, lo inserta y agrega la barra de búsqueda
 async function loadWelcomeHeader() {
-  const res = await fetch('./components/welcome-header.html');
+  const res = await fetch('components/welcome-header.html');
   const html = await res.text();
 
   const headerContainer = document.getElementById('header-container');
