@@ -1,48 +1,48 @@
 [
   {
     "nivelId": "Basico1",
-    "image": "../assets/img/levels/A1.png",
-    "altText": "Herramientas de jardineria",
+    "image": "assets/img/levels/A1.png",
+    "altText": "Herramientas de jardinería que simbolizan el inicio del aprendizaje con recursos básicos",
     "title": "Básico 1 (A1)",
     "description": "Vocabulario y frases básicas.",
     "imageBgColor": "#E6FFEB"
   },
   {
     "nivelId": "Basico2",
-    "image": "../assets/img/levels/A2.png",
-    "altText": "Herramientas de jardineria",
+    "image": "assets/img/levels/A2.png",
+    "altText": "Cultivo de la flor como metáfora de establecer bases sólidas para el aprendizaje",
     "title": "Básico 2 (A2)",
     "description": "Expresiones simples comunes.",
     "imageBgColor": "#CFFFE0"
   },
   {
     "nivelId": "Intermedio1",
-    "image": "../assets/img/levels/B1.png",
-    "altText": "Herramientas de jardineria",
+    "image": "assets/img/levels/B1.png",
+    "altText": "Brote emergiendo del suelo representando los primeros resultados del esfuerzo en el aprendizaje",
     "title": "Intermedio 1 (B1)",
     "description": "Estructuras más complejas.",
     "imageBgColor": "#CCE5FF"
   },
   {
     "nivelId": "Intermedio2",
-    "image": "../assets/img/levels/B2.png",
-    "altText": "Herramientas de jardineria",
+    "image": "assets/img/levels/B2.png",
+    "altText": "Planta joven creciendo, simboliza el desarrollo de habilidades lingüísticas más sólidas",
     "title": "Intermedio 2 (B2)",
     "description": "Conversación fluida y técnica.",
     "imageBgColor": "#A0C4FF"
   },
   {
     "nivelId": "Avanzado1",
-    "image": "../assets/img/levels/C1.png",
-    "altText": "Herramientas de jardineria",
+    "image": "assets/img/levels/C1.png",
+    "altText": "Capullo a punto de florecer, representa la madurez en el uso del idioma con matices",
     "title": "Avanzado 1 (C1)",
     "description": "Expresión con matices.",
     "imageBgColor": "#E6CCFF"
   },
   {
     "nivelId": "Avanzado2",
-    "image": "../assets/img/levels/C2.png",
-    "altText": "Herramientas de jardineria",
+    "image": "assets/img/levels/C2.png",
+    "altText": "Flor abierta y colorida como símbolo del dominio completo del idioma, como un hablante nativo",
     "title": "Avanzado 2 (C2)",
     "description": "Inglés como un nativo.",
     "imageBgColor": "#D1A3FF"

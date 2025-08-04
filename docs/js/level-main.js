@@ -34,7 +34,7 @@ export async function actualizarVista(
 }
 
 // Carga inicial (sin modificar historial porque ya está la URL)
-fetch("./components/sidebar.html")
+fetch("components/sidebar.html")
   .then((res) => res.text())
   .then((html) => {
     document.getElementById("sidebar-container").innerHTML = html;

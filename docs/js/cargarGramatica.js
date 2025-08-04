@@ -1,7 +1,7 @@
 export async function cargarGramaticaComponent(nivel) {
   const contenedor = document.getElementById("nivel-content");
 
-  const res = await fetch("./components/gramatica.html");
+  const res = await fetch("components/gramatica.html");
   const html = await res.text();
   contenedor.innerHTML = html;
 

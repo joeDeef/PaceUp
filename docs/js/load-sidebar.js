@@ -2,12 +2,12 @@ import { cargarContenidoNivel } from './load-level.js';
 
 // Datos estáticos con información de niveles (id, etiqueta e imagen)
 const niveles = [
-  { id: 'Basico1', label: 'Básico 1 (A1)', img: '../assets/img/levels/A1.png' },
-  { id: 'Basico2', label: 'Básico 2 (A2)', img: '../assets/img/levels/A2.png' },
-  { id: 'Intermedio1', label: 'Intermedio 1 (B1)', img: '../assets/img/levels/B1.png' },
-  { id: 'Intermedio2', label: 'Intermedio 2 (B2)', img: '../assets/img/levels/B2.png' },
-  { id: 'Avanzado1', label: 'Avanzado 1 (C1)', img: '../assets/img/levels/C1.png' },
-  { id: 'Avanzado2', label: 'Avanzado 2 (C2)', img: '../assets/img/levels/C2.png' },
+  { id: 'Basico1', label: 'Básico 1 (A1)', img: 'assets/img/levels/A1.png' },
+  { id: 'Basico2', label: 'Básico 2 (A2)', img: 'assets/img/levels/A2.png' },
+  { id: 'Intermedio1', label: 'Intermedio 1 (B1)', img: 'assets/img/levels/B1.png' },
+  { id: 'Intermedio2', label: 'Intermedio 2 (B2)', img: 'assets/img/levels/B2.png' },
+  { id: 'Avanzado1', label: 'Avanzado 1 (C1)', img: 'assets/img/levels/C1.png' },
+  { id: 'Avanzado2', label: 'Avanzado 2 (C2)', img: 'assets/img/levels/C2.png' },
 ];
 
 // Función para configurar la barra lateral con la lista de niveles
