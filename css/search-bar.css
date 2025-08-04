@@ -63,3 +63,9 @@
 .search-input-container button:focus {
   background-color: #e65c00;
 }
+
+.search-highlight {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}

@@ -23,7 +23,7 @@ export async function cargarCanciones(nivelActual) {
   contenedor.innerHTML = html;
 
   const searchContainer = document.getElementById("search-bar-container");
-  await loadSearchBar(searchContainer);
+  await loadSearchBar(searchContainer, "cards");
 
   const template = document.getElementById("card-template");
   const carrusel = document.getElementById("carrusel-populares");

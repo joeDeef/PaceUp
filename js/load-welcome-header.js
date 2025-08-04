@@ -28,7 +28,7 @@ async function loadWelcomeHeader() {
   }
 
   // Cargar la barra de búsqueda dentro del contenedor
-  await loadSearchBar(searchBarContainer);
+  await loadSearchBar(searchContainer, "highlight");
 
   // Mostrar u ocultar el header de bienvenida según scroll
   const welcomeHeader = document.querySelector('.welcome-header');
