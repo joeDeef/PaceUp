@@ -1,17 +1,17 @@
 [
   {
-    "time": 0.63,
+    "time": 0,
     "words": [
       {
         "text": "♪♪♪",
-        "start": 0.63,
-        "end": 3.22
+        "start": 0,
+        "end": 4.05
       }
     ],
     "jugable": false
   },
   {
-    "time": 3.29,
+    "time": 4.05,
     "words": [
       {
         "text": "UHH",
@@ -21,24 +21,13 @@
       {
         "text": "UHH",
         "start": 4.8,
-        "end": 5.55
+        "end": 9.26
       }
     ],
     "jugable": false
   },
   {
-    "time": 6.38,
-    "words": [
-      {
-        "text": "♪♪♪",
-        "start": 6.38,
-        "end": 8.55
-      }
-    ],
-    "jugable": false
-  },
-  {
-    "time": 8.63,
+    "time": 9.26,
     "words": [
       {
         "text": "I,",
@@ -644,7 +633,7 @@
         "end": 82.95
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 85.08,
@@ -660,7 +649,7 @@
         "end": 86.94
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 88.59,
@@ -1361,22 +1350,6 @@
     "jugable": true
   },
   {
-    "time": 171.17,
-    "words": [
-      {
-        "text": "[BOTH",
-        "start": 171.93,
-        "end": 172.69
-      },
-      {
-        "text": "VOCALIZING]",
-        "start": 172.69,
-        "end": 173.45
-      }
-    ],
-    "jugable": false
-  },
-  {
     "time": 175.97,
     "words": [
       {
@@ -1712,28 +1685,6 @@
       }
     ],
     "jugable": true
-  },
-  {
-    "time": 233.44,
-    "words": [
-      {
-        "text": "♪♪♪",
-        "start": 233.44,
-        "end": 235.23
-      }
-    ],
-    "jugable": false
-  },
-  {
-    "time": 235.94,
-    "words": [
-      {
-        "text": "[VOCALIZING]",
-        "start": 237.01,
-        "end": 238.08
-      }
-    ],
-    "jugable": false
   },
   {
     "time": 239.24,
