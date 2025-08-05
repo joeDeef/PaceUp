@@ -42,7 +42,7 @@ export async function cargarContenidoNivel(
   if (modoSeleccionado) {
     switch (modoSeleccionado) {
       case "canciones":
-        import("./loadSongs.js").then((m) => m.cargarCanciones(nivel));
+        import("./loadSongs.js").then((m) => m.cargarCanciones(nivel, id));
         break;
       case "videos":
         break;

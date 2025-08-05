@@ -16,8 +16,8 @@
   </div>
 
   <!-- Lista general de canciones -->
-  <h2 class="titulo-lista" id="titulo-lista-canciones" tabindex="0" aria-label="Lista de canciones">Lista de canciones</h2>
-  <div class="tarjetas-lista" id="lista-canciones" role="list" aria-labelledby="titulo-lista-canciones" aria-description="Listado general de canciones disponibles">
+  <h2 class="titulo-lista" id="titulo-lista-canciones" tabindex="0">Lista de canciones</h2>
+  <div class="tarjetas-lista" id="lista-canciones" role="list">
     <!-- Aquí se insertan el resto de las tarjetas -->
   </div>
 
@@ -26,13 +26,13 @@
 <!-- Template para tarjetas con botón play -->
 <template id="card-template">
   <div class="card" role="listitem" tabindex="0" aria-label="Tarjeta de canción">
-    <h3 class="card-title" tabindex="0" aria-label="Título de la canción">Título</h3>
+    <h3 class="card-title" tabindex="0">Título</h3>
     <div class="card-image-wrapper">
       <img class="card-image" src="" alt="Imagen de la canción" />
       <button class="btn-play" aria-label="Reproducir canción" tabindex="0">
         ▶
       </button>
     </div>
-    <p class="card-description" tabindex="0" aria-label="Descripción de la canción">Descripción breve</p>
+    <p class="card-description" tabindex="0">Descripción breve</p>
   </div>
 </template>

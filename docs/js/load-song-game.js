@@ -37,32 +37,35 @@ function actualizarStatusItem() {
   const aciertosEl = document.getElementById("status-aciertos");
   const fallasEl = document.getElementById("status-fallas");
 
-  if (puntosEl) {
+  const puntosItem = puntosEl?.closest(".status-item");
+  const huecosItem = huecosEl?.closest(".status-item");
+  const aciertosItem = aciertosEl?.closest(".status-item");
+  const fallasItem = fallasEl?.closest(".status-item");
+
+  if (puntosEl && puntosItem) {
     puntosEl.textContent = puntos;
-    puntosEl.setAttribute("aria-label", `Puntos obtenidos: ${puntos}`);
-    puntosEl.setAttribute("aria-live", "polite");
-    puntosEl.setAttribute("tabindex", "0");
+    puntosItem.setAttribute("aria-label", `Puntos obtenidos: ${puntos}`);
   }
-  if (huecosEl) {
+
+  if (huecosEl && huecosItem) {
     huecosEl.textContent = `${huecosCompletados}/${totalHuecos}`;
-    huecosEl.setAttribute(
+    huecosItem.setAttribute(
       "aria-label",
       `Huecos completados: ${huecosCompletados} de ${totalHuecos}`
     );
-    huecosEl.setAttribute("aria-live", "polite");
-    huecosEl.setAttribute("tabindex", "0");
   }
-  if (aciertosEl) {
+
+  if (aciertosEl && aciertosItem) {
     aciertosEl.textContent = aciertos;
-    aciertosEl.setAttribute("aria-label", `Aciertos realizados: ${aciertos}`);
-    aciertosEl.setAttribute("aria-live", "polite");
-    aciertosEl.setAttribute("tabindex", "0");
+    aciertosItem.setAttribute(
+      "aria-label",
+      `Aciertos realizados: ${aciertos}`
+    );
   }
-  if (fallasEl) {
+
+  if (fallasEl && fallasItem) {
     fallasEl.textContent = fallas;
-    fallasEl.setAttribute("aria-label", `Fallas cometidas: ${fallas}`);
-    fallasEl.setAttribute("aria-live", "polite");
-    fallasEl.setAttribute("tabindex", "0");
+    fallasItem.setAttribute("aria-label", `Fallas cometidas: ${fallas}`);
   }
 }
 

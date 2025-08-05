@@ -1,22 +1,26 @@
-
 import { createCard } from "./create-card.js";
 import { loadSearchBar } from "./load-search-bar.js";
 import { cargarVideo } from "./load-song-game.js";
+import { actualizarVista } from "./level-main.js";
 
-// Extraer ID del video de YouTube desde la URL
 function extractVideoId(url) {
   const match = url.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
   return match ? match[1] : "";
 }
 
-export async function cargarCanciones(nivelActual) {
-  // Cargar canciones desde JSON
+export async function cargarCanciones(nivelActual, idSeleccionado = null) {
   let canciones = [];
   const resCanciones = await fetch("data/songs.json");
   canciones = await resCanciones.json();
 
   const contenedor = document.getElementById("nivel-content");
   contenedor.innerHTML = "";
+
+  // ⚠️ Mostrar directamente la canción si hay un idSeleccionado
+  if (idSeleccionado) {
+    cargarVideo(nivelActual, idSeleccionado);
+    return; // Salimos para no mostrar la lista
+  }
 
   const res = await fetch("components/songs.html");
   const html = await res.text();
@@ -29,93 +33,55 @@ export async function cargarCanciones(nivelActual) {
   const carrusel = document.getElementById("carrusel-populares");
   const lista = document.getElementById("lista-canciones");
 
-  // Ordenar por popularidad descendente y tomar las 5 más altas
   const populares = canciones
     .filter((c) => c.popularityRank >= 0)
     .sort((a, b) => b.popularityRank - a.popularityRank)
     .slice(0, 5);
 
-  populares.forEach((cancion, idx) => {
+  const renderCancion = (cancion, destino) => {
     const { fragment, cardElement } = createCard(
       {
         ...cancion,
         image: `https://img.youtube.com/vi/${extractVideoId(cancion.link)}/mqdefault.jpg`,
-        onClick: () => {
-          cargarVideo(nivelActual, cancion.id);
-        },
+        onClick: () => actualizarVista(nivelActual, "canciones", cancion.id),
       },
       template
     );
-    carrusel.appendChild(fragment);
 
-    // Accesibilidad: activar con Enter en cualquier parte de la tarjeta
+    destino.appendChild(fragment);
+
     const focusables = [
-      cardElement.querySelector('.card-title'),
-      cardElement.querySelector('.card-image'),
-      cardElement.querySelector('.btn-play'),
-      cardElement.querySelector('.card-description')
+      cardElement.querySelector(".card-title"),
+      cardElement.querySelector(".card-image"),
+      cardElement.querySelector(".btn-play"),
+      cardElement.querySelector(".card-description"),
     ];
-    focusables.forEach(el => {
+    focusables.forEach((el) => {
       if (el) {
-        el.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.keyCode === 13) {
+        el.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.keyCode === 13) {
             e.preventDefault();
-            cargarVideo(nivelActual, cancion.id);
+            actualizarVista(nivelActual, "canciones", cancion.id);
           }
         });
       }
     });
 
-    // Click en botón play
     const btnPlay = cardElement.querySelector(".btn-play");
     btnPlay.addEventListener("click", (e) => {
       e.stopPropagation();
-      cargarVideo(nivelActual, cancion.id);
+      actualizarVista(nivelActual, "canciones", cancion.id);
     });
-  });
+  };
 
-  // Las restantes que no están en el carrusel
+  // Renderizar canciones populares
+  populares.forEach((cancion) => renderCancion(cancion, carrusel));
+
+  // Renderizar las restantes
   const restantes = canciones.filter((c) => !populares.includes(c));
+  restantes.forEach((cancion) => renderCancion(cancion, lista));
 
-  restantes.forEach((cancion) => {
-    const { fragment, cardElement } = createCard(
-      {
-        ...cancion,
-        image: `https://img.youtube.com/vi/${extractVideoId(cancion.link)}/mqdefault.jpg`,
-        onClick: () => {
-          cargarVideo(nivelActual, cancion.id);
-        },
-      },
-      template
-    );
-    lista.appendChild(fragment);
-
-    // Accesibilidad: activar con Enter en cualquier parte de la tarjeta
-    const focusables = [
-      cardElement.querySelector('.card-title'),
-      cardElement.querySelector('.card-image'),
-      cardElement.querySelector('.btn-play'),
-      cardElement.querySelector('.card-description')
-    ];
-    focusables.forEach(el => {
-      if (el) {
-        el.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.keyCode === 13) {
-            e.preventDefault();
-            cargarVideo(nivelActual, cancion.id);
-          }
-        });
-      }
-    });
-
-    const btnPlay = cardElement.querySelector(".btn-play");
-    btnPlay.addEventListener("click", (e) => {
-      e.stopPropagation();
-      cargarVideo(nivelActual, cancion.id);
-    });
-  });
-
-  // Botones carrusel
+  // Carrusel navegación
   let scrollAmount = 0;
   const cardWidth = 210;
   const visibleCards = 3;
@@ -134,35 +100,23 @@ export async function cargarCanciones(nivelActual) {
     carrusel.style.transform = `translateX(-${scrollAmount}px)`;
   });
 
-  // Accesibilidad: navegación con flechas en el carrusel
-  const carruselCards = carrusel.querySelectorAll('.card');
-  carruselCards.forEach((card, idx) => {
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight' || e.keyCode === 39) {
-        e.preventDefault();
-        const next = carruselCards[idx + 1];
-        if (next) next.focus();
-      } else if (e.key === 'ArrowLeft' || e.keyCode === 37) {
-        e.preventDefault();
-        const prev = carruselCards[idx - 1];
-        if (prev) prev.focus();
-      }
+  // Accesibilidad: navegación con flechas
+  const addArrowNavigation = (cards) => {
+    cards.forEach((card, idx) => {
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.keyCode === 39) {
+          e.preventDefault();
+          const next = cards[idx + 1];
+          if (next) next.focus();
+        } else if (e.key === "ArrowLeft" || e.keyCode === 37) {
+          e.preventDefault();
+          const prev = cards[idx - 1];
+          if (prev) prev.focus();
+        }
+      });
     });
-  });
+  };
 
-  // Accesibilidad: navegación con flechas en la lista de canciones
-  const listaCards = lista.querySelectorAll('.card');
-  listaCards.forEach((card, idx) => {
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight' || e.keyCode === 39) {
-        e.preventDefault();
-        const next = listaCards[idx + 1];
-        if (next) next.focus();
-      } else if (e.key === 'ArrowLeft' || e.keyCode === 37) {
-        e.preventDefault();
-        const prev = listaCards[idx - 1];
-        if (prev) prev.focus();
-      }
-    });
-  });
+  addArrowNavigation(carrusel.querySelectorAll(".card"));
+  addArrowNavigation(lista.querySelectorAll(".card"));
 }

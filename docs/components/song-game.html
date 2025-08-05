@@ -1,31 +1,31 @@
-<section class="video-section" role="main" aria-label="Juego de canción" tabindex="0">
+<section class="video-section" aria-label="Juego de canción" tabindex="0">
   <h2 class="video-title" id="video-title" aria-label="Título del video: nombre de la canción actual" tabindex="0">Título del Video</h2>
 
   <div class="main-content-grid">
     <!-- Lateral Izquierdo: Play + Status -->
     <aside class="left-panel" role="region" aria-label="Controles y estado del juego" tabindex="0">
-      <div class="play-box" aria-label="Caja de control de reproducción">
+      <div class="play-box">
         <button id="playpause-btn" class="control-btn" aria-label="Reproducir o pausar el video de la canción" tabindex="2" aria-pressed="false">
           <img id="playpause-icon" src="assets/icons/play-solid.svg" alt="Icono de reproducir o pausar" class="control-icon" />
         </button>
       </div>
 
       <div class="status-items">
-        <div class="status-item" role="status" aria-label="Puntos obtenidos" tabindex="0">
+        <div class="status-item" role="status" aria-label="Puntos obtenidos: 0" tabindex="0">
           <span class="status-label" id="label-puntos" tabindex="0">Puntos</span>
-          <div class="status-value-box" id="status-puntos" aria-live="polite" aria-labelledby="label-puntos" tabindex="0">000</div>
+          <div class="status-value-box" id="status-puntos" tabindex="0">000</div>
         </div>
-        <div class="status-item" role="status" aria-label="Huecos completados" tabindex="6">
+        <div class="status-item" role="status" aria-label="Huecos completados: 0 de 0" tabindex="0">
           <span class="status-label" id="label-huecos" tabindex="0">Huecos</span>
-          <div class="status-value-box" id="status-huecos" aria-live="polite" aria-labelledby="label-huecos" tabindex="0">0/0</div>
+          <div class="status-value-box" id="status-huecos" tabindex="0">0/0</div>
         </div>
-        <div class="status-item" role="status" aria-label="Aciertos realizados" tabindex="9">
+        <div class="status-item" role="status" aria-label="Aciertos realizados: 0" tabindex="0">
           <span class="status-label" id="label-aciertos" tabindex="0">Aciertos</span>
-          <div class="status-value-box" id="status-aciertos" aria-live="polite" aria-labelledby="label-aciertos" tabindex="0">0</div>
+          <div class="status-value-box" id="status-aciertos" tabindex="0">0</div>
         </div>
-        <div class="status-item" role="status" aria-label="Fallas cometidas" tabindex="12">
+        <div class="status-item" role="status" aria-label="Fallas cometidas: 0" tabindex="0">
           <span class="status-label" id="label-fallas" tabindex="0">Fallas</span>
-          <div class="status-value-box" id="status-fallas" aria-live="polite" aria-labelledby="label-fallas" tabindex="0">0</div>
+          <div class="status-value-box" id="status-fallas" tabindex="0">0</div>
         </div>
       </div>
     </aside>
@@ -57,10 +57,10 @@
 
     <!-- Lateral Derecho: reloj + opciones -->
     <aside class="right-panel" role="region" aria-label="Opciones de respuesta" tabindex="0">
-      <div class="reloj-box" aria-live="polite" aria-label="Tiempo restante" tabindex="21">
+      <div class="reloj-box" aria-live="polite" tabindex="0">
         <span id="reloj" tabindex="0">Opciones</span>
       </div>
-      <div class="game-options" id="game-options" role="region" aria-label="Opciones de respuesta" tabindex="23">
+      <div class="game-options" id="game-options" role="region" aria-label="Opciones de respuesta" tabindex="0">
         <!-- Opciones dinámicas -->
       </div>
     </aside>
