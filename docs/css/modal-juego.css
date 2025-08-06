@@ -1,0 +1,86 @@
+#modal-final {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  z-index: 9999;
+}
+
+/* Fondo semi-transparente */
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Contenido del modal */
+.modal-content {
+  position: relative;
+  background: #ffffff;
+  padding: 2rem 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  text-align: center;
+  max-width: 380px;
+  width: 90%;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Imagen con tamaño proporcional */
+.modal-img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1.2rem;
+}
+
+/* Título */
+.modal-content h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.9rem;
+  color: #333;
+}
+
+/* Texto de estadísticas */
+.modal-content p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Botón */
+#modal-ok-btn {
+  margin-top: 1.8rem;
+  padding: 0.65rem 1.8rem;
+  font-size: 1.05rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#modal-ok-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Para bloquear scroll del fondo */
+body.modal-open {
+  overflow: hidden;
+}

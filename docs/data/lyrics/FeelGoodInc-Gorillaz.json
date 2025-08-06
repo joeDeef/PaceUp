@@ -1,43 +1,5 @@
 [
   {
-    "time": 0,
-    "words": [
-      {
-        "text": "[Music]",
-        "start": 8.28,
-        "end": 14.08
-      }
-    ],
-    "jugable": false
-  },
-  {
-    "time": 22.88,
-    "words": [
-      {
-        "text": "Milk.",
-        "start": 22.88,
-        "end": 24.94
-      },
-      {
-        "text": "Sh.",
-        "start": 24.94,
-        "end": 27.0
-      }
-    ],
-    "jugable": true
-  },
-  {
-    "time": 27.52,
-    "words": [
-      {
-        "text": "Sh.",
-        "start": 27.52,
-        "end": 31.92
-      }
-    ],
-    "jugable": true
-  },
-  {
     "time": 29.76,
     "words": [
       {

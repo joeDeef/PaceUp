@@ -1,0 +1,1810 @@
+[
+  {
+    "time": 0.93,
+    "words": [
+      {
+        "text": "(upbeat",
+        "start": 0.93,
+        "end": 2.04
+      },
+      {
+        "text": "pop-rock",
+        "start": 2.04,
+        "end": 3.15
+      },
+      {
+        "text": "music)",
+        "start": 3.15,
+        "end": 4.26
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 12.05,
+    "words": [
+      {
+        "text": "You",
+        "start": 12.29,
+        "end": 12.52
+      },
+      {
+        "text": "could",
+        "start": 12.52,
+        "end": 12.75
+      },
+      {
+        "text": "never",
+        "start": 12.76,
+        "end": 12.99
+      },
+      {
+        "text": "know",
+        "start": 12.99,
+        "end": 13.22
+      },
+      {
+        "text": "what",
+        "start": 13.23,
+        "end": 13.46
+      },
+      {
+        "text": "it's",
+        "start": 13.46,
+        "end": 13.69
+      },
+      {
+        "text": "like",
+        "start": 13.69,
+        "end": 13.92
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 14.16,
+    "words": [
+      {
+        "text": "Your",
+        "start": 14.42,
+        "end": 14.68
+      },
+      {
+        "text": "blood",
+        "start": 14.68,
+        "end": 14.94
+      },
+      {
+        "text": "like",
+        "start": 14.93,
+        "end": 15.19
+      },
+      {
+        "text": "winter",
+        "start": 15.19,
+        "end": 15.45
+      },
+      {
+        "text": "freezes",
+        "start": 15.45,
+        "end": 15.71
+      },
+      {
+        "text": "just",
+        "start": 15.7,
+        "end": 15.96
+      },
+      {
+        "text": "like",
+        "start": 15.96,
+        "end": 16.22
+      },
+      {
+        "text": "ice",
+        "start": 16.22,
+        "end": 16.48
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 16.73,
+    "words": [
+      {
+        "text": "And",
+        "start": 16.96,
+        "end": 17.19
+      },
+      {
+        "text": "there's",
+        "start": 17.19,
+        "end": 17.42
+      },
+      {
+        "text": "a",
+        "start": 17.41,
+        "end": 17.64
+      },
+      {
+        "text": "cold",
+        "start": 17.64,
+        "end": 17.87
+      },
+      {
+        "text": "lonely",
+        "start": 17.87,
+        "end": 18.1
+      },
+      {
+        "text": "light",
+        "start": 18.09,
+        "end": 18.32
+      },
+      {
+        "text": "that",
+        "start": 18.32,
+        "end": 18.55
+      },
+      {
+        "text": "shines",
+        "start": 18.55,
+        "end": 18.78
+      },
+      {
+        "text": "from",
+        "start": 18.77,
+        "end": 19.0
+      },
+      {
+        "text": "you",
+        "start": 19.0,
+        "end": 19.23
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 19.45,
+    "words": [
+      {
+        "text": "You'll",
+        "start": 19.67,
+        "end": 19.89
+      },
+      {
+        "text": "wind",
+        "start": 19.89,
+        "end": 20.11
+      },
+      {
+        "text": "up",
+        "start": 20.11,
+        "end": 20.33
+      },
+      {
+        "text": "like",
+        "start": 20.33,
+        "end": 20.55
+      },
+      {
+        "text": "the",
+        "start": 20.55,
+        "end": 20.77
+      },
+      {
+        "text": "wreck",
+        "start": 20.77,
+        "end": 20.99
+      },
+      {
+        "text": "you",
+        "start": 20.99,
+        "end": 21.21
+      },
+      {
+        "text": "hide",
+        "start": 21.21,
+        "end": 21.43
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 21.65,
+    "words": [
+      {
+        "text": "Behind",
+        "start": 22.2,
+        "end": 22.75
+      },
+      {
+        "text": "that",
+        "start": 22.75,
+        "end": 23.3
+      },
+      {
+        "text": "mask",
+        "start": 23.3,
+        "end": 23.85
+      },
+      {
+        "text": "you",
+        "start": 23.85,
+        "end": 24.4
+      },
+      {
+        "text": "use",
+        "start": 24.4,
+        "end": 24.95
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 25.51,
+    "words": [
+      {
+        "text": "And",
+        "start": 25.73,
+        "end": 25.95
+      },
+      {
+        "text": "did",
+        "start": 25.95,
+        "end": 26.17
+      },
+      {
+        "text": "you",
+        "start": 26.17,
+        "end": 26.39
+      },
+      {
+        "text": "think",
+        "start": 26.39,
+        "end": 26.61
+      },
+      {
+        "text": "this",
+        "start": 26.61,
+        "end": 26.83
+      },
+      {
+        "text": "fool",
+        "start": 26.83,
+        "end": 27.05
+      },
+      {
+        "text": "could",
+        "start": 27.05,
+        "end": 27.27
+      },
+      {
+        "text": "never",
+        "start": 27.27,
+        "end": 27.49
+      },
+      {
+        "text": "win",
+        "start": 27.49,
+        "end": 27.71
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 27.93,
+    "words": [
+      {
+        "text": "Well,",
+        "start": 28.17,
+        "end": 28.41
+      },
+      {
+        "text": "look",
+        "start": 28.41,
+        "end": 28.65
+      },
+      {
+        "text": "at",
+        "start": 28.66,
+        "end": 28.9
+      },
+      {
+        "text": "me,",
+        "start": 28.9,
+        "end": 29.14
+      },
+      {
+        "text": "I'm",
+        "start": 29.14,
+        "end": 29.38
+      },
+      {
+        "text": "a-coming",
+        "start": 29.38,
+        "end": 29.62
+      },
+      {
+        "text": "back",
+        "start": 29.62,
+        "end": 29.86
+      },
+      {
+        "text": "again",
+        "start": 29.86,
+        "end": 30.1
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 30.34,
+    "words": [
+      {
+        "text": "I",
+        "start": 30.56,
+        "end": 30.78
+      },
+      {
+        "text": "got",
+        "start": 30.79,
+        "end": 31.01
+      },
+      {
+        "text": "a",
+        "start": 31.01,
+        "end": 31.23
+      },
+      {
+        "text": "taste",
+        "start": 31.24,
+        "end": 31.46
+      },
+      {
+        "text": "of",
+        "start": 31.46,
+        "end": 31.68
+      },
+      {
+        "text": "love",
+        "start": 31.68,
+        "end": 31.9
+      },
+      {
+        "text": "in",
+        "start": 31.91,
+        "end": 32.13
+      },
+      {
+        "text": "a",
+        "start": 32.13,
+        "end": 32.35
+      },
+      {
+        "text": "simple",
+        "start": 32.36,
+        "end": 32.58
+      },
+      {
+        "text": "way",
+        "start": 32.58,
+        "end": 32.8
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 33.03,
+    "words": [
+      {
+        "text": "And",
+        "start": 33.22,
+        "end": 33.41
+      },
+      {
+        "text": "if",
+        "start": 33.41,
+        "end": 33.6
+      },
+      {
+        "text": "you",
+        "start": 33.61,
+        "end": 33.8
+      },
+      {
+        "text": "need",
+        "start": 33.8,
+        "end": 33.99
+      },
+      {
+        "text": "to",
+        "start": 33.99,
+        "end": 34.18
+      },
+      {
+        "text": "know",
+        "start": 34.18,
+        "end": 34.37
+      },
+      {
+        "text": "while",
+        "start": 34.37,
+        "end": 34.56
+      },
+      {
+        "text": "I'm",
+        "start": 34.57,
+        "end": 34.76
+      },
+      {
+        "text": "still",
+        "start": 34.76,
+        "end": 34.95
+      },
+      {
+        "text": "standing",
+        "start": 34.95,
+        "end": 35.14
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 35.33,
+    "words": [
+      {
+        "text": "You",
+        "start": 35.8,
+        "end": 36.26
+      },
+      {
+        "text": "just",
+        "start": 36.26,
+        "end": 36.72
+      },
+      {
+        "text": "fade",
+        "start": 36.72,
+        "end": 37.18
+      },
+      {
+        "text": "away",
+        "start": 37.18,
+        "end": 37.64
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 38.1,
+    "words": [
+      {
+        "text": "Don't",
+        "start": 38.49,
+        "end": 38.87
+      },
+      {
+        "text": "you",
+        "start": 38.87,
+        "end": 39.25
+      },
+      {
+        "text": "know",
+        "start": 39.26,
+        "end": 39.64
+      },
+      {
+        "text": "I'm",
+        "start": 39.64,
+        "end": 40.02
+      },
+      {
+        "text": "still",
+        "start": 40.03,
+        "end": 40.41
+      },
+      {
+        "text": "standing",
+        "start": 40.41,
+        "end": 40.79
+      },
+      {
+        "text": "better",
+        "start": 40.79,
+        "end": 41.17
+      },
+      {
+        "text": "than",
+        "start": 41.18,
+        "end": 41.56
+      },
+      {
+        "text": "I",
+        "start": 41.56,
+        "end": 41.94
+      },
+      {
+        "text": "ever",
+        "start": 41.95,
+        "end": 42.33
+      },
+      {
+        "text": "did",
+        "start": 42.33,
+        "end": 42.71
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 43.55,
+    "words": [
+      {
+        "text": "Looking",
+        "start": 43.97,
+        "end": 44.39
+      },
+      {
+        "text": "like",
+        "start": 44.39,
+        "end": 44.81
+      },
+      {
+        "text": "a",
+        "start": 44.8,
+        "end": 45.22
+      },
+      {
+        "text": "true",
+        "start": 45.22,
+        "end": 45.64
+      },
+      {
+        "text": "survivor,",
+        "start": 45.64,
+        "end": 46.06
+      },
+      {
+        "text": "feeling",
+        "start": 46.05,
+        "end": 46.47
+      },
+      {
+        "text": "like",
+        "start": 46.47,
+        "end": 46.89
+      },
+      {
+        "text": "a",
+        "start": 46.89,
+        "end": 47.31
+      },
+      {
+        "text": "little",
+        "start": 47.3,
+        "end": 47.72
+      },
+      {
+        "text": "kid",
+        "start": 47.72,
+        "end": 48.14
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 49.57,
+    "words": [
+      {
+        "text": "And",
+        "start": 50.07,
+        "end": 50.57
+      },
+      {
+        "text": "I'm",
+        "start": 50.57,
+        "end": 51.07
+      },
+      {
+        "text": "still",
+        "start": 51.06,
+        "end": 51.56
+      },
+      {
+        "text": "standing",
+        "start": 51.56,
+        "end": 52.06
+      },
+      {
+        "text": "after",
+        "start": 52.06,
+        "end": 52.56
+      },
+      {
+        "text": "all",
+        "start": 52.56,
+        "end": 53.06
+      },
+      {
+        "text": "this",
+        "start": 53.05,
+        "end": 53.55
+      },
+      {
+        "text": "time",
+        "start": 53.55,
+        "end": 54.05
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 54.55,
+    "words": [
+      {
+        "text": "Picking",
+        "start": 54.9,
+        "end": 55.26
+      },
+      {
+        "text": "up",
+        "start": 55.26,
+        "end": 55.62
+      },
+      {
+        "text": "the",
+        "start": 55.62,
+        "end": 55.98
+      },
+      {
+        "text": "pieces",
+        "start": 55.97,
+        "end": 56.33
+      },
+      {
+        "text": "of",
+        "start": 56.33,
+        "end": 56.69
+      },
+      {
+        "text": "my",
+        "start": 56.69,
+        "end": 57.05
+      },
+      {
+        "text": "life",
+        "start": 57.05,
+        "end": 57.41
+      },
+      {
+        "text": "without",
+        "start": 57.4,
+        "end": 57.76
+      },
+      {
+        "text": "you",
+        "start": 57.76,
+        "end": 58.12
+      },
+      {
+        "text": "on",
+        "start": 58.12,
+        "end": 58.48
+      },
+      {
+        "text": "my",
+        "start": 58.47,
+        "end": 58.83
+      },
+      {
+        "text": "mind",
+        "start": 58.83,
+        "end": 59.19
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 59.78,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 60.21,
+        "end": 60.64
+      },
+      {
+        "text": "still",
+        "start": 60.64,
+        "end": 61.07
+      },
+      {
+        "text": "standing",
+        "start": 61.07,
+        "end": 61.5
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 61.93,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 62.57,
+        "end": 63.22
+      },
+      {
+        "text": "yeah,",
+        "start": 63.22,
+        "end": 63.87
+      },
+      {
+        "text": "yeah",
+        "start": 63.87,
+        "end": 64.52
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 65.16,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 65.59,
+        "end": 66.02
+      },
+      {
+        "text": "still",
+        "start": 66.03,
+        "end": 66.46
+      },
+      {
+        "text": "standing",
+        "start": 66.46,
+        "end": 66.89
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 67.33,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 68.2,
+        "end": 69.07
+      },
+      {
+        "text": "yeah,",
+        "start": 69.07,
+        "end": 69.94
+      },
+      {
+        "text": "yeah",
+        "start": 69.95,
+        "end": 70.82
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 71.69,
+    "words": [
+      {
+        "text": "Once",
+        "start": 71.94,
+        "end": 72.19
+      },
+      {
+        "text": "I",
+        "start": 72.19,
+        "end": 72.44
+      },
+      {
+        "text": "never",
+        "start": 72.45,
+        "end": 72.7
+      },
+      {
+        "text": "could've",
+        "start": 72.7,
+        "end": 72.95
+      },
+      {
+        "text": "hoped",
+        "start": 72.95,
+        "end": 73.2
+      },
+      {
+        "text": "to",
+        "start": 73.21,
+        "end": 73.46
+      },
+      {
+        "text": "win",
+        "start": 73.46,
+        "end": 73.71
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 73.96,
+    "words": [
+      {
+        "text": "You're",
+        "start": 74.23,
+        "end": 74.49
+      },
+      {
+        "text": "starting",
+        "start": 74.49,
+        "end": 74.75
+      },
+      {
+        "text": "down",
+        "start": 74.76,
+        "end": 75.02
+      },
+      {
+        "text": "the",
+        "start": 75.02,
+        "end": 75.28
+      },
+      {
+        "text": "road",
+        "start": 75.29,
+        "end": 75.55
+      },
+      {
+        "text": "leaving",
+        "start": 75.55,
+        "end": 75.81
+      },
+      {
+        "text": "me",
+        "start": 75.82,
+        "end": 76.08
+      },
+      {
+        "text": "again",
+        "start": 76.08,
+        "end": 76.34
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 76.61,
+    "words": [
+      {
+        "text": "The",
+        "start": 76.82,
+        "end": 77.03
+      },
+      {
+        "text": "threats",
+        "start": 77.03,
+        "end": 77.24
+      },
+      {
+        "text": "you",
+        "start": 77.24,
+        "end": 77.45
+      },
+      {
+        "text": "made",
+        "start": 77.44,
+        "end": 77.65
+      },
+      {
+        "text": "were",
+        "start": 77.65,
+        "end": 77.86
+      },
+      {
+        "text": "meant",
+        "start": 77.86,
+        "end": 78.07
+      },
+      {
+        "text": "to",
+        "start": 78.07,
+        "end": 78.28
+      },
+      {
+        "text": "cut",
+        "start": 78.27,
+        "end": 78.48
+      },
+      {
+        "text": "me",
+        "start": 78.48,
+        "end": 78.69
+      },
+      {
+        "text": "down",
+        "start": 78.69,
+        "end": 78.9
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 79.11,
+    "words": [
+      {
+        "text": "And",
+        "start": 79.42,
+        "end": 79.73
+      },
+      {
+        "text": "if",
+        "start": 79.73,
+        "end": 80.04
+      },
+      {
+        "text": "our",
+        "start": 80.04,
+        "end": 80.35
+      },
+      {
+        "text": "love",
+        "start": 80.36,
+        "end": 80.67
+      },
+      {
+        "text": "was",
+        "start": 80.67,
+        "end": 80.98
+      },
+      {
+        "text": "just",
+        "start": 80.98,
+        "end": 81.29
+      },
+      {
+        "text": "a",
+        "start": 81.29,
+        "end": 81.6
+      },
+      {
+        "text": "circus",
+        "start": 81.61,
+        "end": 81.92
+      },
+      {
+        "text": "you'd",
+        "start": 81.92,
+        "end": 82.23
+      },
+      {
+        "text": "be",
+        "start": 82.23,
+        "end": 82.54
+      },
+      {
+        "text": "a",
+        "start": 82.54,
+        "end": 82.85
+      },
+      {
+        "text": "clown",
+        "start": 82.86,
+        "end": 83.17
+      },
+      {
+        "text": "by",
+        "start": 83.17,
+        "end": 83.48
+      },
+      {
+        "text": "now",
+        "start": 83.48,
+        "end": 83.79
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 84.56,
+    "words": [
+      {
+        "text": "You",
+        "start": 84.98,
+        "end": 85.4
+      },
+      {
+        "text": "know,",
+        "start": 85.39,
+        "end": 85.81
+      },
+      {
+        "text": "I'm",
+        "start": 85.81,
+        "end": 86.23
+      },
+      {
+        "text": "still",
+        "start": 86.23,
+        "end": 86.65
+      },
+      {
+        "text": "standing",
+        "start": 86.64,
+        "end": 87.06
+      },
+      {
+        "text": "better",
+        "start": 87.06,
+        "end": 87.48
+      },
+      {
+        "text": "than",
+        "start": 87.48,
+        "end": 87.9
+      },
+      {
+        "text": "I",
+        "start": 87.89,
+        "end": 88.31
+      },
+      {
+        "text": "ever",
+        "start": 88.31,
+        "end": 88.73
+      },
+      {
+        "text": "did",
+        "start": 88.73,
+        "end": 89.15
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 89.61,
+    "words": [
+      {
+        "text": "Looking",
+        "start": 90.03,
+        "end": 90.45
+      },
+      {
+        "text": "like",
+        "start": 90.45,
+        "end": 90.87
+      },
+      {
+        "text": "a",
+        "start": 90.86,
+        "end": 91.28
+      },
+      {
+        "text": "true",
+        "start": 91.28,
+        "end": 91.7
+      },
+      {
+        "text": "survivor,",
+        "start": 91.7,
+        "end": 92.12
+      },
+      {
+        "text": "feeling",
+        "start": 92.11,
+        "end": 92.53
+      },
+      {
+        "text": "like",
+        "start": 92.53,
+        "end": 92.95
+      },
+      {
+        "text": "a",
+        "start": 92.95,
+        "end": 93.37
+      },
+      {
+        "text": "little",
+        "start": 93.36,
+        "end": 93.78
+      },
+      {
+        "text": "kid",
+        "start": 93.78,
+        "end": 94.2
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 95.56,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 96.11,
+        "end": 96.66
+      },
+      {
+        "text": "still",
+        "start": 96.65,
+        "end": 97.2
+      },
+      {
+        "text": "standing",
+        "start": 97.2,
+        "end": 97.75
+      },
+      {
+        "text": "after",
+        "start": 97.74,
+        "end": 98.29
+      },
+      {
+        "text": "all",
+        "start": 98.29,
+        "end": 98.84
+      },
+      {
+        "text": "this",
+        "start": 98.84,
+        "end": 99.39
+      },
+      {
+        "text": "time",
+        "start": 99.38,
+        "end": 99.93
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 100.47,
+    "words": [
+      {
+        "text": "Picking",
+        "start": 100.83,
+        "end": 101.19
+      },
+      {
+        "text": "up",
+        "start": 101.19,
+        "end": 101.55
+      },
+      {
+        "text": "the",
+        "start": 101.55,
+        "end": 101.91
+      },
+      {
+        "text": "pieces",
+        "start": 101.9,
+        "end": 102.26
+      },
+      {
+        "text": "of",
+        "start": 102.26,
+        "end": 102.62
+      },
+      {
+        "text": "my",
+        "start": 102.62,
+        "end": 102.98
+      },
+      {
+        "text": "life",
+        "start": 102.97,
+        "end": 103.33
+      },
+      {
+        "text": "without",
+        "start": 103.33,
+        "end": 103.69
+      },
+      {
+        "text": "you",
+        "start": 103.69,
+        "end": 104.05
+      },
+      {
+        "text": "on",
+        "start": 104.05,
+        "end": 104.41
+      },
+      {
+        "text": "my",
+        "start": 104.4,
+        "end": 104.76
+      },
+      {
+        "text": "mind",
+        "start": 104.76,
+        "end": 105.12
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 105.78,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 106.21,
+        "end": 106.63
+      },
+      {
+        "text": "still",
+        "start": 106.63,
+        "end": 107.05
+      },
+      {
+        "text": "standing",
+        "start": 107.06,
+        "end": 107.48
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 107.9,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 108.55,
+        "end": 109.2
+      },
+      {
+        "text": "yeah,",
+        "start": 109.2,
+        "end": 109.85
+      },
+      {
+        "text": "yeah",
+        "start": 109.84,
+        "end": 110.49
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 111.14,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 111.54,
+        "end": 111.94
+      },
+      {
+        "text": "still",
+        "start": 111.94,
+        "end": 112.34
+      },
+      {
+        "text": "standing",
+        "start": 112.34,
+        "end": 112.74
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 113.14,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 113.73,
+        "end": 114.31
+      },
+      {
+        "text": "yeah,",
+        "start": 114.31,
+        "end": 114.89
+      },
+      {
+        "text": "yeah",
+        "start": 114.89,
+        "end": 115.47
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 117.51,
+    "words": [
+      {
+        "text": "(upbeat",
+        "start": 117.51,
+        "end": 118.55
+      },
+      {
+        "text": "pop-rock",
+        "start": 118.55,
+        "end": 119.59
+      },
+      {
+        "text": "music",
+        "start": 119.59,
+        "end": 120.63
+      },
+      {
+        "text": "continues)",
+        "start": 120.63,
+        "end": 121.67
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 129.81,
+    "words": [
+      {
+        "text": "Don't",
+        "start": 130.12,
+        "end": 130.43
+      },
+      {
+        "text": "you",
+        "start": 130.44,
+        "end": 130.75
+      },
+      {
+        "text": "know",
+        "start": 130.75,
+        "end": 131.06
+      },
+      {
+        "text": "that",
+        "start": 131.07,
+        "end": 131.38
+      },
+      {
+        "text": "I'm",
+        "start": 131.38,
+        "end": 131.69
+      },
+      {
+        "text": "still",
+        "start": 131.69,
+        "end": 132.0
+      },
+      {
+        "text": "standing",
+        "start": 132.01,
+        "end": 132.32
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 132.64,
+    "words": [
+      {
+        "text": "Better",
+        "start": 133.05,
+        "end": 133.47
+      },
+      {
+        "text": "than",
+        "start": 133.47,
+        "end": 133.89
+      },
+      {
+        "text": "I",
+        "start": 133.88,
+        "end": 134.3
+      },
+      {
+        "text": "ever",
+        "start": 134.3,
+        "end": 134.72
+      },
+      {
+        "text": "did",
+        "start": 134.71,
+        "end": 135.13
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 135.54,
+    "words": [
+      {
+        "text": "Looking",
+        "start": 135.96,
+        "end": 136.38
+      },
+      {
+        "text": "like",
+        "start": 136.38,
+        "end": 136.8
+      },
+      {
+        "text": "a",
+        "start": 136.79,
+        "end": 137.21
+      },
+      {
+        "text": "true",
+        "start": 137.21,
+        "end": 137.63
+      },
+      {
+        "text": "survivor,",
+        "start": 137.63,
+        "end": 138.05
+      },
+      {
+        "text": "feeling",
+        "start": 138.04,
+        "end": 138.46
+      },
+      {
+        "text": "like",
+        "start": 138.46,
+        "end": 138.88
+      },
+      {
+        "text": "a",
+        "start": 138.88,
+        "end": 139.3
+      },
+      {
+        "text": "little",
+        "start": 139.29,
+        "end": 139.71
+      },
+      {
+        "text": "kid",
+        "start": 139.71,
+        "end": 140.13
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 141.42,
+    "words": [
+      {
+        "text": "And",
+        "start": 141.91,
+        "end": 142.4
+      },
+      {
+        "text": "I'm",
+        "start": 142.4,
+        "end": 142.89
+      },
+      {
+        "text": "still",
+        "start": 142.89,
+        "end": 143.38
+      },
+      {
+        "text": "standing",
+        "start": 143.38,
+        "end": 143.87
+      },
+      {
+        "text": "after",
+        "start": 143.87,
+        "end": 144.36
+      },
+      {
+        "text": "all",
+        "start": 144.35,
+        "end": 144.84
+      },
+      {
+        "text": "this",
+        "start": 144.84,
+        "end": 145.33
+      },
+      {
+        "text": "time",
+        "start": 145.33,
+        "end": 145.82
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 146.31,
+    "words": [
+      {
+        "text": "Picking",
+        "start": 146.66,
+        "end": 147.02
+      },
+      {
+        "text": "up",
+        "start": 147.02,
+        "end": 147.38
+      },
+      {
+        "text": "the",
+        "start": 147.38,
+        "end": 147.74
+      },
+      {
+        "text": "pieces",
+        "start": 147.74,
+        "end": 148.1
+      },
+      {
+        "text": "of",
+        "start": 148.09,
+        "end": 148.45
+      },
+      {
+        "text": "my",
+        "start": 148.45,
+        "end": 148.81
+      },
+      {
+        "text": "life",
+        "start": 148.81,
+        "end": 149.17
+      },
+      {
+        "text": "without",
+        "start": 149.16,
+        "end": 149.52
+      },
+      {
+        "text": "you",
+        "start": 149.52,
+        "end": 149.88
+      },
+      {
+        "text": "on",
+        "start": 149.88,
+        "end": 150.24
+      },
+      {
+        "text": "my",
+        "start": 150.24,
+        "end": 150.6
+      },
+      {
+        "text": "mind",
+        "start": 150.59,
+        "end": 150.95
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 151.56,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 151.99,
+        "end": 152.42
+      },
+      {
+        "text": "still",
+        "start": 152.42,
+        "end": 152.85
+      },
+      {
+        "text": "standing",
+        "start": 152.85,
+        "end": 153.28
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 153.71,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 154.36,
+        "end": 155.0
+      },
+      {
+        "text": "yeah,",
+        "start": 155.0,
+        "end": 155.64
+      },
+      {
+        "text": "yeah",
+        "start": 155.64,
+        "end": 156.28
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 156.93,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 157.36,
+        "end": 157.79
+      },
+      {
+        "text": "still",
+        "start": 157.8,
+        "end": 158.23
+      },
+      {
+        "text": "standing",
+        "start": 158.23,
+        "end": 158.66
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 159.1,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 159.7,
+        "end": 160.3
+      },
+      {
+        "text": "yeah,",
+        "start": 160.3,
+        "end": 160.9
+      },
+      {
+        "text": "yeah",
+        "start": 160.91,
+        "end": 161.51
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 162.11,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 162.57,
+        "end": 163.03
+      },
+      {
+        "text": "still",
+        "start": 163.04,
+        "end": 163.5
+      },
+      {
+        "text": "standing",
+        "start": 163.5,
+        "end": 163.96
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 164.43,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 165.08,
+        "end": 165.73
+      },
+      {
+        "text": "yeah,",
+        "start": 165.73,
+        "end": 166.38
+      },
+      {
+        "text": "yeah",
+        "start": 166.38,
+        "end": 167.03
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 167.69,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 168.1,
+        "end": 168.52
+      },
+      {
+        "text": "still",
+        "start": 168.52,
+        "end": 168.94
+      },
+      {
+        "text": "standing",
+        "start": 168.94,
+        "end": 169.36
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 169.78,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 170.44,
+        "end": 171.1
+      },
+      {
+        "text": "yeah,",
+        "start": 171.09,
+        "end": 171.75
+      },
+      {
+        "text": "yeah",
+        "start": 171.75,
+        "end": 172.41
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 173.07,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 173.5,
+        "end": 173.93
+      },
+      {
+        "text": "still",
+        "start": 173.94,
+        "end": 174.37
+      },
+      {
+        "text": "standing",
+        "start": 174.37,
+        "end": 174.8
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 175.24,
+    "words": [
+      {
+        "text": "Yeah,",
+        "start": 175.87,
+        "end": 176.5
+      },
+      {
+        "text": "yeah,",
+        "start": 176.5,
+        "end": 177.13
+      },
+      {
+        "text": "yeah",
+        "start": 177.13,
+        "end": 177.76
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 178.39,
+    "words": [
+      {
+        "text": "I'm",
+        "start": 179.01,
+        "end": 179.63
+      },
+      {
+        "text": "still",
+        "start": 179.63,
+        "end": 180.25
+      },
+      {
+        "text": "standing",
+        "start": 180.24,
+        "end": 180.86
+      }
+    ],
+    "jugable": true
+  }
+]

@@ -6,13 +6,6 @@
   --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--gris-fondo);
-  color: #333;
-  line-height: 1.6;
-}
-
 .gramatica-title {
   font-size: 32px;
   font-weight: 700;
@@ -209,17 +202,4 @@ body {
   min-height: 90px; /* Altura mínima segura */
   position: fixed;
   z-index: 100;
-}
-
-/* Asegura que el main nunca lo tape */
-main.sidebar-layout {
-  position: relative;
-  z-index: 1;
-  margin-top: 100 px;
-  padding-top: 0; /* Evita hueco extra */
-}
-
-/* Si usas sticky header, dale margen al main */
-body.has-sticky-header main.sidebar-layout {
-  margin-top: 100px;
 }
