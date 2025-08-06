@@ -25,9 +25,11 @@ function filterCards(searchTerm) {
   });
 }
 
-function resetView(context) {
+export function resetView(context) {
+  console.log("resetView llamado con contexto:", context);
   if (context === "cards") {
     const cards = document.querySelectorAll("#lista-canciones .card");
+    console.log("Cards encontradas para reset:", cards.length);
     cards.forEach(card => {
       card.style.display = "";
     });
@@ -35,6 +37,7 @@ function resetView(context) {
     removeHighlights();
   }
 }
+
 
 function highlightMatches(term) {
   removeHighlights();
@@ -67,11 +70,6 @@ function highlightMatches(term) {
     // Buscar índice de término normalizado dentro del texto normalizado
     const index = normalizedNodeValue.indexOf(normalizedTerm);
     if (index === -1) continue;
-
-    // Ahora vamos a construir el nuevo HTML con <mark> para las coincidencias
-    // Pero no usamos directamente node.nodeValue.replace(regex, ...), 
-    // porque el regex no ignora tildes.
-    // Por eso hacemos un reemplazo manual:
 
     let resultHTML = "";
     let lastIndex = 0;

@@ -31,7 +31,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.3);
+  background: #666666; /* o más oscuro: #4d4d4d */
   border: none;
   color: white;
   font-size: 2rem;
@@ -107,7 +107,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.5);
+background: #444444;
   border: none;
   color: white;
   font-size: 1.8rem;

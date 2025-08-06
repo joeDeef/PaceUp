@@ -11,21 +11,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         card.className = "practicar-card";
         card.setAttribute("role", "region");
-        card.setAttribute("aria-label", `${data.titulo}`);
-        card.setAttribute("tabindex", "0");
 
-        const contenidoBoton = data.activo
-          ? `<button tabindex="0" aria-label="Practicar ${data.titulo}" onclick="window.location.href='level.html?nivel=Intermedio1&modo=${clave}'">Practicar</button>`
-          : `<span class="proximamente-label" tabindex="0" aria-label="Modo próximamente disponible">Próximamente</span>`;
+        // Genera un id único para el encabezado h3
+        const headingId = `modo-titulo-${index}`;
 
+        // Le asignas ese id al h3 para que pueda ser referenciado
         card.innerHTML = `
-          <h3 tabindex="0">${data.titulo}</h3>
-          <img src="${data.imagen}" alt="${data.altText}" tabindex="0">
-          <div class="practicar-content" aria-label="Contenido del modo ${data.titulo}">
-            <p tabindex="0">${data.descripcion}</p>
-            ${contenidoBoton}
-          </div>
-        `;
+    <h3 id="${headingId}" tabindex="0">${data.titulo}</h3>
+    <img src="${data.imagen}" alt="${data.altText}" tabindex="0">
+    <div class="practicar-content">
+      <p tabindex="0">${data.descripcion}</p>
+      ${
+        data.activo
+          ? `<button tabindex="0" onclick="window.location.href='level.html?nivel=Intermedio1&modo=${clave}'">Practicar</button>`
+          : `<span class="proximamente-label" tabindex="0">Próximamente</span>`
+      }
+    </div>
+  `;
+
+        card.setAttribute("role", "listitem");
 
         contenedor.appendChild(card);
       });

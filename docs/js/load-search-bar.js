@@ -1,4 +1,4 @@
-import { handleSearch, removeHighlights } from './highlightSearch.js';
+import { handleSearch, removeHighlights, resetView } from './highlightSearch.js';
 window.handleSearch = handleSearch;
 
 export async function loadSearchBar(container, context = "") {
@@ -43,7 +43,21 @@ export async function loadSearchBar(container, context = "") {
 
     input.addEventListener('input', () => {
       if (input.value.trim() === '') {
-        removeHighlights();
+        if (context === 'text') {
+          removeHighlights();
+        } else if (context === 'cards') {
+          resetView('cards');
+        }
+      }
+    });
+
+    input.addEventListener('blur', () => {
+      if (input.value.trim() === '') {
+        if (context === 'text') {
+          removeHighlights();
+        } else if (context === 'cards') {
+          resetView('cards');
+        }
       }
     });
   }

@@ -21,17 +21,17 @@
       {
         "text": "[♪♪♪]",
         "start": 6.13,
-        "end": 15.7
+        "end": 15
       }
     ],
     "jugable": false
   },
   {
-    "time": 15.77,
+    "time": 15,
     "words": [
       {
         "text": "The",
-        "start": 15.77,
+        "start": 15,
         "end": 16.17
       },
       {
@@ -1106,17 +1106,6 @@
     "jugable": true
   },
   {
-    "time": 76.12,
-    "words": [
-      {
-        "text": "(Oh-I-oh-I-oh-I-oh-I)",
-        "start": 77.04,
-        "end": 77.96
-      }
-    ],
-    "jugable": true
-  },
-  {
     "time": 79.58,
     "words": [
       {
@@ -1153,17 +1142,6 @@
     "jugable": true
   },
   {
-    "time": 81.29,
-    "words": [
-      {
-        "text": "(Oh-I-oh-I-oh-I-oh-I)",
-        "start": 82.08,
-        "end": 82.87
-      }
-    ],
-    "jugable": true
-  },
-  {
     "time": 84.54,
     "words": [
       {
@@ -1195,17 +1173,6 @@
         "text": "body",
         "start": 85.76,
         "end": 85.96
-      }
-    ],
-    "jugable": true
-  },
-  {
-    "time": 86.25,
-    "words": [
-      {
-        "text": "(Oh-I-oh-I-oh-I-oh-I)",
-        "start": 87.07,
-        "end": 87.89
       }
     ],
     "jugable": true
@@ -2428,17 +2395,6 @@
     "jugable": true
   },
   {
-    "time": 156.11,
-    "words": [
-      {
-        "text": "(Oh-I-oh-I-oh-I-oh-I)",
-        "start": 156.96,
-        "end": 157.81
-      }
-    ],
-    "jugable": true
-  },
-  {
     "time": 159.45,
     "words": [
       {
@@ -2517,17 +2473,6 @@
         "text": "body",
         "start": 165.74,
         "end": 165.93
-      }
-    ],
-    "jugable": true
-  },
-  {
-    "time": 166.21,
-    "words": [
-      {
-        "text": "(Oh-I-oh-I-oh-I-oh-I)",
-        "start": 167.03,
-        "end": 167.85
       }
     ],
     "jugable": true
@@ -3689,34 +3634,13 @@
     ],
     "jugable": true
   },
-  {
-    "time": 241.7,
+    {
+    "time": 237.87,
     "words": [
       {
-        "text": "[COSTUME",
-        "start": 241.7,
-        "end": 242.6
-      },
-      {
-        "text": "RUSTLES]",
-        "start": 242.6,
-        "end": 243.5
-      }
-    ],
-    "jugable": false
-  },
-  {
-    "time": 248.16,
-    "words": [
-      {
-        "text": "[HE",
-        "start": 248.16,
-        "end": 249.56
-      },
-      {
-        "text": "GROANS]",
-        "start": 249.56,
-        "end": 250.96
+        "text": "[♪♪♪]",
+        "start": 237.87,
+        "end": 238
       }
     ],
     "jugable": false

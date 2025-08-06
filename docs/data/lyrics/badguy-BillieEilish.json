@@ -1,0 +1,1879 @@
+[
+  {
+    "time": 3.33,
+    "words": [
+      {
+        "text": "MY",
+        "start": 3.33,
+        "end": 3.68
+      },
+      {
+        "text": "INVISILINE",
+        "start": 3.68,
+        "end": 4.03
+      },
+      {
+        "text": "HAS",
+        "start": 4.03,
+        "end": 4.38
+      },
+      {
+        "text": "FINALLLY...",
+        "start": 4.37,
+        "end": 4.72
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 5.1,
+    "words": [
+      {
+        "text": "-I",
+        "start": 5.1,
+        "end": 5.25
+      },
+      {
+        "text": "HAVE",
+        "start": 5.25,
+        "end": 5.4
+      },
+      {
+        "text": "TAKEN",
+        "start": 5.39,
+        "end": 5.54
+      },
+      {
+        "text": "OUT",
+        "start": 5.54,
+        "end": 5.69
+      },
+      {
+        "text": "MY",
+        "start": 5.69,
+        "end": 5.84
+      },
+      {
+        "text": "INVISILINE",
+        "start": 5.83,
+        "end": 5.98
+      },
+      {
+        "text": "-I",
+        "start": 5.98,
+        "end": 6.13
+      },
+      {
+        "text": "HAVE",
+        "start": 6.13,
+        "end": 6.28
+      },
+      {
+        "text": "TAKEN",
+        "start": 6.27,
+        "end": 6.42
+      },
+      {
+        "text": "OUT",
+        "start": 6.42,
+        "end": 6.57
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 6.6,
+    "words": [
+      {
+        "text": "MY",
+        "start": 6.6,
+        "end": 6.95
+      },
+      {
+        "text": "INVISILINE,",
+        "start": 6.95,
+        "end": 7.3
+      },
+      {
+        "text": "AND",
+        "start": 7.3,
+        "end": 7.65
+      },
+      {
+        "text": "THIS",
+        "start": 7.66,
+        "end": 8.01
+      },
+      {
+        "text": "IS",
+        "start": 8.01,
+        "end": 8.36
+      },
+      {
+        "text": "THE",
+        "start": 8.36,
+        "end": 8.71
+      },
+      {
+        "text": "ALBUM",
+        "start": 8.71,
+        "end": 9.06
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 13.37,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 13.37,
+        "end": 27.44
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 27.47,
+    "words": [
+      {
+        "text": "WHITE",
+        "start": 27.73,
+        "end": 28.0
+      },
+      {
+        "text": "SHIRT",
+        "start": 28.0,
+        "end": 28.27
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 28.57,
+    "words": [
+      {
+        "text": "NOW",
+        "start": 28.93,
+        "end": 29.3
+      },
+      {
+        "text": "RED",
+        "start": 29.3,
+        "end": 29.67
+      },
+      {
+        "text": "MY",
+        "start": 29.67,
+        "end": 30.04
+      },
+      {
+        "text": "BLOODY",
+        "start": 30.03,
+        "end": 30.4
+      },
+      {
+        "text": "NOSE",
+        "start": 30.4,
+        "end": 30.77
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 31.17,
+    "words": [
+      {
+        "text": "SLEEPING",
+        "start": 31.48,
+        "end": 31.79
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 32.13,
+    "words": [
+      {
+        "text": "YOU'RE",
+        "start": 32.46,
+        "end": 32.78
+      },
+      {
+        "text": "ON",
+        "start": 32.78,
+        "end": 33.1
+      },
+      {
+        "text": "YOUR",
+        "start": 33.1,
+        "end": 33.42
+      },
+      {
+        "text": "TIPPY",
+        "start": 33.43,
+        "end": 33.75
+      },
+      {
+        "text": "TOES",
+        "start": 33.75,
+        "end": 34.07
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 34.43,
+    "words": [
+      {
+        "text": "CREEPING",
+        "start": 34.8,
+        "end": 35.17
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 35.57,
+    "words": [
+      {
+        "text": "AROUND",
+        "start": 35.93,
+        "end": 36.3
+      },
+      {
+        "text": "LIKE",
+        "start": 36.3,
+        "end": 36.67
+      },
+      {
+        "text": "NO",
+        "start": 36.67,
+        "end": 37.04
+      },
+      {
+        "text": "ONE",
+        "start": 37.03,
+        "end": 37.4
+      },
+      {
+        "text": "KNOWS",
+        "start": 37.4,
+        "end": 37.77
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 38.17,
+    "words": [
+      {
+        "text": "THINK",
+        "start": 38.58,
+        "end": 38.99
+      },
+      {
+        "text": "YOU'RE",
+        "start": 38.99,
+        "end": 39.4
+      },
+      {
+        "text": "SO",
+        "start": 39.4,
+        "end": 39.81
+      },
+      {
+        "text": "CRIMINAL",
+        "start": 39.81,
+        "end": 40.22
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 41.57,
+    "words": [
+      {
+        "text": "BRUISES",
+        "start": 41.9,
+        "end": 42.23
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 42.6,
+    "words": [
+      {
+        "text": "ON",
+        "start": 42.92,
+        "end": 43.24
+      },
+      {
+        "text": "BOTH",
+        "start": 43.24,
+        "end": 43.56
+      },
+      {
+        "text": "MY",
+        "start": 43.56,
+        "end": 43.88
+      },
+      {
+        "text": "KNEES",
+        "start": 43.88,
+        "end": 44.2
+      },
+      {
+        "text": "FOR",
+        "start": 44.2,
+        "end": 44.52
+      },
+      {
+        "text": "YOU",
+        "start": 44.52,
+        "end": 44.84
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 45.2,
+    "words": [
+      {
+        "text": "DON'T",
+        "start": 45.46,
+        "end": 45.72
+      },
+      {
+        "text": "SAY",
+        "start": 45.72,
+        "end": 45.98
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 46.27,
+    "words": [
+      {
+        "text": "THANK",
+        "start": 46.55,
+        "end": 46.84
+      },
+      {
+        "text": "YOU",
+        "start": 46.84,
+        "end": 47.13
+      },
+      {
+        "text": "OR",
+        "start": 47.13,
+        "end": 47.42
+      },
+      {
+        "text": "PLEASE",
+        "start": 47.42,
+        "end": 47.71
+      },
+      {
+        "text": "I",
+        "start": 47.7,
+        "end": 47.99
+      },
+      {
+        "text": "DO",
+        "start": 47.99,
+        "end": 48.28
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 48.6,
+    "words": [
+      {
+        "text": "WHAT",
+        "start": 48.83,
+        "end": 49.06
+      },
+      {
+        "text": "I",
+        "start": 49.07,
+        "end": 49.3
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 49.57,
+    "words": [
+      {
+        "text": "WANT",
+        "start": 49.95,
+        "end": 50.33
+      },
+      {
+        "text": "WHEN",
+        "start": 50.33,
+        "end": 50.71
+      },
+      {
+        "text": "I'M",
+        "start": 50.71,
+        "end": 51.09
+      },
+      {
+        "text": "WANTING",
+        "start": 51.09,
+        "end": 51.47
+      },
+      {
+        "text": "TO",
+        "start": 51.47,
+        "end": 51.85
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 52.27,
+    "words": [
+      {
+        "text": "MY",
+        "start": 52.73,
+        "end": 53.2
+      },
+      {
+        "text": "SOUL?",
+        "start": 53.2,
+        "end": 53.67
+      },
+      {
+        "text": "SO",
+        "start": 53.67,
+        "end": 54.14
+      },
+      {
+        "text": "CYNICAL",
+        "start": 54.13,
+        "end": 54.6
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 55.17,
+    "words": [
+      {
+        "text": "SO",
+        "start": 55.44,
+        "end": 55.72
+      },
+      {
+        "text": "YOU'RE",
+        "start": 55.72,
+        "end": 56.0
+      },
+      {
+        "text": "A",
+        "start": 55.99,
+        "end": 56.27
+      },
+      {
+        "text": "TOUGH",
+        "start": 56.27,
+        "end": 56.55
+      },
+      {
+        "text": "GUY",
+        "start": 56.55,
+        "end": 56.83
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 57.13,
+    "words": [
+      {
+        "text": "LIKE",
+        "start": 57.31,
+        "end": 57.49
+      },
+      {
+        "text": "IT",
+        "start": 57.5,
+        "end": 57.68
+      },
+      {
+        "text": "REALLY",
+        "start": 57.68,
+        "end": 57.86
+      },
+      {
+        "text": "ROUGH",
+        "start": 57.86,
+        "end": 58.04
+      },
+      {
+        "text": "GUY",
+        "start": 58.04,
+        "end": 58.22
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 58.43,
+    "words": [
+      {
+        "text": "JUST",
+        "start": 58.69,
+        "end": 58.94
+      },
+      {
+        "text": "CAN'T",
+        "start": 58.94,
+        "end": 59.19
+      },
+      {
+        "text": "GET",
+        "start": 59.19,
+        "end": 59.44
+      },
+      {
+        "text": "ENOUGH",
+        "start": 59.44,
+        "end": 59.69
+      },
+      {
+        "text": "GUY",
+        "start": 59.7,
+        "end": 59.95
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 60.23,
+    "words": [
+      {
+        "text": "CHEST",
+        "start": 60.54,
+        "end": 60.85
+      },
+      {
+        "text": "ALWAYS",
+        "start": 60.85,
+        "end": 61.16
+      },
+      {
+        "text": "SO",
+        "start": 61.16,
+        "end": 61.47
+      },
+      {
+        "text": "PUFFED",
+        "start": 61.47,
+        "end": 61.78
+      },
+      {
+        "text": "GUY",
+        "start": 61.78,
+        "end": 62.09
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 62.43,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 62.63,
+        "end": 62.83
+      },
+      {
+        "text": "THAT",
+        "start": 62.83,
+        "end": 63.03
+      },
+      {
+        "text": "BAD",
+        "start": 63.03,
+        "end": 63.23
+      },
+      {
+        "text": "TYPE",
+        "start": 63.23,
+        "end": 63.43
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 63.67,
+    "words": [
+      {
+        "text": "MAKE",
+        "start": 63.92,
+        "end": 64.18
+      },
+      {
+        "text": "YOUR",
+        "start": 64.18,
+        "end": 64.44
+      },
+      {
+        "text": "MAMA",
+        "start": 64.44,
+        "end": 64.7
+      },
+      {
+        "text": "SAD",
+        "start": 64.69,
+        "end": 64.95
+      },
+      {
+        "text": "TYPE",
+        "start": 64.95,
+        "end": 65.21
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 65.5,
+    "words": [
+      {
+        "text": "MAKE",
+        "start": 65.77,
+        "end": 66.04
+      },
+      {
+        "text": "YOUR",
+        "start": 66.03,
+        "end": 66.3
+      },
+      {
+        "text": "GIRLFRIEND",
+        "start": 66.3,
+        "end": 66.57
+      },
+      {
+        "text": "MAD",
+        "start": 66.57,
+        "end": 66.84
+      },
+      {
+        "text": "TIGHT",
+        "start": 66.83,
+        "end": 67.1
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 67.4,
+    "words": [
+      {
+        "text": "MIGHT",
+        "start": 67.66,
+        "end": 67.92
+      },
+      {
+        "text": "SEDUCE",
+        "start": 67.92,
+        "end": 68.18
+      },
+      {
+        "text": "YOUR",
+        "start": 68.19,
+        "end": 68.45
+      },
+      {
+        "text": "DAD",
+        "start": 68.45,
+        "end": 68.71
+      },
+      {
+        "text": "TYPE",
+        "start": 68.71,
+        "end": 68.97
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 69.67,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 70.13,
+        "end": 70.6
+      },
+      {
+        "text": "THE",
+        "start": 70.6,
+        "end": 71.07
+      },
+      {
+        "text": "BAD",
+        "start": 71.07,
+        "end": 71.54
+      },
+      {
+        "text": "GUY",
+        "start": 71.53,
+        "end": 72.0
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 73.13,
+    "words": [
+      {
+        "text": "DUH",
+        "start": 73.26,
+        "end": 73.38
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 73.53,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 73.53,
+        "end": 80.6
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 80.63,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 81.09,
+        "end": 81.55
+      },
+      {
+        "text": "THE",
+        "start": 81.54,
+        "end": 82.0
+      },
+      {
+        "text": "BAD",
+        "start": 82.0,
+        "end": 82.46
+      },
+      {
+        "text": "GUY",
+        "start": 82.45,
+        "end": 82.91
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 83.4,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 83.4,
+        "end": 87.63
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 87.67,
+    "words": [
+      {
+        "text": "I",
+        "start": 88.02,
+        "end": 88.38
+      },
+      {
+        "text": "LIKE",
+        "start": 88.38,
+        "end": 88.74
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 89.13,
+    "words": [
+      {
+        "text": "IT",
+        "start": 89.45,
+        "end": 89.76
+      },
+      {
+        "text": "WHEN",
+        "start": 89.76,
+        "end": 90.07
+      },
+      {
+        "text": "YOU",
+        "start": 90.08,
+        "end": 90.39
+      },
+      {
+        "text": "TAKE",
+        "start": 90.39,
+        "end": 90.7
+      },
+      {
+        "text": "CONTROL",
+        "start": 90.7,
+        "end": 91.01
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 91.37,
+    "words": [
+      {
+        "text": "EVEN",
+        "start": 91.7,
+        "end": 92.03
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 92.4,
+    "words": [
+      {
+        "text": "IF",
+        "start": 92.68,
+        "end": 92.96
+      },
+      {
+        "text": "YOU",
+        "start": 92.97,
+        "end": 93.25
+      },
+      {
+        "text": "KNOW",
+        "start": 93.25,
+        "end": 93.53
+      },
+      {
+        "text": "THAT",
+        "start": 93.53,
+        "end": 93.81
+      },
+      {
+        "text": "YOU",
+        "start": 93.82,
+        "end": 94.1
+      },
+      {
+        "text": "DON'T",
+        "start": 94.1,
+        "end": 94.38
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 94.7,
+    "words": [
+      {
+        "text": "OWN",
+        "start": 95.06,
+        "end": 95.42
+      },
+      {
+        "text": "ME",
+        "start": 95.42,
+        "end": 95.78
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 96.17,
+    "words": [
+      {
+        "text": "I'LL",
+        "start": 96.45,
+        "end": 96.73
+      },
+      {
+        "text": "LET",
+        "start": 96.73,
+        "end": 97.01
+      },
+      {
+        "text": "YOU",
+        "start": 97.02,
+        "end": 97.3
+      },
+      {
+        "text": "PLAY",
+        "start": 97.3,
+        "end": 97.58
+      },
+      {
+        "text": "THE",
+        "start": 97.58,
+        "end": 97.86
+      },
+      {
+        "text": "ROLE",
+        "start": 97.87,
+        "end": 98.15
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 98.47,
+    "words": [
+      {
+        "text": "I'LL",
+        "start": 98.73,
+        "end": 99.0
+      },
+      {
+        "text": "BE",
+        "start": 99.0,
+        "end": 99.27
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 99.57,
+    "words": [
+      {
+        "text": "YOUR",
+        "start": 100.0,
+        "end": 100.43
+      },
+      {
+        "text": "ANIMAL",
+        "start": 100.43,
+        "end": 100.86
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 102.17,
+    "words": [
+      {
+        "text": "MY",
+        "start": 102.52,
+        "end": 102.87
+      },
+      {
+        "text": "MOMMY",
+        "start": 102.87,
+        "end": 103.22
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 103.6,
+    "words": [
+      {
+        "text": "LIKES",
+        "start": 103.92,
+        "end": 104.24
+      },
+      {
+        "text": "TO",
+        "start": 104.23,
+        "end": 104.55
+      },
+      {
+        "text": "SING",
+        "start": 104.55,
+        "end": 104.87
+      },
+      {
+        "text": "ALONG",
+        "start": 104.87,
+        "end": 105.19
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 105.53,
+    "words": [
+      {
+        "text": "WITH",
+        "start": 105.79,
+        "end": 106.05
+      },
+      {
+        "text": "ME",
+        "start": 106.05,
+        "end": 106.31
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 106.6,
+    "words": [
+      {
+        "text": "BUT",
+        "start": 106.93,
+        "end": 107.26
+      },
+      {
+        "text": "SHE",
+        "start": 107.26,
+        "end": 107.59
+      },
+      {
+        "text": "WON'T",
+        "start": 107.59,
+        "end": 107.92
+      },
+      {
+        "text": "SING",
+        "start": 107.92,
+        "end": 108.25
+      },
+      {
+        "text": "THE",
+        "start": 108.25,
+        "end": 108.58
+      },
+      {
+        "text": "SONG",
+        "start": 108.57,
+        "end": 108.9
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 109.27,
+    "words": [
+      {
+        "text": "IF",
+        "start": 109.52,
+        "end": 109.77
+      },
+      {
+        "text": "SHE",
+        "start": 109.77,
+        "end": 110.02
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 110.3,
+    "words": [
+      {
+        "text": "READS",
+        "start": 110.64,
+        "end": 110.98
+      },
+      {
+        "text": "ALL",
+        "start": 110.99,
+        "end": 111.33
+      },
+      {
+        "text": "THE",
+        "start": 111.33,
+        "end": 111.67
+      },
+      {
+        "text": "LYRICS",
+        "start": 111.68,
+        "end": 112.02
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 112.4,
+    "words": [
+      {
+        "text": "SHE'LL",
+        "start": 112.7,
+        "end": 113.0
+      },
+      {
+        "text": "PITY",
+        "start": 113.0,
+        "end": 113.3
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 113.63,
+    "words": [
+      {
+        "text": "THE",
+        "start": 113.92,
+        "end": 114.21
+      },
+      {
+        "text": "MEN",
+        "start": 114.21,
+        "end": 114.5
+      },
+      {
+        "text": "I",
+        "start": 114.5,
+        "end": 114.79
+      },
+      {
+        "text": "KNOW",
+        "start": 114.79,
+        "end": 115.08
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 115.63,
+    "words": [
+      {
+        "text": "SO",
+        "start": 115.88,
+        "end": 116.12
+      },
+      {
+        "text": "YOU'RE",
+        "start": 116.12,
+        "end": 116.36
+      },
+      {
+        "text": "A",
+        "start": 116.36,
+        "end": 116.6
+      },
+      {
+        "text": "TOUGH",
+        "start": 116.6,
+        "end": 116.84
+      },
+      {
+        "text": "GUY",
+        "start": 116.85,
+        "end": 117.09
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 117.37,
+    "words": [
+      {
+        "text": "LIKE",
+        "start": 117.62,
+        "end": 117.87
+      },
+      {
+        "text": "IT",
+        "start": 117.87,
+        "end": 118.12
+      },
+      {
+        "text": "REALLY",
+        "start": 118.12,
+        "end": 118.37
+      },
+      {
+        "text": "ROUGH",
+        "start": 118.38,
+        "end": 118.63
+      },
+      {
+        "text": "GUY",
+        "start": 118.63,
+        "end": 118.88
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 119.17,
+    "words": [
+      {
+        "text": "JUST",
+        "start": 119.36,
+        "end": 119.56
+      },
+      {
+        "text": "CAN'T",
+        "start": 119.56,
+        "end": 119.76
+      },
+      {
+        "text": "GET",
+        "start": 119.75,
+        "end": 119.95
+      },
+      {
+        "text": "ENOUGH",
+        "start": 119.95,
+        "end": 120.15
+      },
+      {
+        "text": "GUY",
+        "start": 120.14,
+        "end": 120.34
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 120.57,
+    "words": [
+      {
+        "text": "CHEST",
+        "start": 120.93,
+        "end": 121.29
+      },
+      {
+        "text": "ALWAYS",
+        "start": 121.29,
+        "end": 121.65
+      },
+      {
+        "text": "SO",
+        "start": 121.65,
+        "end": 122.01
+      },
+      {
+        "text": "PUFFED",
+        "start": 122.01,
+        "end": 122.37
+      },
+      {
+        "text": "GUY",
+        "start": 122.38,
+        "end": 122.74
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 123.13,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 123.32,
+        "end": 123.51
+      },
+      {
+        "text": "THAT",
+        "start": 123.51,
+        "end": 123.7
+      },
+      {
+        "text": "BAD",
+        "start": 123.7,
+        "end": 123.89
+      },
+      {
+        "text": "TYPE",
+        "start": 123.89,
+        "end": 124.08
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 124.3,
+    "words": [
+      {
+        "text": "MAKE",
+        "start": 124.56,
+        "end": 124.82
+      },
+      {
+        "text": "YOUR",
+        "start": 124.82,
+        "end": 125.08
+      },
+      {
+        "text": "MAMA",
+        "start": 125.09,
+        "end": 125.35
+      },
+      {
+        "text": "SAD",
+        "start": 125.35,
+        "end": 125.61
+      },
+      {
+        "text": "TYPE",
+        "start": 125.61,
+        "end": 125.87
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 126.17,
+    "words": [
+      {
+        "text": "MAKE",
+        "start": 126.38,
+        "end": 126.59
+      },
+      {
+        "text": "YOUR",
+        "start": 126.59,
+        "end": 126.8
+      },
+      {
+        "text": "GIRLFRIEND",
+        "start": 126.79,
+        "end": 127.0
+      },
+      {
+        "text": "MAD",
+        "start": 127.0,
+        "end": 127.21
+      },
+      {
+        "text": "TIGHT",
+        "start": 127.21,
+        "end": 127.42
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 127.67,
+    "words": [
+      {
+        "text": "MIGHT",
+        "start": 127.94,
+        "end": 128.21
+      },
+      {
+        "text": "SEDUCE",
+        "start": 128.21,
+        "end": 128.48
+      },
+      {
+        "text": "YOUR",
+        "start": 128.48,
+        "end": 128.75
+      },
+      {
+        "text": "DAD",
+        "start": 128.75,
+        "end": 129.02
+      },
+      {
+        "text": "TYPE",
+        "start": 129.02,
+        "end": 129.29
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 130.23,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 130.71,
+        "end": 131.19
+      },
+      {
+        "text": "THE",
+        "start": 131.19,
+        "end": 131.67
+      },
+      {
+        "text": "BAD",
+        "start": 131.67,
+        "end": 132.15
+      },
+      {
+        "text": "GUY",
+        "start": 132.14,
+        "end": 132.62
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 133.47,
+    "words": [
+      {
+        "text": "DUH",
+        "start": 133.72,
+        "end": 133.98
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 134.27,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 134.27,
+        "end": 140.64
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 140.67,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 141.16,
+        "end": 141.65
+      },
+      {
+        "text": "THE",
+        "start": 141.64,
+        "end": 142.13
+      },
+      {
+        "text": "BAD",
+        "start": 142.13,
+        "end": 142.62
+      },
+      {
+        "text": "GUY",
+        "start": 142.62,
+        "end": 143.11
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 143.63,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 143.63,
+        "end": 147.63
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 147.67,
+    "words": [
+      {
+        "text": "DUH",
+        "start": 147.9,
+        "end": 148.13
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 148.4,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 148.4,
+        "end": 153.63
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 153.67,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 154.22,
+        "end": 154.77
+      },
+      {
+        "text": "ONLY",
+        "start": 154.77,
+        "end": 155.32
+      },
+      {
+        "text": "GOOD",
+        "start": 155.33,
+        "end": 155.88
+      },
+      {
+        "text": "AT",
+        "start": 155.88,
+        "end": 156.43
+      },
+      {
+        "text": "BEING",
+        "start": 156.44,
+        "end": 156.99
+      },
+      {
+        "text": "BAD",
+        "start": 156.99,
+        "end": 157.54
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 159.3,
+    "words": [
+      {
+        "text": "BAD",
+        "start": 160.06,
+        "end": 160.82
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 172.6,
+    "words": [
+      {
+        "text": "I",
+        "start": 172.84,
+        "end": 173.08
+      },
+      {
+        "text": "LIKE",
+        "start": 173.08,
+        "end": 173.32
+      },
+      {
+        "text": "WHEN",
+        "start": 173.32,
+        "end": 173.56
+      },
+      {
+        "text": "YOU",
+        "start": 173.57,
+        "end": 173.81
+      },
+      {
+        "text": "GET",
+        "start": 173.81,
+        "end": 174.05
+      },
+      {
+        "text": "MAD",
+        "start": 174.05,
+        "end": 174.29
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 176.4,
+    "words": [
+      {
+        "text": "I",
+        "start": 176.7,
+        "end": 177.0
+      },
+      {
+        "text": "GUESS",
+        "start": 177.01,
+        "end": 177.31
+      },
+      {
+        "text": "I'M",
+        "start": 177.31,
+        "end": 177.61
+      },
+      {
+        "text": "PRETTY",
+        "start": 177.62,
+        "end": 177.92
+      },
+      {
+        "text": "GLAD",
+        "start": 177.92,
+        "end": 178.22
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 178.57,
+    "words": [
+      {
+        "text": "THAT",
+        "start": 178.79,
+        "end": 179.02
+      },
+      {
+        "text": "YOU'RE",
+        "start": 179.02,
+        "end": 179.25
+      },
+      {
+        "text": "ALONE",
+        "start": 179.25,
+        "end": 179.48
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 180.63,
+    "words": [
+      {
+        "text": "YOU",
+        "start": 180.92,
+        "end": 181.21
+      },
+      {
+        "text": "SAID",
+        "start": 181.21,
+        "end": 181.5
+      },
+      {
+        "text": "SHE'S",
+        "start": 181.49,
+        "end": 181.78
+      },
+      {
+        "text": "SCARED",
+        "start": 181.78,
+        "end": 182.07
+      },
+      {
+        "text": "OF",
+        "start": 182.07,
+        "end": 182.36
+      },
+      {
+        "text": "ME?",
+        "start": 182.35,
+        "end": 182.64
+      },
+      {
+        "text": "I",
+        "start": 182.64,
+        "end": 182.93
+      },
+      {
+        "text": "MEAN...",
+        "start": 182.93,
+        "end": 183.22
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 184.27,
+    "words": [
+      {
+        "text": "I",
+        "start": 184.39,
+        "end": 184.51
+      },
+      {
+        "text": "DON'T",
+        "start": 184.52,
+        "end": 184.65
+      },
+      {
+        "text": "SEE",
+        "start": 184.64,
+        "end": 184.76
+      },
+      {
+        "text": "WHAT",
+        "start": 184.77,
+        "end": 184.9
+      },
+      {
+        "text": "SHE",
+        "start": 184.89,
+        "end": 185.01
+      },
+      {
+        "text": "SEES",
+        "start": 185.02,
+        "end": 185.15
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 185.3,
+    "words": [
+      {
+        "text": "BUT",
+        "start": 185.44,
+        "end": 185.58
+      },
+      {
+        "text": "MAYBE",
+        "start": 185.59,
+        "end": 185.73
+      },
+      {
+        "text": "IT'S",
+        "start": 185.73,
+        "end": 185.87
+      },
+      {
+        "text": "CUZ",
+        "start": 185.88,
+        "end": 186.02
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 186.2,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 186.46,
+        "end": 186.72
+      },
+      {
+        "text": "WEARING",
+        "start": 186.71,
+        "end": 186.97
+      },
+      {
+        "text": "YOUR",
+        "start": 186.97,
+        "end": 187.23
+      },
+      {
+        "text": "COLOGNE",
+        "start": 187.22,
+        "end": 187.48
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 188.4,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 188.4,
+        "end": 190.63
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 190.67,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 191.22,
+        "end": 191.78
+      },
+      {
+        "text": "A",
+        "start": 191.78,
+        "end": 192.34
+      },
+      {
+        "text": "BAD",
+        "start": 192.33,
+        "end": 192.89
+      },
+      {
+        "text": "GUY",
+        "start": 192.89,
+        "end": 193.45
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 194.03,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 194.03,
+        "end": 198.53
+      }
+    ],
+    "jugable": false
+  },
+  {
+    "time": 198.57,
+    "words": [
+      {
+        "text": "I'M",
+        "start": 198.91,
+        "end": 199.25
+      },
+      {
+        "text": "A",
+        "start": 199.25,
+        "end": 199.59
+      },
+      {
+        "text": "BAD",
+        "start": 199.6,
+        "end": 199.94
+      },
+      {
+        "text": "GUY",
+        "start": 199.94,
+        "end": 200.28
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 200.67,
+    "words": [
+      {
+        "text": "BAD",
+        "start": 201.01,
+        "end": 201.35
+      },
+      {
+        "text": "GUY",
+        "start": 201.35,
+        "end": 201.69
+      },
+      {
+        "text": "BAD",
+        "start": 201.7,
+        "end": 202.04
+      },
+      {
+        "text": "GUY",
+        "start": 202.04,
+        "end": 202.38
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 202.77,
+    "words": [
+      {
+        "text": "♪♪♪",
+        "start": 202.77,
+        "end": 203.7
+      }
+    ],
+    "jugable": false
+  }
+]
