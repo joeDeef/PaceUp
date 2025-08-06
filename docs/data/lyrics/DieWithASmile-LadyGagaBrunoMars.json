@@ -1,16 +1,5 @@
 [
   {
-    "time": 0,
-    "words": [
-      {
-        "text": "♪♪♪",
-        "start": 0,
-        "end": 4.05
-      }
-    ],
-    "jugable": false
-  },
-  {
     "time": 4.05,
     "words": [
       {
@@ -21,17 +10,17 @@
       {
         "text": "UHH",
         "start": 4.8,
-        "end": 9.26
+        "end": 8.9
       }
     ],
-    "jugable": false
+    "jugable": true
   },
   {
-    "time": 9.26,
+    "time": 8.9,
     "words": [
       {
         "text": "I,",
-        "start": 9.26,
+        "start": 8.9,
         "end": 9.89
       },
       {
@@ -99,7 +88,13 @@
         "text": "HAD",
         "start": 17.27,
         "end": 17.61
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 17.61,
+    "words": [
       {
         "text": "TO",
         "start": 17.61,
@@ -140,7 +135,13 @@
         "text": "KNOW",
         "start": 21.74,
         "end": 22.11
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 22.11,
+    "words": [
       {
         "text": "WHAT",
         "start": 22.11,
@@ -186,7 +187,13 @@
         "text": "SURVIVED",
         "start": 26.65,
         "end": 27.12
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 27.12,
+    "words": [
       {
         "text": "I",
         "start": 27.12,
@@ -217,7 +224,13 @@
         "text": "GO",
         "start": 30.61,
         "end": 31.12
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 31.12,
+    "words": [
       {
         "text": "THAT'S",
         "start": 31.13,
@@ -294,7 +307,13 @@
         "text": "NIGHT",
         "start": 40.13,
         "end": 40.4
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 40.4,
+    "words": [
       {
         "text": "LIKE",
         "start": 40.41,
@@ -381,7 +400,13 @@
         "text": "ENDING",
         "start": 48.03,
         "end": 48.69
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 48.69,
+    "words": [
       {
         "text": "I’D",
         "start": 48.7,
@@ -452,7 +477,13 @@
         "text": "OUR",
         "start": 58.1,
         "end": 58.73
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 58.73,
+    "words": [
       {
         "text": "TIME",
         "start": 58.73,
@@ -503,7 +534,13 @@
         "text": "YOU",
         "start": 64.61,
         "end": 65.07
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 65.07,
+    "words": [
       {
         "text": "JUST",
         "start": 65.06,
@@ -585,7 +622,13 @@
         "text": "ENDING",
         "start": 74.7,
         "end": 75.24
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 75.7,
+    "words": [
       {
         "text": "I’D",
         "start": 75.24,
@@ -633,7 +676,7 @@
         "end": 82.95
       }
     ],
-    "jugable": false
+    "jugable": true
   },
   {
     "time": 85.08,
@@ -673,7 +716,13 @@
         "text": "WORDS",
         "start": 90.03,
         "end": 90.39
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 90.39,
+    "words": [
       {
         "text": "THAT",
         "start": 90.4,
@@ -714,7 +763,13 @@
         "text": "WANNA",
         "start": 94.83,
         "end": 95.33
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 95.33,
+    "words": [
       {
         "text": "DO",
         "start": 95.32,
@@ -755,7 +810,13 @@
         "text": "ALREADY",
         "start": 98.72,
         "end": 98.99
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 98.99,
+    "words": [
       {
         "text": "KNOW",
         "start": 98.99,
@@ -821,7 +882,13 @@
         "text": "ONLY",
         "start": 103.39,
         "end": 103.75
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 103.75,
+    "words": [
       {
         "text": "WAR",
         "start": 103.76,
@@ -862,7 +929,13 @@
         "text": "GO",
         "start": 108.19,
         "end": 108.65
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 108.65,
+    "words": [
       {
         "text": "THAT'S",
         "start": 108.65,
@@ -939,7 +1012,13 @@
         "text": "NIGHT",
         "start": 117.54,
         "end": 117.81
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 117.81,
+    "words": [
       {
         "text": "LIKE",
         "start": 117.82,
@@ -1021,7 +1100,13 @@
         "text": "WAS",
         "start": 124.91,
         "end": 125.56
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 125.56,
+    "words": [
       {
         "text": "ENDING",
         "start": 125.56,
@@ -1118,7 +1203,13 @@
         "text": "EARTH",
         "start": 137.38,
         "end": 138.07
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 138.07,
+    "words": [
       {
         "text": "WAS",
         "start": 138.07,
@@ -1242,7 +1333,13 @@
         "text": "ENDING",
         "start": 151.92,
         "end": 152.39
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 151.39,
+    "words": [
       {
         "text": "I’D",
         "start": 152.4,
@@ -1350,17 +1447,6 @@
     "jugable": true
   },
   {
-    "time": 175.97,
-    "words": [
-      {
-        "text": "♪♪♪",
-        "start": 175.97,
-        "end": 179.64
-      }
-    ],
-    "jugable": false
-  },
-  {
     "time": 190.48,
     "words": [
       {
@@ -1387,7 +1473,13 @@
         "text": "ENDING",
         "start": 193.1,
         "end": 193.62
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 193.62,
+    "words": [
       {
         "text": "I’D",
         "start": 193.62,
@@ -1448,7 +1540,13 @@
         "text": "OVER",
         "start": 202.21,
         "end": 202.74
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 202.21,
+    "words": [
       {
         "text": "AND",
         "start": 202.74,
@@ -1509,7 +1607,13 @@
         "text": "YOU",
         "start": 210.28,
         "end": 210.68
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 210.68,
+    "words": [
       {
         "text": "JUST",
         "start": 210.69,
@@ -1591,7 +1695,13 @@
         "text": "ENDING",
         "start": 220.69,
         "end": 221.24
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 221.24,
+    "words": [
       {
         "text": "I’D",
         "start": 221.24,
@@ -1652,7 +1762,13 @@
         "text": "ENDING",
         "start": 229.25,
         "end": 229.76
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 229.76,
+    "words": [
       {
         "text": "I’D",
         "start": 229.76,

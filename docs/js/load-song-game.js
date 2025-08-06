@@ -213,7 +213,7 @@ function handlePlayerStateChange(event) {
       aciertos,
       fallas,
       tiempoSegundos: tiempoTotal,
-      redireccion: "level.html?nivel=Intermedio1&modo=canciones"
+      redireccion: 'level.html?nivel=Intermedio1&modo=canciones'
     });
   }
 
