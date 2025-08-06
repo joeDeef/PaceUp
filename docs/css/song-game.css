@@ -70,12 +70,11 @@ height: 100%;
   user-select: none;
 }
 
-/* Status items: título arriba y valor en cuadro debajo */
+/* status-items sin huecos */
 .status-items {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
 }
 
 .status-item {
@@ -83,12 +82,14 @@ height: 100%;
   color: #ffffff; /* blanco puro para contraste */
 }
 
+
 .status-label {
   color: #ffffff; /* blanco puro para contraste */
   font-size: 16px;
   margin-bottom: 6px;
   display: block;
 }
+
 
 .status-value-box {
   background: #1c2e4a;

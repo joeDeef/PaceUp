@@ -1,21 +1,5 @@
 [
   {
-    "time": 5.14,
-    "words": [
-      {
-        "text": "(upbeat",
-        "start": 5.14,
-        "end": 6.43
-      },
-      {
-        "text": "music)",
-        "start": 6.44,
-        "end": 7.73
-      }
-    ],
-    "jugable": false
-  },
-  {
     "time": 16.59,
     "words": [
       {
@@ -47,7 +31,13 @@
         "text": "better",
         "start": 17.97,
         "end": 18.2
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 18.2,
+    "words": [
       {
         "text": "sounds",
         "start": 18.2,
@@ -113,7 +103,13 @@
         "text": "voice",
         "start": 20.97,
         "end": 21.17
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 21.17,
+    "words": [
       {
         "text": "that",
         "start": 21.17,
@@ -174,7 +170,13 @@
         "text": "chords",
         "start": 23.48,
         "end": 23.67
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 23.67,
+    "words": [
       {
         "text": "in",
         "start": 23.67,
@@ -240,7 +242,13 @@
         "text": "to",
         "start": 26.36,
         "end": 26.59
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 26.59,
+    "words": [
       {
         "text": "rhyme",
         "start": 26.59,
@@ -306,7 +314,13 @@
         "text": "older,",
         "start": 29.14,
         "end": 29.31
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 29.31,
+    "words": [
       {
         "text": "all",
         "start": 29.31,
@@ -362,7 +376,13 @@
         "text": "and",
         "start": 31.39,
         "end": 31.6
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 31.6,
+    "words": [
       {
         "text": "I",
         "start": 31.6,
@@ -413,7 +433,13 @@
         "text": "and",
         "start": 34.7,
         "end": 35.15
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 35.15,
+    "words": [
       {
         "text": "I",
         "start": 35.16,
@@ -464,7 +490,13 @@
         "text": "and",
         "start": 39.87,
         "end": 40.32
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 40.32,
+    "words": [
       {
         "text": "I",
         "start": 40.32,
@@ -520,7 +552,13 @@
         "text": "back",
         "start": 58.62,
         "end": 59.0
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 59,
+    "words": [
       {
         "text": "time",
         "start": 59.0,
@@ -591,7 +629,13 @@
         "text": "sleep",
         "start": 64.9,
         "end": 65.26
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 65.26,
+    "words": [
       {
         "text": "but",
         "start": 65.25,
@@ -642,7 +686,13 @@
         "text": "turn",
         "start": 69.36,
         "end": 69.74
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 69.74,
+    "words": [
       {
         "text": "back",
         "start": 69.74,
@@ -718,7 +768,13 @@
         "text": "sleep",
         "start": 76.08,
         "end": 76.44
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 76.44,
+    "words": [
       {
         "text": "but",
         "start": 76.44,
@@ -785,7 +841,13 @@
         "text": "certain",
         "start": 90.26,
         "end": 90.45
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 90.45,
+    "words": [
       {
         "text": "smell",
         "start": 90.45,
@@ -877,7 +939,13 @@
         "text": "to",
         "start": 93.85,
         "end": 94.07
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 94.07,
+    "words": [
       {
         "text": "identify",
         "start": 94.07,
@@ -933,7 +1001,13 @@
         "text": "out",
         "start": 96.23,
         "end": 96.4
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 96.4,
+    "words": [
       {
         "text": "of",
         "start": 96.4,
@@ -1081,7 +1155,13 @@
         "text": "brother,",
         "start": 101.85,
         "end": 102.02
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 102.02,
+    "words": [
       {
         "text": "'cause",
         "start": 102.02,
@@ -1224,7 +1304,13 @@
         "text": "of",
         "start": 107.84,
         "end": 108.03
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 108.03,
+    "words": [
       {
         "text": "when",
         "start": 108.03,
@@ -1270,7 +1356,13 @@
         "text": "loans",
         "start": 109.77,
         "end": 109.96
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 109.96,
+    "words": [
       {
         "text": "and",
         "start": 109.97,
@@ -1352,7 +1444,13 @@
         "text": "Blurryface",
         "start": 114.47,
         "end": 114.85
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 114.85,
+    "words": [
       {
         "text": "and",
         "start": 114.85,
@@ -1403,7 +1501,13 @@
         "text": "Blurryface",
         "start": 119.86,
         "end": 120.31
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 120.31,
+    "words": [
       {
         "text": "and",
         "start": 120.31,
@@ -1464,7 +1568,13 @@
         "text": "back",
         "start": 127.65,
         "end": 128.03
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 128.03,
+    "words": [
       {
         "text": "time",
         "start": 128.04,
@@ -1535,7 +1645,13 @@
         "text": "sleep",
         "start": 133.91,
         "end": 134.27
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 134.27,
+    "words": [
       {
         "text": "but",
         "start": 134.26,
@@ -1596,7 +1712,13 @@
         "text": "time",
         "start": 139.35,
         "end": 139.73
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 139.73,
+    "words": [
       {
         "text": "to",
         "start": 139.74,
@@ -1662,7 +1784,13 @@
         "text": "sleep",
         "start": 145.15,
         "end": 145.51
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 145.51,
+    "words": [
       {
         "text": "but",
         "start": 145.51,
@@ -1723,7 +1851,13 @@
         "text": "give",
         "start": 148.8,
         "end": 148.98
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 148.98,
+    "words": [
       {
         "text": "each",
         "start": 148.98,
@@ -1779,7 +1913,13 @@
         "text": "ship",
         "start": 151.06,
         "end": 151.26
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 151.26,
+    "words": [
       {
         "text": "and",
         "start": 151.26,
@@ -1917,7 +2057,13 @@
         "text": "you",
         "start": 156.55,
         "end": 156.85
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 156.85,
+    "words": [
       {
         "text": "need",
         "start": 156.85,
@@ -1978,7 +2124,13 @@
         "text": "give",
         "start": 159.88,
         "end": 160.09
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 160.09,
+    "words": [
       {
         "text": "each",
         "start": 160.09,
@@ -2034,7 +2186,13 @@
         "text": "ship",
         "start": 162.36,
         "end": 162.57
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 162.57,
+    "words": [
       {
         "text": "and",
         "start": 162.56,
@@ -2172,7 +2330,13 @@
         "text": "you",
         "start": 168.31,
         "end": 168.69
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 168.69,
+    "words": [
       {
         "text": "need",
         "start": 168.69,
@@ -2228,7 +2392,13 @@
         "text": "back",
         "start": 172.89,
         "end": 173.27
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 173.27,
+    "words": [
       {
         "text": "time",
         "start": 173.28,
@@ -2299,7 +2469,13 @@
         "text": "sleep",
         "start": 179.12,
         "end": 179.48
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 179.48,
+    "words": [
       {
         "text": "but",
         "start": 179.48,
@@ -2360,7 +2536,13 @@
         "text": "time",
         "start": 184.48,
         "end": 184.86
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 184.86,
+    "words": [
       {
         "text": "to",
         "start": 184.86,
@@ -2426,7 +2608,13 @@
         "text": "sleep",
         "start": 190.34,
         "end": 190.69
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 190.69,
+    "words": [
       {
         "text": "but",
         "start": 190.69,
@@ -2482,7 +2670,13 @@
         "text": "pretend,",
         "start": 193.84,
         "end": 194.05
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 194.05,
+    "words": [
       {
         "text": "used",
         "start": 194.06,
@@ -2538,7 +2732,13 @@
         "text": "pretend,",
         "start": 196.42,
         "end": 196.64
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 198.64,
+    "words": [
       {
         "text": "wake",
         "start": 196.64,
@@ -2594,7 +2794,13 @@
         "text": "pretend,",
         "start": 199.11,
         "end": 199.35
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 199.35,
+    "words": [
       {
         "text": "used",
         "start": 199.35,
@@ -2650,7 +2856,13 @@
         "text": "pretend,",
         "start": 201.95,
         "end": 202.18
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 202.18,
+    "words": [
       {
         "text": "wake",
         "start": 202.18,
@@ -2711,7 +2923,13 @@
         "text": "give",
         "start": 204.92,
         "end": 205.14
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 205.14,
+    "words": [
       {
         "text": "each",
         "start": 205.14,
@@ -2767,7 +2985,13 @@
         "text": "ship",
         "start": 207.4,
         "end": 207.59
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 207.59,
+    "words": [
       {
         "text": "and",
         "start": 207.59,
@@ -2905,7 +3129,13 @@
         "text": "you",
         "start": 213.65,
         "end": 214.1
-      },
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 214.1,
+    "words": [
       {
         "text": "need",
         "start": 214.1,

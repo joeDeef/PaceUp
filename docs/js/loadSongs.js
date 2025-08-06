@@ -38,7 +38,7 @@ export async function cargarCanciones(nivelActual, idSeleccionado = null) {
   const populares = canciones
     .filter((c) => c.popularityRank >= 0)
     .sort((a, b) => b.popularityRank - a.popularityRank)
-    .slice(0, 5);
+    .slice(0, 3);
 
   const renderCancion = (cancion, destino) => {
     const { fragment, cardElement } = createCard(

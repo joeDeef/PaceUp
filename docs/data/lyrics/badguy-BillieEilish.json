@@ -3,7 +3,7 @@
     "time": 3.33,
     "words": [
       {
-        "text": "-MY",
+        "text": "MY",
         "start": 3.33,
         "end": 3.68
       },
@@ -21,11 +21,6 @@
         "text": "FINALLLY...",
         "start": 4.37,
         "end": 4.72
-      },
-      {
-        "text": "(LAUGHTER)",
-        "start": 4.72,
-        "end": 5.07
       }
     ],
     "jugable": true
@@ -128,17 +123,6 @@
     "jugable": true
   },
   {
-    "time": 9.1,
-    "words": [
-      {
-        "text": "(LAUGHTER)",
-        "start": 9.1,
-        "end": 13.33
-      }
-    ],
-    "jugable": true
-  },
-  {
     "time": 13.37,
     "words": [
       {
@@ -147,7 +131,7 @@
         "end": 27.44
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 27.47,
@@ -767,7 +751,7 @@
         "end": 80.6
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 80.63,
@@ -804,7 +788,7 @@
         "end": 87.63
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 87.67,
@@ -998,7 +982,7 @@
         "end": 103.22
       }
     ],
-    "jugable": false
+    "jugable": true
   },
   {
     "time": 103.6,
@@ -1451,7 +1435,7 @@
         "end": 140.64
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 140.67,
@@ -1488,7 +1472,7 @@
         "end": 147.63
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 147.67,
@@ -1510,7 +1494,7 @@
         "end": 153.63
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 153.67,
@@ -1555,17 +1539,6 @@
         "text": "BAD",
         "start": 160.06,
         "end": 160.82
-      }
-    ],
-    "jugable": true
-  },
-  {
-    "time": 164.37,
-    "words": [
-      {
-        "text": "♪♪♪",
-        "start": 164.37,
-        "end": 172.57
       }
     ],
     "jugable": true
@@ -1801,7 +1774,7 @@
         "end": 190.63
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 190.67,
@@ -1838,7 +1811,7 @@
         "end": 198.53
       }
     ],
-    "jugable": true
+    "jugable": false
   },
   {
     "time": 198.57,
@@ -1901,6 +1874,6 @@
         "end": 203.7
       }
     ],
-    "jugable": true
+    "jugable": false
   }
 ]
