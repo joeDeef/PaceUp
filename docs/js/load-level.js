@@ -45,6 +45,7 @@ export async function cargarContenidoNivel(
         import("./loadSongs.js").then((m) => m.cargarCanciones(nivel, id));
         break;
       case "videos":
+        import("./loadSongs.js").then((m) => m.cargarVideosInteractivos(nivel, id));
         break;
       case "gramatica":
         import("./cargarGramatica.js").then((m) =>

@@ -1,6 +1,8 @@
 import { createCard } from "./create-card.js";
 import { loadSearchBar } from "./load-search-bar.js";
 import { cargarVideo } from "./load-song-game.js";
+import { videoQuizData } from "../data/video-quiz.js";
+import { loadVideoQuiz } from "./load-video-quiz.js";
 import { actualizarVista } from "./level-main.js";
 
 function extractVideoId(url) {
@@ -119,4 +121,65 @@ export async function cargarCanciones(nivelActual, idSeleccionado = null) {
 
   addArrowNavigation(carrusel.querySelectorAll(".card"));
   addArrowNavigation(lista.querySelectorAll(".card"));
+}
+
+export async function cargarVideosInteractivos(nivelActual, idSeleccionado = null) {
+  const contenedor = document.getElementById("nivel-content");
+  contenedor.innerHTML = "";
+
+  if (idSeleccionado) {
+    loadVideoQuiz("nivel-content", idSeleccionado);
+    return;
+  }
+
+  // Cargar HTML base (usa uno simplificado que NO incluya carrusel)
+  const res = await fetch("components/video-list.html");
+  const html = await res.text();
+  contenedor.innerHTML = html;
+
+  const searchContainer = document.getElementById("search-bar-container");
+  await loadSearchBar(searchContainer, "cards");
+
+  const template = document.getElementById("card-template");
+  const lista = document.getElementById("lista-videos");
+
+  videoQuizData.forEach((video) => {
+    const { fragment, cardElement } = createCard(
+      {
+        id: video.id,
+        title: video.title,
+        description: "Video interactivo con quiz y transcripción",
+        image: `https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`,
+        onClick: () => actualizarVista(nivelActual, "videos", video.id),
+      },
+      template
+    );
+
+    lista.appendChild(fragment);
+
+    const focusables = [
+      cardElement.querySelector(".card-title"),
+      cardElement.querySelector(".card-image"),
+      cardElement.querySelector(".btn-play"),
+      cardElement.querySelector(".card-description"),
+    ];
+    focusables.forEach((el) => {
+      if (el) {
+        el.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.keyCode === 13) {
+            e.preventDefault();
+            actualizarVista(nivelActual, "videos", video.id);
+          }
+        });
+      }
+    });
+
+    const btnPlay = cardElement.querySelector(".btn-play");
+    if (btnPlay) {
+      btnPlay.addEventListener("click", (e) => {
+        e.stopPropagation();
+        actualizarVista(nivelActual, "videos", video.id);
+      });
+    }
+  });
 }
