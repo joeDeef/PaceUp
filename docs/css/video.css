@@ -1,0 +1,330 @@
+/* ==========================================================================
+   Estilos para la sección de videos
+   ========================================================================== */
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs li + li::before {
+    content: "›";
+    margin: 0 0.5rem;
+    color: #555;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #103D7C;
+    font-weight: 500;
+}
+
+.breadcrumbs span {
+    color: #555;
+    font-weight: 400;
+}
+
+.content-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.content-header h2 {
+    font-family: 'Title1', sans-serif;
+    color: #103D7C;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-header p {
+    font-family: 'Subtitle', sans-serif;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Estilos para las preferencias y filtros
+   ========================================================================== */
+.preferences {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.preferences h3 {
+    font-family: 'Title2', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #103D7C;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Text', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: #103D7C;
+    color: #103D7C;
+}
+
+.filter-btn.active {
+    background-color: #103D7C;
+    color: #fff;
+    border-color: #103D7C;
+}
+
+/* ==========================================================================
+   Estilos para las tarjetas de video
+   ========================================================================== */
+.video-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.video-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.video-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.video-card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.video-card-info h4 {
+    font-family: 'Title2', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.video-card-info p {
+    font-family: 'Text', sans-serif;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Estilos para el reproductor de video y la transcripción
+   ========================================================================== */
+.video-player-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.video-player-content h2 {
+    font-family: 'Title1', sans-serif;
+    color: #103D7C;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    margin-bottom: 2rem;
+}
+
+#youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+.tabs-container {
+    background-color: #f9fafb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(16, 61, 124, 0.1);
+    padding: 1.5rem;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.tabs button {
+    background-color: transparent;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-family: 'Title2', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tabs button.active {
+    color: #103D7C;
+}
+
+.tabs button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #103D7C;
+}
+
+.tab-panel {
+    font-family: 'Text', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ==========================================================================
+   Estilos para el formulario del test
+   ========================================================================== */
+#quiz-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.quiz-question {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.quiz-question p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quiz-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.quiz-options label:hover {
+    background-color: #f0f4f8;
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.quiz-options label.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.quiz-options label.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.quiz-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.primary-btn {
+    background-color: #103D7C;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Title2', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #0d2c5e;
+}
+
+.secondary-btn {
+    background-color: #ccc;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Title2', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background-color: #bbb;
+}

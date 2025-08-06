@@ -45,6 +45,7 @@ export async function cargarContenidoNivel(
         import("./loadSongs.js").then((m) => m.cargarCanciones(nivel));
         break;
       case "videos":
+        import("./loadVideos.js").then((m) => m.cargarVideos(nivel));
         break;
       case "gramatica":
         import("./cargarGramatica.js").then((m) =>
@@ -84,6 +85,11 @@ export async function cargarContenidoNivel(
             // Si el modo es gramática, redirige a la página gramatica.html
             onClick = () => {
               actualizarVista(nivel, "gramatica");
+            };
+          } else if (keyModo === "videos") {
+            // Si el modo es videos, redirige a la sección de videos dentro de level.html
+            onClick = () => {
+              actualizarVista(nivel, "videos"); // Carga los videos según la lógica de level-main.js
             };
           } else {
             // Para los demás modos sigue como antes
