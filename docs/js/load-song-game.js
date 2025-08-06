@@ -13,46 +13,21 @@ function isInAnswerRange(currentTime) {
 // --- STATUS ITEM ---
 let puntos = 0,
   aciertos = 0,
-  fallas = 0,
-  totalHuecos = 0;
+  fallas = 0;
 let tiempoInicio = null;
 
-function calcularTotalHuecos() {
-  // Cuenta pares jugables (de 2 en 2)
-  let count = 0;
-  for (let i = 0; i < syncedLyrics.length; i += 2) {
-    if (
-      (syncedLyrics[i]?.jugable ?? true) ||
-      (syncedLyrics[i + 1]?.jugable ?? true)
-    )
-      count++;
-  }
-  return count;
-}
-
 function actualizarStatusItem() {
-  const huecosCompletados = aciertos;
   const puntosEl = document.getElementById("status-puntos");
-  const huecosEl = document.getElementById("status-huecos");
   const aciertosEl = document.getElementById("status-aciertos");
   const fallasEl = document.getElementById("status-fallas");
 
   const puntosItem = puntosEl?.closest(".status-item");
-  const huecosItem = huecosEl?.closest(".status-item");
   const aciertosItem = aciertosEl?.closest(".status-item");
   const fallasItem = fallasEl?.closest(".status-item");
 
   if (puntosEl && puntosItem) {
     puntosEl.textContent = puntos;
     puntosItem.setAttribute("aria-label", `Puntos obtenidos: ${puntos}`);
-  }
-
-  if (huecosEl && huecosItem) {
-    huecosEl.textContent = `${huecosCompletados}/${totalHuecos}`;
-    huecosItem.setAttribute(
-      "aria-label",
-      `Huecos completados: ${huecosCompletados} de ${totalHuecos}`
-    );
   }
 
   if (aciertosEl && aciertosItem) {
@@ -114,7 +89,6 @@ export async function cargarVideo(levelId, videoId) {
 
   if (song.lyrics_file) {
     await loadLyrics(song.lyrics_file);
-    totalHuecos = calcularTotalHuecos();
     puntos = aciertos = fallas = 0;
     actualizarStatusItem();
   }
@@ -360,10 +334,6 @@ function updateLyrics() {
       resetLineState(currentPairIndex);
 
       const nextLine = syncedLyrics[currentPairIndex];
-      /*
-      if (nextLine && nextLine.words?.length > 0) {
-        youtubePlayer.seekTo(nextLine.words[0].start, true);
-      }*/
     }
   }
 
@@ -394,7 +364,7 @@ function renderCurrentLyrics(currentTime) {
     mostrarOpcionesAleatorias(line1, line2);
     lastPairIndexShown = currentPairIndex;
   }
-  actualizarStatusItem(); // <-- Actualiza siempre que se renderiza
+  actualizarStatusItem();
 }
 
 function renderLine(container, line, currentTime) {
@@ -612,8 +582,6 @@ function avanzarLineaConRespuestaCorrecta() {
     );
     if (currentPairIndex >= syncedLyrics.length) return stopLyricsAnimation();
     const nextLine = syncedLyrics[currentPairIndex];
-    //if (nextLine?.words?.length)
-    //  youtubePlayer.seekTo(nextLine.words[0].start, true);
     restoreVolume();
     startLyricsAnimation();
     youtubePlayer.playVideo();

@@ -1,40 +1,12 @@
 [
   {
-    "time": 0.98,
-    "words": [
-      {
-        "text": "[Music]",
-        "start": 0.98,
-        "end": 10.04
-      }
-    ],
-    "jugable": false
-  },
-  {
-    "time": 7.04,
-    "words": [
-      {
-        "text": "so",
-        "start": 7.04,
-        "end": 10.04
-      }
-    ],
-    "jugable": true
-  },
-  {
     "time": 22.8,
     "words": [
-      {
-        "text": "lady",
+            {
+        "text": "Lady",
         "start": 22.8,
         "end": 27.08
-      }
-    ],
-    "jugable": true
-  },
-  {
-    "time": 24.08,
-    "words": [
+      },
       {
         "text": "heal",
         "start": 24.08,
@@ -46,7 +18,7 @@
         "end": 31.08
       },
       {
-        "text": "today",
+        "text": "tonight",
         "start": 31.08,
         "end": 34.58
       }
@@ -57,12 +29,143 @@
     "time": 27.08,
     "words": [
       {
-        "text": "[Music]",
+        "text": "cause",
         "start": 27.08,
-        "end": 34.58
+        "end": 28.52
+      },
+      {
+        "text": "my",
+        "start": 28.52,
+        "end": 29.96
+      },
+      {
+        "text": "feeling",
+        "start": 29.96,
+        "end": 31.4
       }
     ],
-    "jugable": false
+    "jugable": true
+  },
+  {
+    "time": 34.58,
+    "words": [
+      {
+        "text": "is",
+        "start": 34.58,
+        "end": 35.52
+      },
+      {
+        "text": "just",
+        "start": 35.52,
+        "end": 36.46
+      },
+      {
+        "text": "so",
+        "start": 36.46,
+        "end": 37.4
+      },
+      {
+        "text": "right",
+        "start": 37.4,
+        "end": 38.34
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 36.46,
+    "words": [
+      {
+        "text": "as",
+        "start": 36.46,
+        "end": 37.68
+      },
+      {
+        "text": "we",
+        "start": 37.68,
+        "end": 38.9
+      },
+      {
+        "text": "dance",
+        "start": 38.9,
+        "end": 40.12
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 38.34,
+    "words": [
+      {
+        "text": "by",
+        "start": 38.34,
+        "end": 39.36
+      },
+      {
+        "text": "the",
+        "start": 39.36,
+        "end": 40.3
+      },
+      {
+        "text": "moonlight",
+        "start": 40.3,
+        "end": 41.24
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 40.12,
+    "words": [
+      {
+        "text": "can't",
+        "start": 40.12,
+        "end": 41.2
+      },
+      {
+        "text": "you",
+        "start": 41.2,
+        "end": 42.62
+      },
+      {
+        "text": "see",
+        "start": 42.62,
+        "end": 44.04
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 41.24,
+    "words": [
+      {
+        "text": "you're",
+        "start": 41.24,
+        "end": 42.18
+      },
+      {
+        "text": "my",
+        "start": 42.18,
+        "end": 43.12
+      },
+      {
+        "text": "delight",
+        "start": 43.12,
+        "end": 44.1
+      }
+    ],
+    "jugable": true
+  },
+  {
+    "time": 44.04,
+    "words": [
+      {
+        "text": "lady",
+        "start": 44.04,
+        "end": 46.88
+      }
+    ],
+    "jugable": true
   },
   {
     "time": 39.36,
@@ -138,7 +241,12 @@
         "text": "mind",
         "start": 46.05,
         "end": 47.03
+      }],
+    "jugable": true
       },
+        {
+    "time": 43.12,
+    "words": [
       {
         "text": "i",
         "start": 47.02,
@@ -184,16 +292,49 @@
     "jugable": true
   },
   {
-    "time": 49.95,
+    "time": 55.04,
     "words": [
       {
-        "text": "[Music]",
-        "start": 49.95,
-        "end": 55.04
+        "text": "And",
+        "start": 55.04,
+        "end": 56.32
+      },
+      {
+        "text": "I",
+        "start": 56.32,
+        "end": 57.6
+      },
+      {
+        "text": "kwon",
+        "start": 57.6,
+        "end": 58.88
+      }
+
+    ],
+    "jugable": true
+  },
+  {
+    "time": 58.88,
+    "words": [
+      {
+        "text": "that",
+        "start": 58.88,
+        "end": 60.16
+      },
+      {
+        "text": "it's",
+        "start": 60.16,
+        "end": 61.44
+      },
+      {
+        "text": "true",
+        "start": 61.44,
+        "end": 62.72
       }
     ],
-    "jugable": false
+    "jugable": true
   },
+
   {
     "time": 83.76,
     "words": [

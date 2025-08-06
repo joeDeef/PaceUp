@@ -1,26 +1,5 @@
 [
   {
-    "time": 0.93,
-    "words": [
-      {
-        "text": "(upbeat",
-        "start": 0.93,
-        "end": 2.04
-      },
-      {
-        "text": "pop-rock",
-        "start": 2.04,
-        "end": 3.15
-      },
-      {
-        "text": "music)",
-        "start": 3.15,
-        "end": 4.26
-      }
-    ],
-    "jugable": true
-  },
-  {
     "time": 12.05,
     "words": [
       {
@@ -1309,32 +1288,6 @@
       }
     ],
     "jugable": false
-  },
-  {
-    "time": 117.51,
-    "words": [
-      {
-        "text": "(upbeat",
-        "start": 117.51,
-        "end": 118.55
-      },
-      {
-        "text": "pop-rock",
-        "start": 118.55,
-        "end": 119.59
-      },
-      {
-        "text": "music",
-        "start": 119.59,
-        "end": 120.63
-      },
-      {
-        "text": "continues)",
-        "start": 120.63,
-        "end": 121.67
-      }
-    ],
-    "jugable": true
   },
   {
     "time": 129.81,
