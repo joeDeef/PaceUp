@@ -15,8 +15,10 @@ export function loadVideoQuiz(containerId, videoId) {
         "youtube-player"
       ).src = `https://www.youtube.com/embed/${data.youtubeId}`;
 
+      document.getElementById("video-title").setAttribute("tabindex", "0");
+
       const transcriptionHtml = data.transcription
-        .map((line) => `<p>${line}</p>`)
+        .map((line) => `<p tabindex="0">${line}</p>`)
         .join("");
       document.getElementById("transcription-section").innerHTML =
         transcriptionHtml;
@@ -26,9 +28,10 @@ export function loadVideoQuiz(containerId, videoId) {
         .map((q, i) => {
           const options = q.options
             .map(
-              (opt) => `
+              (opt, j) => `
                 <label>
-                  <input type="radio" name="q${i}" value="${opt}" class="quiz-option"> ${opt}
+                  <input type="radio" tabindex=-1 name="q${i}" value="${opt}" class="quiz-option" id="q${i}-opt${j}">
+                  <span tabindex="0" role="button" aria-pressed="false" data-input="q${i}-opt${j}">${opt}</span>
                 </label><br>
               `
             )
@@ -36,7 +39,7 @@ export function loadVideoQuiz(containerId, videoId) {
           return `
             <div class="quiz-card">
               <div class="quiz-card-header">
-                <p>${q.question}</p>
+                <p tabindex="0">${q.question}</p>
               </div>
               <div class="quiz-card-body">
                 ${options}
@@ -46,6 +49,26 @@ export function loadVideoQuiz(containerId, videoId) {
         })
         .join("");
       document.getElementById("quiz-section").innerHTML = quizHtml;
+
+      // Accesibilidad: permitir marcar/desmarcar opción con Enter en el span
+      document.querySelectorAll('[data-input]').forEach(span => {
+        span.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            const input = document.getElementById(span.dataset.input);
+            if (input) {
+              input.checked = true;
+              input.dispatchEvent(new Event('change'));
+            }
+          }
+        });
+        span.addEventListener('click', function() {
+          const input = document.getElementById(span.dataset.input);
+          if (input) {
+            input.checked = true;
+            input.dispatchEvent(new Event('change'));
+          }
+        });
+      });
 
       // Añadir el botón de "Comprobar respuestas" con el estilo de los otros botones
       const checkAnswersButton = document.createElement("button");
