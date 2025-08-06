@@ -45,3 +45,28 @@
 #quiz-section li {
   margin-bottom: 15px;
 }
+
+/* Estilo para el botón de "Comprobar respuestas" */
+.btn-check-answers {
+  background-color: #007acc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-check-answers:hover {
+  background-color: #005f99;
+}
+
+/* Estilo para el contenedor de resultados */
+#result-container {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
