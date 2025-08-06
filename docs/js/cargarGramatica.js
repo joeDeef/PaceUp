@@ -253,7 +253,11 @@ export async function cargarGramaticaComponent(nivel) {
       contGramatica.setAttribute("role", "region");
       contGramatica.setAttribute("aria-label", `Contenido de gramática: ${tema.titulo.replace(/<[^>]+>/g, '')}`);
 
+      // Insertar el contenido y luego agregar tabindex a títulos y párrafos
       contGramatica.innerHTML = tema.titulo + tema.contenido;
+      contGramatica.querySelectorAll("h1, h2, h3, h4, h5, h6, p, ul, ol, li, table, thead, tbody, tr, td, th, .gramatica-example-item").forEach(el => {
+        el.setAttribute("tabindex", "0");
+      });
 
       // Actualiza números de navegación
       const spanTema = document.getElementById("numero-tema");
@@ -308,9 +312,10 @@ export async function cargarGramaticaComponent(nivel) {
       if (ej.tipo === "seleccion") {
         html += `
           <fieldset>
-            <legend>${ej.pregunta}</legend>
+            <legend tabindex="0">${ej.pregunta}</legend>
         `;
-        ej.opciones.forEach(opt => {
+        ej.opciones.forEach((opt, optIdx) => {
+          const radioId = `ej-${numeroTema}-${idx}-opt${optIdx}`;
           html += `
             <label>
               <input 
@@ -318,8 +323,10 @@ export async function cargarGramaticaComponent(nivel) {
                 name="ejercicio-${numeroTema}-${idx}" 
                 value="${opt}" 
                 aria-label="${opt}"
+                id="${radioId}"
+                tabindex="-1"
               />
-              ${opt}
+              <span tabindex="0" role="button" aria-pressed="false" data-input="${radioId}">${opt}</span>
             </label><br/>
           `;
         });
@@ -477,6 +484,26 @@ export async function cargarGramaticaComponent(nivel) {
     // Mueve el foco al score para que lo anuncie el lector de pantalla
     container.querySelector(".score-result").focus();
   }
+
+  // Accesibilidad: permitir marcar opción con Enter en el span de selección
+  document.addEventListener('keydown', function(e) {
+    if (e.target.matches('[data-input]') && (e.key === 'Enter' || e.key === ' ')) {
+      const input = document.getElementById(e.target.dataset.input);
+      if (input) {
+        input.checked = true;
+        input.dispatchEvent(new Event('change'));
+      }
+    }
+  });
+  document.addEventListener('click', function(e) {
+    if (e.target.matches('[data-input]')) {
+      const input = document.getElementById(e.target.dataset.input);
+      if (input) {
+        input.checked = true;
+        input.dispatchEvent(new Event('change'));
+      }
+    }
+  });
 
   // Mostrar el primer tema
   mostrarTema(temaActual);
